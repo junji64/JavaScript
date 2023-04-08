@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>JavaScript Introduction</title>
+    <style>a.menu_html_images{font-weight:bold;}</style>
+    <meta name="viewport" content="width=device-width">
+    <meta name="Keywords" content="HTML,CSS,XML,JavaScript,DOM,jQuery,ASP.NET,PHP,SQL,colors,tutorial,programming,development,training,learning,quiz,primer,lessons,reference,examples,source code,demos,tips,color table,w3c,cascading style sheets,active server pages,Web building,Webmaster">
+    <meta name="Description" content="Free HTML CSS JavaScript DOM jQuery XML AJAX RSS ASP .NET PHP SQL tutorials, references, examples for web building.">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="w3.css">
+    <script>
+function changeimage()
+{
+element=document.getElementById('myimage')
+if (element.src.match("bulbon"))
+  {
+  element.src="http://www.w3schools.com/js/pic_bulboff.gif";
+  }
+else
+  {
+  element.src="http://www.w3schools.com/js/pic_bulbon.gif";
+  }
+}
+
+function myFunction() {
+  var x, text;
+
+  // Get the value of the input field with id="numb"
+  x = document.getElementById("numb").value;
+
+  // If x is Not a Number or less than one or greater than 10
+  if (isNaN(x) || x < 1 || x > 10) {
+    text = "Input not valid";
+  } else {
+    text = "Input OK";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+
+</script> 
+
+</head>
+  <body>
+    <div id="belowTopnav" style="width:auto">
+      <div id="page" style="width:auto; padding:30px; margin:10px;">
+        <div>
+          <div style="width:auto">
+            <h1>JavaScript <span class="color_h1">Introduction</span></h1>
+            <div class="chapter">
+              <div class="w3-clear nextprev"> <a class="w3-left w3-btn" href="index.html">«
+                  Previous</a> <a class="w3-right w3-btn" href="JavaScript%20Where%20To.html">
+                  Next Chapter »</a> </div>
+            </div>
+            <hr>
+                        <p>JavaScript 는 <strong>컴파일이 필요없는 scripting 프로그래밍 언어</strong>이다.</p>
+                        <p>JavaScript 는 <strong>HTML 페이지에 삽입 </strong>될 수 있고,<strong> 모든 웹
+                브라우저에서 실행</strong>될 수 있다.</p>
+            <p>JavaScript 는 <strong>배우기 쉽습니다.</strong></p>
+
+            <p>이 페이지는 JavaScript 가 수행할 수 있는 몇 가지 예를 보여줍니다.</p>
+            <hr>
+            <h2>JavaScript 는 HTML 내용을 변경할 수 있다</h2>
+
+            <p><strong><font><font>document.getElementById()</font></font></strong><font><font>
+                  는 가장 흔히 사용되는 HTML의 메서드(method) 중 하나입니다.</font></font></p>
+            <p><font><font>다음의 예는 HTML 요소 ( id="demo" 인) 를 찾는데 이 메서드를 사용하고, 요소의
+                  내용(innerHTML)을 "Hello JavaScript"로 바꾸고 있다.<br>
+                </font></font></p>
+            <p> </p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  document.getElementById(<span style="color:brown">"demo"</span>).innerHTML
+                  = <span style="color:brown">"Hello JavaScript"</span>;</span></div>
+              <a target="_blank" class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_intro_inner_html">Try
+                it Yourself »</a> </div>
+            <hr>
+            <h2>JavaScript 는 HTML 속성 값을 변경할 수 있다</h2>
+            <p>이 예제에서는 HTML &lt;img&gt; 태그의&nbsp; src 속성을 변경하여, HTML image를 바꾼다.
+              :</p>
+            <div class="w3-example">
+              <h3>The Light bulb</h3>
+              <div class="w3-padding w3-white notranslate" style="text-align:center">
+              <button onclick="document.getElementById('myImage').src='http://www.w3schools.com/js/pic_bulbon.gif'">Turn on the light</button>
+
+              <img id="myImage" src="http://www.w3schools.com/js/pic_bulboff.gif" style="width:100px">
+
+              <button onclick="document.getElementById('myImage').src='http://www.w3schools.com/js/pic_bulboff.gif'">Turn off the light</button>
+              </div>
+              <p> <a class="w3-btn" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_intro_lightbulb"
+
+                  target="_blank">Try it Yourself »</a> </p>
+            </div>
+            <hr>
+            <h2>JavaScript 는 HTML 스타일(CSS) 을 변경할 수 있다</h2>
+            <p>HTML 요소의 스타일 변경은&nbsp; HTML 속성 변경의 한 변형으로 볼 수 있다.</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  document.getElementById(<span style="color:brown">"demo"</span>).style.fontSize
+                  = <span style="color:brown">"35px"</span>;</span></div>
+              <a target="_blank" class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_intro_style">Try
+                it Yourself »</a> </div>
+            <hr>
+            <h2>JavaScript 는 HTML 요소를 숨길 수 있습니다.</h2>
+            <p><code class="w3-codespan">display</code> 스타일을 변경하여 HTML 요소를 숨길 수 있습니다.</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+            <div class="w3-code notranslate jsHigh">
+            document.getElementById(&quot;demo&quot;).style.display = &quot;none&quot;;</div>
+              <a target="_blank" class="w3-btn w3-margin-bottom" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_intro_hide">Try
+                it Yourself »</a> </div>
+            <hr>
+            <h2>JavaScript 는 HTML 요소를 보일 수 있습니다.</h2>
+            <p><code class="w3-codespan">display</code> 스타일을 변경하여 숨겨진 HTML 요소를 표시 할 수도 있습니다.</p>
+            <div class="w3-example">
+            <h3>Example</h3>
+            <div class="w3-code notranslate jsHigh">
+             document.getElementById(&quot;demo&quot;).style.display = "block";</div>
+             <a class="w3-btn w3-margin-bottom" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_intro_show" target="_blank">Try it Yourself &raquo;</a>
+            </div>
+            <hr>
+            <h2>JavaScript: Input 유효성 검사를 할 수 있다.</h2>
+            <p>JavaScript 는 일반적으로 입력의 유효성을 검사하는 데 사용됩니다 :</p>
+            <p> </p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh">
+              <p>Please input a number between 1 and 10</p>
+              <input id="numb" type="text"> <button type="button" onclick="myFunction()">Submit</button>
+              <p id="demo"></p>
+
+              </div>
+              <a target="_blank" class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_intro_validate">Try
+                it Yourself »</a> </div>
+            <br>
+            <hr>
+            <h2>Did You Know?</h2>
+            <div class="w3-panel w3-note"> 
+              <b>JavaScript</b>와 <b>Java</b>는 개념과 디자인면에서 완전히 다른 언어입니다. <br>
+
+              JavaScript는 1995년 Brendan Eich에 의해 발명되었으며 1997년 ECMA 표준이되었습니다. <br>
+              ECMA-262는 표준의 공식 명칭입니다. ECMAScript는 언어의 공식 이름입니다..</div>
+            <br>
+            <br>
+            <div class="chapter">
+              <div class="w3-clear nextprev"> <a class="w3-left w3-btn" href="index.html">«
+                  Previous</a> <a class="w3-right w3-btn" href="JavaScript%20Where%20To.html">
+                  Next Chapter »</a> </div>
+            </div>
+            <hr> </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
