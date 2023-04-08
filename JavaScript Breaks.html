@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>JavaScript Break 와 Continue</title>
+    <style>a.menu_js_loop_for{font-weight:bold;}</style>
+    <meta name="viewport" content="width=device-width">
+    <meta name="Keywords" content="HTML,CSS,XML,JavaScript,DOM,jQuery,ASP.NET,PHP,SQL,colors,tutorial,programming,development,training,learning,quiz,primer,lessons,reference,examples,source code,demos,tips,color table,w3c,cascading style sheets,active server pages,Web building,Webmaster">
+    <meta name="Description" content="Free HTML CSS JavaScript DOM jQuery XML AJAX RSS ASP .NET PHP SQL tutorials, references, examples for web building.">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="http://www.w3schools.com/stdtheme.css">
+    <link rel="stylesheet" href="w3.css">
+  </head>
+  <body><br>
+    <div id="belowTopnav" style="width:auto">
+      <div id="page" style="width:auto; padding:30px; margin:10px;">
+        <div>
+          <div id="main" style="width:auto"><br>
+            <h1>JavaScript <span class="color_h1">Break 와 Continue</span></h1>
+            <div class="chapter">
+               <div class="w3-clear nextprev"> <a class="w3-left w3-btn" href="JavaScript%20for%20Loop.html">«
+                  Previous</a> <a class="w3-right w3-btn" href="JavaScript%20Errors%20Try%20Catch%20Throw.html">Next
+                  Chapter »</a> </div>
+
+            </div>
+            <hr>
+            <p class="intro">break 문은 루프를 "빠져나온다(jumps out)".</p>
+            <p class="intro">continue 문은 루프의 한 반복에서 "빠져나온다(jumps over)".</p>
+            <hr>
+            <h2>The Break Statement</h2>
+            <p>break 문이 이 튜토리얼의 이전 장에서 사용된 것을 보았다. 그것은 switch() 문에서 "빠져나오는(jump
+              out)" 데 사용되었다.</p>
+            <p>break 문은 투프를 빠져 나오는데 사용 될 수 있다.&nbsp;&nbsp;&nbsp; </p>
+            <p><strong>break 문</strong>은 루프를 깨고 루프 다음의 코드(있는 경우)를 실행한다:</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">for</span> (i = <span style="color:red">0</span>;
+                  i &lt; <span style="color:red">10</span>; i++) {<br>
+                  <span style="color:red">
+                  </span>&nbsp;&nbsp;&nbsp;
+                  <span style="color:mediumblue">if</span> (i === <span style="color:red">3</span>)
+                  { <span style="color:mediumblue">break</span>; }<br>
+                  <span style="color:red">
+                  </span>&nbsp;&nbsp;&nbsp; text += <span style="color:brown">"The
+                    number is "</span> + i + <span style="color:brown">"&lt;br&gt;"</span>;<br>
+                  <span style="color:red"> </span>}</span></div>
+              <a target="_blank" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_break"
+
+                class="w3-btn w3-margin-bottom">Try it Yourself »</a>
+            </div>
+            <hr>
+            <h2>Continue 문</h2>
+            <p><strong>continue 문은 </strong>(루프에서) 하나의 반복을 멈추고, 어떤 조건이 발생하면,
+              그리고 루프의 다음 반복을 계속한다. </p>
+            <p>다음의 예는 3을 스킵한다: </p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">for</span> (i = <span style="color:red">0</span>;
+                  i &lt; <span style="color:red">10</span>; i++) {<br>
+                  <span style="color:red">
+                  </span>&nbsp;&nbsp;&nbsp; <span style="color:mediumblue">if</span>
+                  (i === <span style="color:red">3</span>) { <span style="color:mediumblue">continue</span>;
+                  }<br>
+                  <span style="color:red">
+                  </span>&nbsp;&nbsp;&nbsp; text += <span style="color:brown">"The
+                    number is "</span> + i + <span style="color:brown">"&lt;br&gt;"</span>;<br>
+                  <span style="color:red">
+                  </span>}
+                </span></div>
+              <a target="_blank" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_continue"
+
+                class="w3-btn w3-margin-bottom">Try it Yourself »</a>
+            </div>
+            <hr>
+            <h2>JavaScript Labels</h2>
+            <p>JavaScript 문은 라벨을 붙일 수 있다.</p>
+            <p>JavaScript 문에 라벨을 지정하려면 문 앞에 콜론 : 을 놓는다.</p>
+            <div class="w3-example">
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  label:<br>
+                  statements</span></div>
+            </div>
+            <p>break 와 continue 문은 코드 블록을 빠져 나올 수 있는 유일한 문장이다. </p>
+            <p>구문:</p>
+            <div class="w3-example">
+              <div class="w3-code notranslate"> break <em>labelname</em>; <br>
+                <br>
+                continue <em>labelname</em>;</div>
+            </div>
+            <p>&nbsp;continue 문 (with or without a label reference) 루프 안에서만 사용할
+              수 있다.</p>
+            <p>break 문은, without a label reference, 루프 또는 switch 안에서만 사용될 수 있다.
+            </p>
+            <p>label 참조와 함께, 어떤 JavaScript 코드 블록을 빠져나오는데도 사용될 수 있다: </p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> cars = [<span style="color:brown">"BMW"</span>,
+                  <span style="color:brown">"Volvo"</span>, <span style="color:brown">"Saab"</span>,
+                  <span style="color:brown">"Ford"</span>];<br>
+                  list: <span style="color:red"> </span>{<br>
+                  &nbsp;&nbsp;&nbsp; text += cars[<span style="color:red">0</span>]
+                  + <span style="color:brown">"&lt;br&gt;"</span>; <br>
+                  &nbsp;&nbsp;&nbsp; text += cars[<span style="color:red">1</span>]
+                  + <span style="color:brown">"&lt;br&gt;"</span>; <br>
+                  &nbsp;&nbsp;&nbsp; text += cars[<span style="color:red">2</span>]
+                  + <span style="color:brown">"&lt;br&gt;"</span>; <br>
+                  &nbsp;&nbsp;&nbsp; <span style="color:mediumblue">break</span>
+                  list;<br>
+                  &nbsp;&nbsp;&nbsp; text += cars[<span style="color:red">3</span>]
+                  + <span style="color:brown">"&lt;br&gt;"</span>; <br>
+                  &nbsp;&nbsp;&nbsp; text += cars[<span style="color:red">4</span>]
+                  + <span style="color:brown">"&lt;br&gt;"</span>; <br>
+                  &nbsp;&nbsp;&nbsp; text += cars[<span style="color:red">5</span>]
+                  + <span style="color:brown">"&lt;br&gt;"</span>; <br>
+                  }</span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_break_list"
+
+                target="_blank">Try it Yourself »</a>
+            </div>
+            <hr>
+            <h2>Test Yourself with Exercises!</h2>
+            <p>
+              <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_break1"
+
+                target="_blank">Exercise 1 »</a>&nbsp;
+              <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_break2"
+
+                target="_blank">Exercise 2 »</a>&nbsp;
+              <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_break3"
+
+                target="_blank">Exercise 3 »</a>&nbsp;
+              <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_break4"
+
+                target="_blank">Exercise 4 »</a>&nbsp;
+              <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_break5"
+
+                target="_blank">Exercise 5 »</a>
+            </p>
+            <br>
+            <div class="chapter">
+               <div class="w3-clear nextprev"> <a class="w3-left w3-btn" href="JavaScript%20for%20Loop.html">«
+                  Previous</a> <a class="w3-right w3-btn" href="JavaScript%20Errors%20Try%20Catch%20Throw.html">Next
+                  Chapter »</a> </div>
+            </div>
+            <hr> </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

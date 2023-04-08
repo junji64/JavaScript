@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+     <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>JavaScript Operators</title>
+    <style>a.menu_html_images{font-weight:bold;}</style>
+    <meta name="viewport" content="width=device-width">
+    <meta name="Keywords" content="HTML,CSS,XML,JavaScript,DOM,jQuery,ASP.NET,PHP,SQL,colors,tutorial,programming,development,training,learning,quiz,primer,lessons,reference,examples,source code,demos,tips,color table,w3c,cascading style sheets,active server pages,Web building,Webmaster">
+    <meta name="Description" content="Free HTML CSS JavaScript DOM jQuery XML AJAX RSS ASP .NET PHP SQL tutorials, references, examples for web building.">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="w3.css">
+  </head>
+  <body>
+    <div id="belowTopnav" style="width:auto">
+      <div id="page" style="width:auto; padding:30px; margin:10px;">
+        <div>
+          <div id="main" style="width:auto">
+            <h1>JavaScript <span class="color_h1">연산자(Operators)</span></h1>
+            <div class="chapter">
+                <div class="w3-clear nextprev"> <a class="w3-left w3-btn" href="JavaScript%20Booleans.html">«
+                  Previous</a> <a class="w3-right w3-btn" href="JavaScript%20Timing%20Events.html">Next
+                  Chapter »</a> </div>
+
+            </div>
+            <hr>
+            <p>할당(assignment) 연산자&nbsp; <b>=</b> JavaScript 변수에 값을 할당하는데
+              사용됩니다.</p>
+            <p>산술(arithmetic) 연산자 + 는 값들을 서로 더하는데 사용됩니다.</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <p>Assign values to variables and add them together:</p>
+              <div class="w3-code notranslate jsHigh"><span style="color:black"><span
+
+                    style="color:red"> </span> <span style="color:mediumblue">var</span>
+                  x = <span style="color:red">5</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+
+                    style="color:green">// assign the value 5 to x<br>
+                  </span><span style="color:red"> </span> <span style="color:mediumblue">var</span>
+                  y = <span style="color:red">2</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+
+                    style="color:green">// assign the value 2 to y<br>
+                  </span><span style="color:red"> </span> <span style="color:mediumblue">var</span>
+                  z = x + y;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green">//
+                    assign the value 7 to z (x + y) </span></span></div>
+              <a target="_blank" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_oper"
+
+                class="w3-btn w3-margin-bottom">Try it Yourself »</a> </div>
+            <br>
+            <hr>
+            <h2>JavaScript 산술 연산자(Arithmetic Operator)</h2>
+            <p>산술 연산자(Arithmetic operators)는 숫자(문자 또는 변수)들에 산술 연산을 수행하는 데 사용됩니다.
+            </p>
+            <p>&nbsp;<b>y=5</b> 로 주어진 경우, 아래 표는 산술 연산자들을 설명합니다: </p>
+            <table class="w3-table-all notranslate">
+              <tbody>
+                <tr>
+                  <th style="width:13%">Operator</th>
+                  <th style="width:32%">Description</th>
+                  <th style="width:15%">Example</th>
+                  <th style="width:15%">Result of x</th>
+                  <th style="width:15%">Result of y</th>
+                  <th style="width:10%">Try it</th>
+                </tr>
+                <tr>
+                  <td>+</td>
+                  <td>Addition</td>
+                  <td>x=y+2</td>
+                  <td>7</td>
+                  <td>5</td>
+                  <td><a target="_blank" class="w3-btn"
+
+                      href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_oper_add">Try
+                      it »</a></td>
+                </tr>
+                <tr>
+                  <td>-</td>
+                  <td>Subtraction</td>
+                  <td>x=y-2</td>
+                  <td>3</td>
+                  <td>5</td>
+                  <td><a target="_blank" class="w3-btn"
+
+                      href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_oper_sub">Try
+                      it »</a></td>
+                </tr>
+                <tr>
+                  <td>*</td>
+                  <td>Multiplication</td>
+                  <td>x=y*2</td>
+                  <td>10</td>
+                  <td>5</td>
+                  <td><a target="_blank" class="w3-btn" 
+                      href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_oper_mult">Try
+                      it »</a></td>
+                </tr>
+                <tr>
+                  <td>/</td>
+                  <td>Division</td>
+                  <td>x=y/2</td>
+                  <td>2.5</td>
+                  <td>5</td>
+                  <td><a target="_blank" class="w3-btn"
+
+                      href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_oper_div">Try
+                      it »</a></td>
+                </tr>
+                <tr>
+                  <td>%</td>
+                  <td>Modulus (division remainder)</td>
+                  <td>x=y%2</td>
+                  <td>1</td>
+                  <td>5</td>
+                  <td><a target="_blank" class="w3-btn"
+
+                      href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_oper_mod">Try
+                      it »</a></td>
+                </tr>
+                <tr>
+                  <td rowspan="2">++</td>
+                  <td rowspan="2">Increment</td>
+                  <td>x=++y</td>
+                  <td>6</td>
+                  <td>6</td>
+                  <td><a target="_blank" class="w3-btn"
+
+                      href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_oper_incr">Try
+                      it »</a></td>
+                </tr>
+                <tr class="fixzebra">
+                  <td>x=y++</td>
+                  <td>5</td>
+                  <td>6</td>
+                  <td><a target="_blank" class="w3-btn"
+
+                      href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_oper_incr2">Try
+                      it »</a></td>
+                </tr>
+                <tr style="background-color:#ffffff;">
+                  <td rowspan="2">--</td>
+                  <td rowspan="2">Decrement</td>
+                  <td>x=--y</td>
+                  <td>4</td>
+                  <td>4</td>
+                  <td><a target="_blank" class="w3-btn"
+
+                      href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_oper_decr">Try
+                      it »</a></td>
+                </tr>
+                <tr style="background-color:#ffffff;">
+                  <td>x=y--</td>
+                  <td>5</td>
+                  <td>4</td>
+                  <td><a target="_blank" class="w3-btn"
+
+                      href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_oper_decr2">Try
+                      it »</a></td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <hr>
+            <h2>Test Yourself with Exercises!</h2>
+            <p> <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_arithmetic1"
+
+                target="_blank">Exercise 1 »</a>&nbsp; <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_arithmetic2"
+
+                target="_blank">Exercise 2 »</a>&nbsp; <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_arithmetic3"
+
+                target="_blank">Exercise 3 »</a>&nbsp; <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_arithmetic4"
+
+                target="_blank">Exercise 4 »</a>&nbsp; <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_arithmetic5"
+
+                target="_blank">Exercise 5 »</a> </p>
+            <hr>
+            <h2>JavaScript 할당 연산자(Assignment Operator)</h2>
+            <p>할당 연산자(Assignment operators) 자바 스크립트의 변수에 값을 할당하는 데 사용됩니다.</p>
+            <p>&nbsp;<b>x=10</b> 과 <b>y=5 </b>로 주어진 경우, 아래 표는 할당 연산자들을 설명합니다 :</p>
+            <table class="w3-table-all notranslate">
+              <tbody>
+                <tr>
+                  <th style="width:13%">Operator</th>
+                  <th style="width:32%">Example</th>
+                  <th style="width:20%">Same As</th>
+                  <th>Result</th>
+                  <th>Try it</th>
+                </tr>
+                <tr>
+                  <td>=</td>
+                  <td>x=y</td>
+                  <td>&nbsp;</td>
+                  <td>x=5</td>
+                  <td><a target="_blank" class="w3-btn"
+
+                      href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_oper_equal">Try
+                      it »</a></td>
+                </tr>
+                <tr>
+                  <td>+=</td>
+                  <td>x+=y</td>
+                  <td>x=x+y</td>
+                  <td>x=15</td>
+                  <td><a target="_blank" class="w3-btn"
+
+                      href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_oper_plusequal">Try
+                      it »</a></td>
+                </tr>
+                <tr>
+                  <td>-=</td>
+                  <td>x-=y</td>
+                  <td>x=x-y</td>
+                  <td>x=5</td>
+                  <td><a target="_blank" class="w3-btn"
+
+                      href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_oper_minequal">Try
+                      it »</a></td>
+                </tr>
+                <tr>
+                  <td>*=</td>
+                  <td>x*=y</td>
+                  <td>x=x*y</td>
+                  <td>x=50</td>
+                  <td><a target="_blank" class="w3-btn"
+
+                      href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_oper_multequal">Try
+                      it »</a></td>
+                </tr>
+                <tr>
+                  <td>/=</td>
+                  <td>x/=y</td>
+                  <td>x=x/y</td>
+                  <td>x=2</td>
+                  <td><a target="_blank" class="w3-btn"
+
+                      href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_oper_divequal">Try
+                      it »</a></td>
+                </tr>
+                <tr>
+                  <td>%=</td>
+                  <td>x%=y</td>
+                  <td>x=x%y</td>
+                  <td>x=0</td>
+                  <td><a target="_blank" class="w3-btn"
+
+                      href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_oper_modequal">Try
+                      it »</a></td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <hr>
+            <h2>JavaScript 문자열(String) 연산자</h2>
+            <p>&nbsp;+ 연산자는 문자열 변수 또는 텍스트 값을 추가 하는데도 사용될 수 있다.</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  txt1 = <span style="color:brown">"John"</span>;<br>
+                  txt2 = <span style="color:brown">"Doe"</span>;<br>
+                  txt3 = txt1 + <span style="color:brown">" "</span> + txt2; </span></div>
+              <p>The result of <strong>txt3</strong> will be:</p>
+              <div class="w3-code notranslate"> John Doe</div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_oper_concatenate"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <p>문자열을 추가하는데&nbsp; +=&nbsp; 연산자도 사용될 수 있다 :</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  txt1 = <span style="color:brown">"What a very "</span>;<br>
+                  txt1 += <span style="color:brown">"nice day"</span>;</span></div>
+              <p>The result of <strong>txt1</strong> will be:</p>
+              <div class="w3-code notranslate"> What a very nice day</div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_oper_concat4"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <hr>
+            <h2>&nbsp;문자열과 숫자 더하기</h2>
+            <p>두 숫자를 더하면 합계를 반환하지만, 숫자와 문자열을 더하면 문자열을 반환합니다:</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  x = <span style="color:red">5</span> + <span style="color:red">5</span>;<br>
+                  y = <span style="color:brown">"5"</span> + <span style="color:red">5</span>;<br>
+                  z = <span style="color:brown">"Hello"</span> + <span style="color:red">5</span>;<br>
+                </span></div>
+              <p>The result of <em>x</em>,<em> y</em>, and <em>z</em> will be:</p>
+              <div class="w3-code notranslate"> 10<br>
+                55<br>
+                Hello5</div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_oper_concat5"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <p><strong>규칙 </strong>: <b>숫자와 문자열를 더하면 결과는 문자열!</b></p>
+            <hr>
+            <h2>Test Yourself with Exercises!</h2>
+            <p> <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_assignment1"
+
+                target="_blank">Exercise 1 »</a>&nbsp; <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_assignment2"
+
+                target="_blank">Exercise 2 »</a>&nbsp; <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_assignment3"
+
+                target="_blank">Exercise 3 »</a>&nbsp; <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_assignment4"
+
+                target="_blank">Exercise 4 »</a>&nbsp; <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_assignment5"
+
+                target="_blank">Exercise 5 »</a> </p>
+
+                <hr>
+
+         <div id="main" style="width:auto">
+            <h1>JavaScript <span class="color_h1">비교(Comparison)</span>
+              및 <span class="color_h1">논리(Logical) 연산자<br>
+              </span></h1>
+
+            <hr>
+            <p class="intro">비교 및 논리 연산자는 <em>true</em> 또는 <em>false</em> 를
+              테스트 하는데 사용된다.</p>
+            <hr>
+            <h2>비교(Comparison) 연산자</h2>
+            <p>비교 연산자는 변수들이나 값들 사이의 동등성이나 차이를 결정하는 논리문(logical statements)에
+              사용됩니다.&nbsp; </p>
+            <p>&nbsp;<b>x=5</b> 로  주어진 경우, 아래 표는 비교 연산자를 설명합니다 :</p>
+            <table class="w3-table-all notranslate">
+              <tbody>
+                <tr>
+                  <th style="width:15%">Operator</th>
+                  <th style="width:40%">Description</th>
+                  <th style="width:18%">Comparing</th>
+                  <th style="width:17%">Returns</th>
+                  <th style="width:10%">Try it</th>
+                </tr>
+                <tr style="background-color:#ffffff;">
+                  <td rowspan="2">==</td>
+                  <td rowspan="2">equal to</td>
+                  <td>x==8</td>
+                  <td><em>false</em></td>
+                  <td><a target="_blank" class="w3-btn"
+
+                      href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison1">Try
+                      it »</a></td>
+                </tr>
+                <tr style="background-color:#ffffff;">
+                  <td>x==5</td>
+                  <td><em>true</em></td>
+                  <td><a target="_blank" class="w3-btn"
+
+                      href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison2">Try
+                      it »</a></td>
+                </tr>
+                <tr class="fixzebra">
+                  <td rowspan="2">===</td>
+                  <td rowspan="2">exactly equal to (equal value and equal type)</td>
+                  <td>x==="5"</td>
+                  <td><em>false</em></td>
+                  <td><a target="_blank" class="w3-btn"
+
+                      href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison3">Try
+                      it »</a></td>
+                </tr>
+                <tr class="fixzebra">
+                  <td>x===5</td>
+                  <td><em>true</em></td>
+                  <td><a target="_blank" class="w3-btn"
+
+                      href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison4">Try
+                      it »</a></td>
+                </tr>
+                <tr>
+                  <td>!=</td>
+                  <td>&nbsp;not equal</td>
+                  <td>x!=8</td>
+                  <td><em>true</em></td>
+                  <td><a target="_blank" class="w3-btn"
+
+                      href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison5">Try
+                      it »</a></td>
+                </tr>
+                <tr>
+                  <td rowspan="2">!==</td>
+                  <td rowspan="2">&nbsp;not equal (different value or different
+                    type)</td>
+                  <td>x!=="5"</td>
+                  <td><em>true</em></td>
+                  <td><a target="_blank" class="w3-btn"
+
+                      href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison6">Try
+                      it »</a></td>
+                </tr>
+                <tr class="fixzebra">
+                  <td>x!==5</td>
+                  <td><em>false</em></td>
+                  <td><a target="_blank" class="w3-btn"
+
+                      href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison7">Try
+                      it »</a></td>
+                </tr>
+                <tr style="background-color:#ffffff;">
+                  <td>&gt;</td>
+                  <td>&nbsp;greater than</td>
+                  <td>x&gt;8</td>
+                  <td><em>false</em></td>
+                  <td><a target="_blank" class="w3-btn"
+
+                      href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison8">Try
+                      it »</a></td>
+                </tr>
+                <tr class="fixzebra">
+                  <td>&lt;</td>
+                  <td>&nbsp;less than</td>
+                  <td>x&lt;8</td>
+                  <td><em>true</em></td>
+                  <td><a target="_blank" class="w3-btn"
+
+                      href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison9">Try
+                      it »</a></td>
+                </tr>
+                <tr style="background-color:#ffffff;">
+                  <td>&gt;=</td>
+                  <td>&nbsp;greater than or equal to</td>
+                  <td>x&gt;=8</td>
+                  <td><em>false</em></td>
+                  <td><a target="_blank" class="w3-btn"
+
+                      href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison10">Try
+                      it »</a></td>
+                </tr>
+                <tr class="fixzebra">
+                  <td>&lt;=</td>
+                  <td>&nbsp;less than or equal to</td>
+                  <td>x&lt;=8</td>
+                  <td><em>true</em></td>
+                  <td><a target="_blank" class="w3-btn"
+
+                      href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison11">Try
+                      it »</a></td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <hr>
+            <h2>How Can it be Used</h2>
+            <p>비교 연산자(Comparison operators)는 값을 비교하고 결과에 따라 조치를 취할 조건문에서 사용할 수
+              있습니다 :</p>
+            <div class="w3-example">
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">if</span> (age &lt; <span style="color:red">18</span>)
+                  text = <span style="color:brown">"Too young"</span>; </span></div>
+            </div>
+            <hr>
+            <h2>논리(Logical) 연산자 </h2>
+            <p>논리 연산자는 변수들과 또는 값들 사이의 논리를 결정하기 위해 사용된다.</p>
+            <p>t <b>x=6 과&nbsp; y=3</b> 로 주어진 경우, 아래 표는 논리 연산자를 설명합니다: </p>
+            <table class="w3-table-all notranslate">
+              <tbody>
+                <tr>
+                  <th style="width:15%">Operator</th>
+                  <th style="width:45%">Description</th>
+                  <th>Example</th>
+                </tr>
+                <tr>
+                  <td>&amp;&amp;</td>
+                  <td>and</td>
+                  <td> (x &lt; 10 &amp;&amp; y &gt; 1) is true</td>
+                </tr>
+                <tr>
+                  <td>||</td>
+                  <td>or</td>
+                  <td>(x==5 || y==5) is false</td>
+                </tr>
+                <tr>
+                  <td>!</td>
+                  <td>not</td>
+                  <td> !(x==y) is true</td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <hr>
+            <h2>조건(Conditional) (Ternary) 연산자 </h2>
+            <p>JavaScript 는 어떤 조건에 따라 변수에 값을 할당하는 조건 연산자가 포함되어 있습니다.</p>
+            <h3>Syntax</h3>
+            <div class="w3-code w3-border notranslate">
+              <div> <em>variablename </em>= (<em>condition</em>) ?<em> value1</em>:<em>value2</em>&nbsp;</div>
+            </div>
+            <h3>Example</h3>
+            <div class="w3-example">
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> voteable = (age &lt;
+                  <span style="color:red">18</span>) ? <span style="color:brown">"Too
+                    young"</span>:<span style="color:brown">"Old enough"</span>;</span></div>
+              <a target="_blank" class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison">Try
+                it Yourself »</a> </div>
+            <br>
+          <hr>
+          <h2>Test Yourself with Exercises!</h2>
+          <p>
+            <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_comparisons1"
+
+              target="_blank">Exercise 1 »</a>&nbsp;
+            <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_comparisons2"
+
+              target="_blank">Exercise 2 »</a>&nbsp;
+            <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_comparisons3"
+
+              target="_blank">Exercise 3 »</a>&nbsp;
+            <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_comparisons4"
+
+              target="_blank">Exercise 4 »</a>&nbsp;
+            <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_comparisons5"
+
+              target="_blank">Exercise 5 »</a>&nbsp;
+            <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_comparisons6"
+
+              target="_blank">Exercise 6 »</a>
+          </p>
+
+
+
+
+
+            <div class="chapter">
+ <div class="w3-clear nextprev"> <a class="w3-left w3-btn" href="JavaScript%20Booleans.html">«
+                  Previous</a> <a class="w3-right w3-btn" href="JavaScript%20Timing%20Events.html">Next
+                  Chapter »</a> </div>
+            </div>
+            <hr> </div>
+        </div>
+      </div>
+    </div>
+    <br>
+  </body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>JavaScript HTML DOM Elements</title>
+    <style>a.menu_js_htmldom_elements{font-weight:bold;}</style>
+    <meta name="viewport" content="width=device-width">
+    <meta name="Keywords" content="HTML,CSS,XML,JavaScript,DOM,jQuery,ASP.NET,PHP,SQL,colors,tutorial,programming,development,training,learning,quiz,primer,lessons,reference,examples,source code,demos,tips,color table,w3c,cascading style sheets,active server pages,Web building,Webmaster">
+    <meta name="Description" content="Free HTML CSS JavaScript DOM jQuery XML AJAX RSS ASP .NET PHP SQL tutorials, references, examples for web building.">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="w3.css">
+  </head>
+  <body>
+    <div id="belowTopnav" style="width:auto">
+      <div id="page" style="width:auto; padding:30px; margin:10px;">
+        <div>
+          <div id="main" style="width:auto"><br>
+            <h1>JavaScript <span class="color_h1">HTML DOM Elements</span></h1>
+            <div class="chapter">
+                           <div class="w3-clear nextprev"> <a class="w3-left w3-btn" href="JavaScript%20HTML%20DOM%20Document.html">«
+                  Previous</a> <a class="w3-right w3-btn" href="JavaScript%20HTML%20DOM%20Changing%20HTML%20Content.html">Next
+                  Chapter »</a> </div>
+
+            </div>
+            <hr>
+            <p class="intro">이 페이지는 HTML 페이지에서 HTML 요소(elements)들은 어떻게 찾아 접근하는지를
+              가르쳐줍니다.</p>
+            <hr>
+            <h2>HTML Elements 찾기</h2>
+            <p>HTML 요소를 조작하는데 JavaScript 가 종종 사용됩니다.</p>
+            <p>이렇게 하려면, 먼저 요소를 찾아야 합니다. 이를 수행하는 몇 가지 방법이 있습니다.:</p>
+            <ul>
+              <li>Finding HTML elements by <strong>id</strong></li>
+              <li>Finding HTML elements by <strong>tag name </strong></li>
+              <li>Finding HTML elements by <strong>class name</strong></li>
+              <li>Finding HTML elements by <strong>HTML object collections</strong></li>
+            </ul>
+            <hr>
+            <h2>Id 로 HTML Elements 찾기 </h2>
+            <p>DOM 에서 HTML 요소를 찾을 수 있는 가장 쉬운 방법은, 요소의 <strong>id</strong> 를
+              사용하는 것입니다.</p>
+            <p>아래의 예는 id="intro" 인 요소를 찾습니다:</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> myElement =
+                  document.getElementById(<span style="color:brown">"intro"</span>);
+                  </span></div> <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_dom_getelementbyid"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <p>요소가 발견되면, 메서드는 요소를 객체(in x)로 반환합니다.</p>
+            <p>요소가 발견되지 않으면, x 는 null 을 가집니다.</p>
+            <hr>
+            <h2>Tag Name 으로 HTML Elements 찾기 </h2>
+            <p>이 예는 모든 &lt;p&gt; 요소를 찾는다 :</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> x =
+                  document.getElementsByTagName(<span style="color:brown">"p"</span>);</span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_dom_getelementsbytagname2"
+
+                target="_blank">Try it Yourself »</a> </div>
+            이 예는 id="main" 인 요소를 찾은 후, "main" 안에 있는 모든 &lt;p&gt; 요소를 찾는다 :
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> x =
+                  document.getElementById(<span style="color:brown">"main"</span>);<br>
+                  <span style="color:mediumblue">var</span> y =
+                  x.getElementsByTagName(<span style="color:brown">"p"</span>);
+                </span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_dom_getelementsbytagname"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <br>
+            <br>
+            <hr>
+            <h2>Class Name 으로 HTML Elements 찾기 </h2>
+            <p>같은 class 이름을 가진 모든 HTML 요소를 찾으려면, getElementsByClassName()를
+              사용합니다.</p>
+            <p>다음의 예는 class="intro" 인 모든 요소의 목록을 반환합니다. </p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> x =
+                  document.getElementsByClassName(<span style="color:brown">"intro"</span>);</span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_dom_getelementsbyclassname"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <table class="lamp">
+              <tbody>
+                <tr>
+                  <th style="width:34px"><img src="http://www.w3schools.com/images/lamp.jpg"
+
+                      alt="Note" style="height:32px;width:32px"></th>
+                  <td>&nbsp;Finding elements by class name does <strong>not
+                      work</strong> in <strong>Internet Explorer 5,6,7, and 8</strong>.</td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <hr>
+            <h2>HTML Object Collections 으로 HTML Elements 찾기 </h2>
+            <p>이 예는 id="frm1"을 갖는 form 요소를 forms collection 형태로 찾아 모든 요소 값을 표시합니
+              다.:</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> x = document.forms[<span
+
+                    style="color:brown">"frm1"</span>];<br>
+                  <span style="color:mediumblue">var</span> text = <span style="color:brown">""</span>;<br>
+                  <span style="color:mediumblue">var</span> i;<br>
+                  <span style="color:mediumblue">for</span> (i = <span style="color:red">0</span>;
+                  i &lt; x.length; i++) {<br>
+                  &nbsp;&nbsp;&nbsp; text += x.elements[i].value + <span style="color:brown">"&lt;br&gt;"</span>;<br>
+                  }<br>
+                  document.getElementById(<span style="color:brown">"demo"</span>).innerHTML
+                  = text;</span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_dom_form_elements"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <p>다음의 HTML 객체 컬렉션(collection)들이 접근 가능합니다.:</p>
+            <ul>
+              <li><a target="_blank" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_doc_anchors">document.anchors</a></li>
+              <li><a target="_blank" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_doc_body">document.body</a></li>
+              <li><a target="_blank" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_doc_element">document.documentElement</a></li>
+              <li><a target="_blank" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_doc_embeds">document.embeds</a></li>
+              <li><a target="_blank" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_doc_forms">document.forms</a></li>
+              <li><a target="_blank" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_doc_head">document.head</a></li>
+              <li><a target="_blank" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_doc_images">document.images</a></li>
+              <li><a target="_blank" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_doc_links">document.links</a></li>
+              <li><a target="_blank" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_doc_scripts">document.scripts</a></li>
+              <li><a target="_blank" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_doc_title">document.title</a></li>
+            </ul>
+            <h2>Test Yourself with Exercises! </h2>
+            <p> <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_dom_elements1"
+
+                target="_blank">Exercise 1 »</a>&nbsp; <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_dom_elements2"
+
+                target="_blank">Exercise 2 »</a>&nbsp; <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_dom_elements3"
+
+                target="_blank">Exercise 3 »</a>&nbsp; <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_dom_elements4"
+
+                target="_blank">Exercise 4 »</a>&nbsp; <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_dom_elements5"
+
+                target="_blank">Exercise 5 »</a> </p>
+            <br>
+            <div class="chapter">
+                           <div class="w3-clear nextprev"> <a class="w3-left w3-btn" href="JavaScript%20HTML%20DOM%20Document.html">«
+                  Previous</a> <a class="w3-right w3-btn" href="JavaScript%20HTML%20DOM%20Changing%20HTML%20Content.html">Next
+                  Chapter »</a> </div>
+            </div>
+            <hr><br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

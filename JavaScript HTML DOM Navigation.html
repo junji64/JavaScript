@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>JavaScript HTML DOM Navigation</title>
+    <style>a.menu_js_htmldom_navigation{font-weight:bold;}</style>
+    <meta name="viewport" content="width=device-width">
+    <meta name="Keywords" content="HTML,CSS,XML,JavaScript,DOM,jQuery,ASP.NET,PHP,SQL,colors,tutorial,programming,development,training,learning,quiz,primer,lessons,reference,examples,source code,demos,tips,color table,w3c,cascading style sheets,active server pages,Web building,Webmaster">
+    <meta name="Description" content="Free HTML CSS JavaScript DOM jQuery XML AJAX RSS ASP .NET PHP SQL tutorials, references, examples for web building.">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="/w3.css">
+  </head>
+  <body>
+    <div id="belowTopnav" style="width:auto">
+      <div id="page" style="width:auto; padding:30px; margin:10px;">
+        <div>
+          <div id="main" style="width:auto"><br>
+            <h1>JavaScript <span class="color_h1">HTML DOM <strong>탐색</strong>(Navigation)</span></h1>
+            <div class="chapter">
+              <div class="w3-clear nextprev"> <a class="w3-left w3-btn" href="JavaScript%20HTML%20DOM%20Events.html">«
+                  Previous</a> <a class="w3-right w3-btn" href="JavaScript%20HTML%20DOM%20Nodes.html">Next
+                  Chapter »</a> </div>
+
+            </div>
+            <hr>
+            <p class="intro">HTML DOM 을 가지고, 노드 관계(node relationships)를 사용하여 노드
+              트리(node tree)를 탐색 할 수 있습니다.</p>
+            <hr>
+            <h2>DOM 노드(Nodes)</h2>
+            <p>W3C HTML DOM 표준에 따르면, HTML 문서의 모든 것은 노드이다 : </p>
+            <ul>
+              <li>전체 document 는 document 노드이다 </li>
+              <li>모든 HTML 요소는 요소 노드이다</li>
+              <li>HTML 요소 내부의 텍스트는 텍스트 노드입니다 </li>
+              <li>모든 HTML 속성(attribute)은 속성 노드이다</li>
+              <li>모든 주석(comments) 은 주석 노드이다.</li>
+            </ul>
+            <div class="example_code notranslate" style="text-align:center"> <img
+
+                src="http://www.w3schools.com/js/pic_htmltree.gif" alt="DOM HTML tree"
+
+                border="0" height="266" width="486"> </div>
+            <p>HTML DOM 으로, 노드 트리의 모든 노드는&nbsp; JavaScript 에 의해 접근 될 수 있다.</p>
+            <p>새로운 노드가 생성 될 수 있고, 모든 노드가 수정 또는 삭제 될 수 있다.</p>
+            <hr>
+            <h2>노드 관계</h2>
+            <p>노드 트리의 노드는 서로에 대해 계층적 관계(hierarchical relationship)를 가진다. </p>
+            <p>parent, child, 그리고 sibling 이라는 용어가 관계를 설명하는 데 사용됩니다. </p>
+            <ul>
+              <li>노드 트리의 최상위 노드는 root (또는 root 노드) 라고 부른다.</li>
+              <li>모든 노드는&nbsp; root (부모가 없는)를 제외하고 정확히 하나의 parent 를 가진다.</li>
+              <li>노드는 여러 children 를 가질 수 있습니다</li>
+              <li>Siblings (brothers or sisters)은 같은 parent 를 가진 노드입니다 </li>
+            </ul>
+            <div class="w3-row-padding">
+              <div class="w3-half">
+                <div class="w3-code w3-border notranslate htmlHigh"> <span style="color:brown"><span
+
+                      style="color:mediumblue">&lt;</span>html<span style="color:mediumblue">&gt;</span></span><br>
+                  <br>
+                  &nbsp; <span style="color:brown"><span style="color:mediumblue">&lt;</span>head<span
+
+                      style="color:mediumblue">&gt;</span></span><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:brown"><span
+
+                      style="color:mediumblue">&lt;</span>title<span style="color:mediumblue">&gt;</span></span>DOM
+                  Tutorial<span style="color:brown"><span style="color:mediumblue">&lt;</span>/title<span
+
+                      style="color:mediumblue">&gt;</span></span><br>
+                  &nbsp; <span style="color:brown"><span style="color:mediumblue">&lt;</span>/head<span
+
+                      style="color:mediumblue">&gt;</span></span><br>
+                  <br>
+                  &nbsp; <span style="color:brown"><span style="color:mediumblue">&lt;</span>body<span
+
+                      style="color:mediumblue">&gt;</span></span><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:brown"><span
+
+                      style="color:mediumblue">&lt;</span>h1<span style="color:mediumblue">&gt;</span></span>DOM
+                  Lesson one<span style="color:brown"><span style="color:mediumblue">&lt;</span>/h1<span
+
+                      style="color:mediumblue">&gt;</span></span><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:brown"><span
+
+                      style="color:mediumblue">&lt;</span>p<span style="color:mediumblue">&gt;</span></span>Hello
+                  world!<span style="color:brown"><span style="color:mediumblue">&lt;</span>/p<span
+
+                      style="color:mediumblue">&gt;</span></span><br>
+                  &nbsp; <span style="color:brown"><span style="color:mediumblue">&lt;</span>/body<span
+
+                      style="color:mediumblue">&gt;</span></span><br>
+                  <br>
+                  <span style="color:brown"><span style="color:mediumblue">&lt;</span>/html<span
+
+                      style="color:mediumblue">&gt;</span></span> </div>
+              </div>
+              <div class="w3-half"> <img style="margin-top:30px;width:362px;height:255px"
+
+                  src="http://www.w3schools.com/js/pic_navigate.gif" alt="Node tree">
+              </div>
+            </div>
+            <p>위의 HTML은 다음과 같이 읽힐 수 있습니다 :</p>
+            <ul>
+              <li>&lt;html&gt; 이 root 노드</li>
+              <li>&lt;html&gt; 는 부모(parents)가 없음 </li>
+              <li>&lt;html&gt; 은 &lt;head&gt; 와 &lt;body&gt;의 부모(parent)</li>
+              <li>&lt;head&gt; 는 &lt;html&gt; 의 첫 번째 자녀(child)</li>
+              <li>&lt;body&gt; 는 &lt;html&gt; 의 마지막&nbsp; 자녀(child)</li>
+            </ul>
+            <p>and:</p>
+            <ul>
+              <li>&lt;head&gt; 는 한 자녀(child) &lt;title&gt; 를 가진다</li>
+              <li>&lt;title&gt;&nbsp; 는 한 자녀(child) (a text node): "DOM
+                Tutorial" 를 가진다.</li>
+              <li>&lt;body&gt; 는 두 자녀(children): &lt;h1&gt; 과 &lt;p&gt; 를 가진다</li>
+              <li>&lt;h1&gt; 는 한 자녀(child): "DOM Lesson one" 를 가진다</li>
+              <li>&lt;p&gt; 는 한 자녀(child): "Hello world!" 를 가진다</li>
+              <li>&lt;h1&gt; 과 &lt;p&gt; 는 형제(siblings) 이다.</li>
+            </ul>
+            <hr>
+            <h2>Nodes 들 사이의 탐색</h2>
+            <p>JavaScript 로 노드들 사이를 이동하기 위해 다음과 같은 노드 속성(properties)을 사용할 수 있습니다
+              :</p>
+            <ul>
+              <li>parentNode</li>
+              <li>childNodes[<em>nodenumber</em>]</li>
+              <li>firstChild</li>
+              <li>lastChild</li>
+              <li>nextSibling</li>
+              <li>previousSibling</li>
+            </ul>
+            <hr>
+            <h2>Warning !</h2>
+            <p>DOM 처리에서 흔한 오류는 텍스트를 포함하는 요소 노드를 예상하는 것입니다.</p>
+            <p>다음 예에서: <b>&lt;title&gt;DOM Tutorial&lt;/title&gt;</b>,&nbsp; 요소
+              노드 &lt;title&gt; 은 텍스트를 포함하지 않는다. 대신에 "DOM Tutorial" 이라는 값을 가진 <b>text
+                node</b> 를 갖는다</p>
+            <p>text&nbsp; 노드의 값은 노드의 <b>innerHTML</b> 속성(property), 또는 <strong>nodeValue
+                </strong>로 접근 될 수 있다.</p>
+            <hr>
+            <h2><strong>자식</strong>(Child) <strong>노드와 노드 값</strong></h2>
+            <p>innerHTML 속성 이외에, 요소의 내용을 얻기 위해 childNodes 와 nodeValue를 속성을 사용할 수
+              있습니다. </p>
+            <p>다음 예에서는 id="intro" 인 &lt;h1&gt; 요소의 노드 값을 가져다가 &lt;p&gt; 요소에
+              복사합니다:</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate htmlHigh"> <span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>html<span style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>body<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>h1<span
+
+                    style="color:red"> id<span style="color:mediumblue">="intro"</span></span><span
+
+                    style="color:mediumblue">&gt;</span></span>My First Page<span
+
+                  style="color:brown"><span style="color:mediumblue">&lt;</span>/h1<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>p<span
+
+                    style="color:red"> id<span style="color:mediumblue">="demo"</span></span><span
+
+                    style="color:mediumblue">&gt;</span></span>Hello!<span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>/p<span style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>script<span
+
+                    style="color:mediumblue">&gt;</span></span><span style="color:black"><br>
+                  <span style="color:mediumblue">var</span> myText =
+                  document.getElementById(<span style="color:brown">"intro"</span>).childNodes[<span
+
+                    style="color:red">0</span>].nodeValue;<br>
+                  document.getElementById(<span style="color:brown">"demo"</span>).innerHTML
+                  = myText;<br>
+                </span><span style="color:brown"><span style="color:mediumblue">&lt;</span>/script<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>/body<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>/html<span
+
+                    style="color:mediumblue">&gt;</span></span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_dom_nodevalue"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <p>위의 예에서, childNodes 와 nodeValue 는 속성(properties)이지만,
+              getElementById 는 메서드입니다.</p>
+            <p>이 튜토리얼에서 우리는 innerHTML 속성(property)을 사용합니다. 그러나 위의 방법을 배우는 것은 트리
+              구조와 DOM의 탐색을 이해하는 데 유용합니다.</p>
+            <p>firstChild 속성의 사용은 childNodes[0] 의 사용과 동일합니다.:</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate htmlHigh"> <span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>html<span style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>body<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>h1<span
+
+                    style="color:red"> id<span style="color:mediumblue">="intro"</span></span><span
+
+                    style="color:mediumblue">&gt;</span></span>My First Page<span
+
+                  style="color:brown"><span style="color:mediumblue">&lt;</span>/h1<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>p<span
+
+                    style="color:red"> id<span style="color:mediumblue">="demo"</span></span><span
+
+                    style="color:mediumblue">&gt;</span></span>Hello World!<span
+
+                  style="color:brown"><span style="color:mediumblue">&lt;</span>/p<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>script<span
+
+                    style="color:mediumblue">&gt;</span></span><span style="color:black"><br>
+                  myText = document.getElementById(<span style="color:brown">"intro"</span>).firstChild.nodeValue;<br>
+                  document.getElementById(<span style="color:brown">"demo"</span>).innerHTML
+                  = myText;<br>
+                </span><span style="color:brown"><span style="color:mediumblue">&lt;</span>/script<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>/body<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>/html<span
+
+                    style="color:mediumblue">&gt;</span></span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_dom_firstchild"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <br>
+            <hr>
+            <h2>DOM Root Nodes</h2>
+            <p>전체 문서(document)에 접근할 수 있는 두 가지 특별한 속성(properties) 이 있습니다.:</p>
+            <ul>
+              <li>document.documentElement - 전체 문서(document)</li>
+              <li>document.body - 문서(document) 의 본문(body)</li>
+            </ul>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate htmlHigh"> <span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>html<span style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>body<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>p<span
+
+                    style="color:mediumblue">&gt;</span></span>Hello World!<span
+
+                  style="color:brown"><span style="color:mediumblue">&lt;</span>/p<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>div<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>p<span
+
+                    style="color:mediumblue">&gt;</span></span>The DOM is very
+                useful!<span style="color:brown"><span style="color:mediumblue">&lt;</span>/p<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>p<span
+
+                    style="color:mediumblue">&gt;</span></span>This example
+                demonstrates the <span style="color:brown"><span style="color:mediumblue">&lt;</span>b<span
+
+                    style="color:mediumblue">&gt;</span></span>document.body<span
+
+                  style="color:brown"><span style="color:mediumblue">&lt;</span>/b<span
+
+                    style="color:mediumblue">&gt;</span></span> property.<span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>/p<span style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>/div<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>script<span
+
+                    style="color:mediumblue">&gt;</span></span><span style="color:black"><br>
+                  alert(document.body.innerHTML);<br>
+                </span><span style="color:brown"><span style="color:mediumblue">&lt;</span>/script<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>/body<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>/html<span
+
+                    style="color:mediumblue">&gt;</span></span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_dom_body"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <br>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate htmlHigh"> <span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>html<span style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>body<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>p<span
+
+                    style="color:mediumblue">&gt;</span></span>Hello World!<span
+
+                  style="color:brown"><span style="color:mediumblue">&lt;</span>/p<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>div<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>p<span
+
+                    style="color:mediumblue">&gt;</span></span>The DOM is very
+                useful!<span style="color:brown"><span style="color:mediumblue">&lt;</span>/p<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>p<span
+
+                    style="color:mediumblue">&gt;</span></span>This example
+                demonstrates the <span style="color:brown"><span style="color:mediumblue">&lt;</span>b<span
+
+                    style="color:mediumblue">&gt;</span></span>document.documentElement<span
+
+                  style="color:brown"><span style="color:mediumblue">&lt;</span>/b<span
+
+                    style="color:mediumblue">&gt;</span></span> property.<span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>/p<span style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>/div<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>script<span
+
+                    style="color:mediumblue">&gt;</span></span><span style="color:black"><br>
+                  alert(document.documentElement.innerHTML);<br>
+                </span><span style="color:brown"><span style="color:mediumblue">&lt;</span>/script<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>/body<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>/html<span
+
+                    style="color:mediumblue">&gt;</span></span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_dom_document"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <ul>
+            </ul>
+            <hr>
+            <h2>nodeName 속성(Property)</h2>
+            <p>nodeName 속성(property)은 노드의 이름을 지정합니다.</p>
+            <ul>
+              <li>nodeName 은 읽기 전용(read-only) 입니다</li>
+              <li>요소 노드의 nodeName 은 태그 이름과 동일합니다</li>
+              <li>속성(attribute) 노드의 nodeName 은 속성(attribute)의 이름입니다</li>
+              <li>텍스트 노드의 nodeName 은 항상 #text 입니다.</li>
+              <li>문서(document) 노드의 nodeName 은 항상 #document 입니다.</li>
+            </ul>
+            <p><b>Note:</b> nodeName 은 항상 HTML 요소의 대문자 태그 이름이 포함되어 있습니다. </p>
+            <hr>
+            <h2>nodeValue 속성(Property)</h2>
+            <p>nodeValue 속성(property)은 노드의 값을 지정합니다.</p>
+            <ul>
+              <li>요소 노드의 nodeValue 는 정의되지 않습니다.</li>
+              <li>텍스트 노드의 nodeValue 는 텍스트 자체입니다.</li>
+              <li>속성(attribute) 노드의 nodeValue 는 속성(attribute) 값 입니다.</li>
+            </ul>
+            <hr>
+            <h2>nodeType 속성(Property)</h2>
+            <p>nodeType 속성은 노드의 타입을 반환합니다. nodeType 은 읽기 전용(read only) 입니다..</p>
+            <p>가장 중요한 node types 들은 다음과 같습니다.:</p>
+            <table class="w3-table-all notranslate">
+              <tbody>
+                <tr>
+                  <th>Element type</th>
+                  <th>NodeType</th>
+                </tr>
+                <tr>
+                  <td>Element</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td>Attribute</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>Text</td>
+                  <td>3</td>
+                </tr>
+                <tr>
+                  <td>Comment</td>
+                  <td>8</td>
+                </tr>
+                <tr>
+                  <td>Document</td>
+                  <td>9</td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <br>
+            <div class="chapter">
+              <div class="w3-clear nextprev"> <a class="w3-left w3-btn" href="JavaScript%20HTML%20DOM%20Events.html">«
+                  Previous</a> <a class="w3-right w3-btn" href="JavaScript%20HTML%20DOM%20Nodes.html">Next
+                  Chapter »</a> </div>
+            </div>
+            <hr></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

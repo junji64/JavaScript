@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>JavaScript HTML DOM Changing CSS</title>
+    <style>a.menu_js_htmldom_css{font-weight:bold;}</style>
+    <meta name="viewport" content="width=device-width">
+    <meta name="Keywords" content="HTML,CSS,XML,JavaScript,DOM,jQuery,ASP.NET,PHP,SQL,colors,tutorial,programming,development,training,learning,quiz,primer,lessons,reference,examples,source code,demos,tips,color table,w3c,cascading style sheets,active server pages,Web building,Webmaster">
+    <meta name="Description" content="Free HTML CSS JavaScript DOM jQuery XML AJAX RSS ASP .NET PHP SQL tutorials, references, examples for web building.">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="w3.css">
+  </head>
+  <body>
+    <div id="belowTopnav" style="width:auto">
+      <div id="page" style="width:auto; padding:30px; margin:10px;">
+        <div>
+          <div id="main" style="width:auto"><br>
+            <h1>JavaScript <span class="color_h1">HTML DOM - Changing CSS</span></h1>
+            <div class="chapter">
+                <div class="w3-clear nextprev"> <a class="w3-left w3-btn" href="JavaScript%20HTML%20DOM%20Changing%20HTML%20Content.html">«
+                  Previous</a> <a class="w3-right w3-btn" href="JavaScript%20HTML%20DOM%20Events.html">Next
+                  Chapter »</a> </div>
+
+            </div>
+            <hr>
+            <p class="intro">HTML DOM 은 JavaScript 로 HTML 요소의 스타일(style )을 변경할 수
+              있게 해줍니다.</p>
+            <hr>
+            <h2>Changing HTML Style</h2>
+            <p>HTML 요소의 스타일을 변경하려면 다음 구문을 사용합니다:</p>
+            <div class="w3-code w3-border notranslate">
+              <div> document.getElementById(<i>id</i>).style.<i>property</i>=<i>new
+                  style</i> </div>
+            </div>
+            <p>다음의 예는 &lt;p&gt; 요소의 스타일을 변경합니다 :</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate htmlHigh"> <span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>html<span style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>body<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>p<span
+
+                    style="color:red"> id<span style="color:mediumblue">="p2"</span></span><span
+
+                    style="color:mediumblue">&gt;</span></span>Hello World!<span
+
+                  style="color:brown"><span style="color:mediumblue">&lt;</span>/p<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>script<span
+
+                    style="color:mediumblue">&gt;</span></span><span style="color:black"><br>
+                  document.getElementById(<span style="color:brown">"p2"</span>).style.color
+                  = <span style="color:brown">"blue"</span>;<br>
+                </span><span style="color:brown"><span style="color:mediumblue">&lt;</span>/script<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>p<span
+
+                    style="color:mediumblue">&gt;</span></span>The paragraph
+                above was changed by a script.<span style="color:brown"><span style="color:mediumblue">&lt;</span>/p<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>/body<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>/html<span
+
+                    style="color:mediumblue">&gt;</span></span> </div>
+              <a target="_blank" class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_change_style">Try
+                it Yourself »</a> </div>
+            <br>
+            <hr>
+            <h2><strong>이벤트 사용</strong></h2>
+            <p>HTML DOM 이벤트가 발생할 때 코드를 실행할 수 있습니다.</p>
+            <p>이벤트는 HTML 요소에 "다음과 같은 일이 생기면" 브라우저에 의해 생성된다 :</p>
+            <ul>
+              <li>요소를 클릭하면</li>
+              <li>페이지가 로드되면</li>
+              <li>입력 필드가 변경되면</li>
+            </ul>
+            <p>이 예에서는 사용자가 버튼을 클릭 할 때, id="id1" 인 HTML 요소의 스타일을 변경한다 :</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate htmlHigh"> <span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>!DOCTYPE<span style="color:red">
+                    html</span><span style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>html<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>body<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>h1<span
+
+                    style="color:red"> id<span style="color:mediumblue">="id1"</span></span><span
+
+                    style="color:mediumblue">&gt;</span></span>My Heading 1<span
+
+                  style="color:brown"><span style="color:mediumblue">&lt;</span>/h1<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>button<span
+
+                    style="color:red"> type<span style="color:mediumblue">="button"</span>
+                    <br>
+                    onclick<span style="color:mediumblue">="document.getElementById('id1').style.color
+                      = 'red'"</span></span><span style="color:mediumblue">&gt;</span></span><br>
+                Click Me!<span style="color:brown"><span style="color:mediumblue">&lt;</span>/button<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>/body<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>/html<span
+
+                    style="color:mediumblue">&gt;</span></span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_dom_color2"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <br>
+            <hr>
+            <h2>More Examples</h2>
+            <p><a href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_visibility"
+
+                target="_blank">Visibility</a> How to make an element invisible.
+              Do you want the element to show or not?</p>
+            <hr>
+            <h2>HTML DOM Style Object Reference</h2>
+            <p>&nbsp;<a href="http://www.w3schools.com/jsref/dom_obj_style.asp">HTML
+                DOM Style Object Reference</a>.</p>
+            <br>
+            <h2>Test Yourself with Exercises!</h2>
+            <p> <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_dom_css1"
+
+                target="_blank">Exercise 1 »</a>&nbsp; <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_dom_css2"
+
+                target="_blank">Exercise 2 »</a>&nbsp; <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_dom_css3"
+
+                target="_blank">Exercise 3 »</a>&nbsp; <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_dom_css4"
+
+                target="_blank">Exercise 4 »</a>&nbsp; <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_dom_css5"
+
+                target="_blank">Exercise 5 »</a> </p>
+            <div class="chapter">
+                <div class="w3-clear nextprev"> <a class="w3-left w3-btn" href="JavaScript%20HTML%20DOM%20Changing%20HTML%20Content.html">«
+                  Previous</a> <a class="w3-right w3-btn" href="JavaScript%20HTML%20DOM%20Events.html">Next
+                  Chapter »</a> </div>
+            </div>
+            <hr> </div>
+        </div>
+      </div>
+      <br>
+    </div>
+  </body>
+</html>

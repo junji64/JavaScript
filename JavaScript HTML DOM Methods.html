@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>JavaScript HTML DOM Methods</title>
+    <style>a.menu_js_htmldom_methods{font-weight:bold;}</style>
+    <meta name="viewport" content="width=device-width">
+    <meta name="Keywords" content="HTML,CSS,XML,JavaScript,DOM,jQuery,ASP.NET,PHP,SQL,colors,tutorial,programming,development,training,learning,quiz,primer,lessons,reference,examples,source code,demos,tips,color table,w3c,cascading style sheets,active server pages,Web building,Webmaster">
+    <meta name="Description" content="Free HTML CSS JavaScript DOM jQuery XML AJAX RSS ASP .NET PHP SQL tutorials, references, examples for web building.">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="w3.css">
+  </head>
+  <body>
+    <div id="belowTopnav" style="width:auto">
+      <div id="page" style="width:auto; padding:30px; margin:10px;">
+        <div>
+          <div id="main" style="width:auto"><br>
+            <h1>JavaScript - <span class="color_h1">HTML DOM Methods </span></h1>
+            <div class="chapter">
+                           <div class="w3-clear nextprev"> <a class="w3-left w3-btn" href="JavaScript%20HTML%20DOM.html">«
+                  Previous</a> <a class="w3-right w3-btn" href="JavaScript%20HTML%20DOM%20Document.html">Next
+                  Chapter »</a> </div>
+
+            </div>
+            <hr>
+            <p class="intro">HTML DOM 메서드(methods)는 (HTML 요소에) 수행할 수 있는 행동(<strong>actions</strong>)
+              들 이다. </p>
+            <p class="intro">HTML DOM 속성(properties)은 설정하거나 변경할 수 있는 (HTML 요소의)
+              값(<strong>values</strong>)들 이다. </p>
+            <hr>
+            <h2>The DOM Programming Interface</h2>
+            <p>HTML DOM 은 JavaScript (그리고 다른 programming languages)로 액세스 할 수 있다.
+            </p>
+            <p>DOM 에서, 모든 HTML 요소는 객체(<strong>objects</strong>)로 정의 된다.</p>
+            <p>프로그래밍 인터페이스(programming interface)는 각 객체의 속성과 메서드들이다. </p>
+            속성(<b>property</b>)은 (HTML 요소의 내용을 바꾸는 것 같이) 읽을 수도 설정할 수도 있는 값이다.
+            <p>메서드(<b>method</b>)는 (HTML 요소를 추가하거나 삭제하는 것 같이) 할 수 있는 행동(action)
+              이다.</p>
+            <hr>
+            <h2>Example</h2>
+            <p>다음의 예는 id="demo" 인&nbsp;&lt;p&gt; element 의 내용(innerHTML) 을
+              변경한다.:</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate htmlHigh"> <span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>html<span style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>body<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>p<span
+
+                    style="color:red"> id<span style="color:mediumblue">="demo"</span></span><span
+
+                    style="color:mediumblue">&gt;</span></span><span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>/p<span style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>script<span
+
+                    style="color:mediumblue">&gt;</span></span><span style="color:black"><br>
+                  document.getElementById(<span style="color:brown">"demo"</span>).innerHTML
+                  = <span style="color:brown">"Hello World!"</span>;<br>
+                </span><span style="color:brown"><span style="color:mediumblue">&lt;</span>/script<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>/body<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>/html<span
+
+                    style="color:mediumblue">&gt;</span></span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_dom_method"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <p>위의 예에서, getElementById 이 메서드(<strong>method</strong>) 이며,
+              innerHTML 이 속성(<strong>property</strong>) 이다.</p>
+            <hr>
+            <h2>&nbsp;getElementById() Method</h2>
+            <p>HTML 요소에 접근하는 가장 일반적인 방법은 요소의 ID를 사용하는 것이다.</p>
+            <p>위의 예에서, 요소를 찾는데 getElementById 메서드가 id="demo" 를 사용하였다.</p>
+            <hr>
+            <h2>&nbsp;innerHTML Property</h2>
+            <p>요소의 내용을 얻을 수 있는 가장 쉬운 방법은 <strong>innerHTML</strong> 속성을 사용하는
+              것이다 .</p>
+            <p>&nbsp;innerHTML 속성은 HTML 요소의 내용을 가져 오거나 교체에 유용하다. </p>
+            <table class="lamp">
+              <tbody>
+                <tr>
+                  <th style="width:34px"><img src="http://www.w3schools.com/images/lamp.jpg"
+
+                      alt="Note" style="height:32px;width:32px"></th>
+                  <td>&nbsp; innerHTML 속성은 &lt;html&gt; 과 &lt;body&gt;을 포함한 모든
+                    HTML 요소를 얻거나 변경하는 데 사용할 수 있습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <br>
+            <div class="chapter">
+<div class="w3-clear nextprev"> <a class="w3-left w3-btn" href="JavaScript%20HTML%20DOM.html">«
+                  Previous</a> <a class="w3-right w3-btn" href="JavaScript%20HTML%20DOM%20Document.html">Next
+                  Chapter »</a> </div>
+            </div>
+            <hr> </div>
+        </div>
+      </div>
+      <br>
+    </div>
+  </body>
+</html>

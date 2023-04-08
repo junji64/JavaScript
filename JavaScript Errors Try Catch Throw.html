@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>JavaScript Errors</title>
+    <style>a.menu_js_loop_for{font-weight:bold;}</style>
+    <meta name="viewport" content="width=device-width">
+    <meta name="Keywords" content="HTML,CSS,XML,JavaScript,DOM,jQuery,ASP.NET,PHP,SQL,colors,tutorial,programming,development,training,learning,quiz,primer,lessons,reference,examples,source code,demos,tips,color table,w3c,cascading style sheets,active server pages,Web building,Webmaster">
+    <meta name="Description" content="Free HTML CSS JavaScript DOM jQuery XML AJAX RSS ASP .NET PHP SQL tutorials, references, examples for web building.">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="w3.css">
+  </head>
+  <body>
+    <div id="belowTopnav" style="width:auto">
+      <div id="page" style="width:auto; padding:30px; margin:10px;">
+        <div>
+          <div id="main" style="width:auto"><br>
+            <h1>JavaScript <span class="color_h1">Errors - Throw 와 Try to Catch</span></h1>
+            <div class="chapter">
+                             <div class="w3-clear nextprev"> <a class="w3-left w3-btn" href="JavaScript%20Breaks.html">«
+                  Previous</a> <a class="w3-right w3-btn" href="JavaScript%20RegExp%20Object.html">Next
+                  Chapter »</a> </div>
+            </div>
+            <hr>
+            <p class="intro"><strong>try</strong> 문은 코드블록의 오류를 테스트할 수 있다. </p>
+            <p class="intro"><strong>catch</strong> 문은 오류를 처리하게 해준다.</p>
+            <p class="intro"><strong>throw</strong> 문은 사용자 지정 오류를 생성할 수 있다.</p>
+            <hr>
+            <h2>Errors Will Happen!</h2>
+            <p>JavaScript 엔진이 JavaScript 코드를 실행하면, 여러가지 오류가 발생 할 수 있다:</p>
+            <p>그것은 문법 오류 일 수 있으며, 일반적인 코딩 오류거나 오타 일 수 있다.</p>
+            <p>잘못 썼거나 언어에서의 빠진 기능 (아마도 브라우저 차이 때문).</p>
+            <p>사용자 또는 인터넷 서버로부터의&nbsp; 잘못된 입력에 의한 오류 일 수 도 있다.</p>
+            <p>그리고, 물론 많은 다른 예상할 수 없는 것들 일 수 있다. </p>
+            <hr>
+            <h2>JavaScript Throws Errors</h2>
+            <p>무엇인가가 잘 못 되서 오류가 발생하면, JavaScript 엔진은 일반적으로 중지하고, 오류 메시지를 생성합니다.</p>
+            <p>이것의 기술적인 용어는 : JavaScript 가 error를 <strong>throw</strong> 했다.</p>
+            <hr>
+            <h2>JavaScript try and catch</h2>
+            <p><strong>try</strong> 문은 코드블록이 실행 되는 동안 오류에 대하여 테스트되도록 정의 할 수 있다.
+            </p>
+            <p><strong>catch</strong> 문은, try 블록에서 오류가 발생하면, 실행될 코드 블록을 정의 할 수
+              있게 해 준다. </p>
+            <p>JavaScript 문에서&nbsp; <strong>try</strong> 와 <strong>catch</strong>
+              는 쌍으로 따라온다.</p>
+            <h3><strong>Syntax</strong></h3>
+            <div class="w3-example">
+              <div class="w3-code notranslate"> try {<br>
+                &nbsp;&nbsp;&nbsp; <em>Block of code to try<br>
+                </em>}<br>
+                catch(err) {<br>
+                &nbsp;&nbsp;&nbsp; <em>Block of code to handle errors<br>
+                </em>} </div>
+            </div>
+            <h2>Examples</h2>
+            <p>아래의 예는 의도적으로 try 블록 안의 코드에 오타를 만들어 넣었다.</p>
+            <p>catch 블록은 try 블록에서 오류를 캐치하고 그것을 처리하는 코드를 실행한다.:</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate htmlHigh"> <span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>!DOCTYPE<span style="color:red">
+                    html</span><span style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>html<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>body<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>p<span
+
+                    style="color:red"> id<span style="color:mediumblue">="demo"</span></span><span
+
+                    style="color:mediumblue">&gt;</span></span><span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>/p<span style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>script<span
+
+                    style="color:mediumblue">&gt;</span></span><span style="color:black"><br>
+                  <span style="color:mediumblue">try</span> {<br>
+                  &nbsp;&nbsp;&nbsp; adddlert(<span style="color:brown">"Welcome
+                    guest!"</span>);<br>
+                  }<br>
+                  <span style="color:mediumblue">catch</span>(err) {<br>
+                  &nbsp;&nbsp;&nbsp; document.getElementById(<span style="color:brown">"demo"</span>).innerHTML
+                  = err.message;<br>
+                  }<br>
+                </span><span style="color:brown"><span style="color:mediumblue">&lt;</span>/script<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>/body<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>/html<span
+
+                    style="color:mediumblue">&gt;</span></span></div>
+              <a target="_blank" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_try_catch"
+
+                class="w3-btn w3-margin-bottom">Try it Yourself »</a> </div>
+            <br>
+            <hr>
+            <h2>Throw 문</h2>
+            <p>throw 문은 사용자 지정 오류를 생성할 수 있게 해준다. </p>
+            <p>올바른 기술적 용어는 <strong>예외를</strong> 만들거나 <strong>던지다</strong>(create
+              or <strong>throw an exception</strong>) 이다.</p>
+            <p>throw 문을 try 와 catch 와 함께 사용하면, 프로그램 흐름을 제어 할 수 있고 사용자 지정 오류 메시지를
+              생성할 수 있다.</p>
+            <h3><strong>Syntax</strong></h3>
+            <div class="w3-example">
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">throw</span> <span style="color:brown">"Too
+                    big"</span>;&nbsp;&nbsp;&nbsp; <span style="color:green">//
+                    throw a text<br>
+                  </span>
+                  <span style="color:mediumblue">throw</span> <span style="color:red">500</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span style="color:green">// throw a number</span></span></div>
+            </div>
+            <p>예외(exception)는 JavaScript String, Number, Boolean 또는 Object 일 수
+              있다.</p>
+            <h2>Example</h2>
+            <p>이 예는 입력 변수 값을 검사한다. 값이 잘못 되면 예외(exception(error))가 던져진다(is
+              thrown). 에러는 catch 문에 의해서 잡혀(caught)지고 사용자 지정 오류 메시지가 보여진다:</p>
+            <div class="w3-example">
+              <div class="w3-code notranslate htmlHigh"> <span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>!DOCTYPE<span style="color:red">
+                    html</span><span style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>html<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>body<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>p<span
+
+                    style="color:mediumblue">&gt;</span></span>Please input a
+                number between 5 and 10:<span style="color:brown"><span style="color:mediumblue">&lt;</span>/p<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>input<span
+
+                    style="color:red"> id<span style="color:mediumblue">="demo"</span>
+                    type<span style="color:mediumblue">="text"</span></span><span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>button<span
+
+                    style="color:red"> type<span style="color:mediumblue">="button"</span>
+                    onclick<span style="color:mediumblue">="myFunction()"</span></span><span
+
+                    style="color:mediumblue">&gt;</span></span>Test Input<span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>/button<span style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>p<span
+
+                    style="color:red"> id<span style="color:mediumblue">="message"</span></span><span
+
+                    style="color:mediumblue">&gt;</span></span><span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>/p<span style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>script<span
+
+                    style="color:mediumblue">&gt;</span></span><span style="color:black"><br>
+                  <span style="color:mediumblue">function</span> myFunction() {<br>
+                  &nbsp;&nbsp;&nbsp; <span style="color:mediumblue">var</span>
+                  message, x;<br>
+                  &nbsp;&nbsp;&nbsp; message = document.getElementById(<span style="color:brown">"message"</span>);<br>
+                  &nbsp;&nbsp;&nbsp; message.innerHTML = <span style="color:brown">""</span>;<br>
+                  <span style="color:red"> </span>&nbsp;&nbsp;&nbsp;&nbsp;x =
+                  document.getElementById(<span style="color:brown">"demo"</span>).value;<br>
+                  &nbsp;&nbsp;&nbsp; <span style="color:mediumblue">try</span>
+                  { <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:mediumblue">if</span>(x
+                  == <span style="color:brown">""</span>) <span style="color:mediumblue">throw</span>
+                  <span style="color:brown">"empty"</span>;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:red">
+                  </span> <span style="color:mediumblue">if</span>(isNaN(x)) <span
+
+                    style="color:mediumblue">throw</span> <span style="color:brown">"not
+                    a number"</span>;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:red">
+                  </span> x = Number(x);<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:mediumblue">if</span>(x
+                  &lt; <span style="color:red">5</span>) <span style="color:mediumblue">throw</span>
+                  <span style="color:red"> </span> <span style="color:brown">"too
+                    low"</span>;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:mediumblue">if</span>(x
+                  &gt; <span style="color:red">10</span>) <span style="color:mediumblue">throw</span>
+                  <span style="color:brown">"too high"</span>;<br>
+                  &nbsp;&nbsp;&nbsp; }<br>
+                  &nbsp;&nbsp;&nbsp; <span style="color:mediumblue">catch</span>(err)
+                  {<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; message.innerHTML =
+                  <span style="color:brown">"Input is "</span> + err;<br>
+                  &nbsp;&nbsp;&nbsp; }<br>
+                  }<br>
+                </span><span style="color:brown"><span style="color:mediumblue">&lt;</span>/script<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>/body<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>/html<span
+
+                    style="color:mediumblue">&gt;</span></span></div>
+              <a target="_blank" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_throw_error"
+
+                class="w3-btn w3-margin-bottom">Try it Yourself »</a> </div>
+            <p>위의 예애서 getElementById function이 실패할 경우에도 오류가 던져짐에 유의하시오.</p>
+            <br>
+            <div class="chapter">
+<div class="w3-clear nextprev"> <a class="w3-left w3-btn" href="JavaScript%20Breaks.html">«
+                  Previous</a> <a class="w3-right w3-btn" href="JavaScript%20RegExp%20Object.html">Next
+                  Chapter »</a> </div>
+            </div>
+            <hr> </div>
+        </div>
+      </div>
+      <br>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>JavaScript Where To</title>
+    <style>a.menu_html_images{font-weight:bold;}</style>
+    <meta name="viewport" content="width=device-width">
+    <meta name="Keywords" content="HTML,CSS,XML,JavaScript,DOM,jQuery,ASP.NET,PHP,SQL,colors,tutorial,programming,development,training,learning,quiz,primer,lessons,reference,examples,source code,demos,tips,color table,w3c,cascading style sheets,active server pages,Web building,Webmaster">
+    <meta name="Description" content="Free HTML CSS JavaScript DOM jQuery XML AJAX RSS ASP .NET PHP SQL tutorials, references, examples for web building.">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="w3.css">
+  </head>
+  <body>
+    <div id="belowTopnav" style="width:auto">
+      <div id="page" style="width:auto; padding:30px; margin:10px;">
+        <div>
+          <div id="main" style="width:auto">
+            <h1>JavaScript <span class="color_h1">Where To</span></h1>
+            <div class="chapter">
+              <div class="w3-clear nextprev"> <a class="w3-left w3-btn" href="JavaScript%20Introduction.html">«
+                  Previous</a> <a class="w3-right w3-btn" href="JavaScript%20Output.html">Next
+                  Chapter »</a> </div>
+            </div>
+            <hr>
+            <p class="intro">JavaScripts 는 HTML 페이지의 &lt;body&gt; 와 &lt;head&gt;
+              섹션에 위치할 수 있습니다.</p>
+            <hr>
+            <h2>&lt;script&gt; Tag</h2>
+            <p>HTML 에서,&nbsp; JavaScripts 는 <strong>&lt;script&gt;</strong> 와 <strong>&lt;/script&gt;
+                </strong>태그 사이에 삽입해야만 한다.<br>
+            </p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate htmlHigh"> <span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>script<span style="color:mediumblue">&gt;</span></span><span
+
+                  style="color:black"><br>
+                  document.getElementById(<span style="color:brown">"demo"</span>).innerHTML
+                  = <span style="color:brown">"My First JavaScript"</span>;<br>
+                </span><span style="color:brown"><span style="color:mediumblue">&lt;</span>/script<span
+
+                    style="color:mediumblue">&gt;</span></span> </div>
+                    <p>
+<a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_whereto" target="_blank">Try it Yourself &raquo;</a>
+</p>
+            </div>
+             <div class="w3-panel w3-note">
+                  <td>&nbsp;과거에는 type 속성을 사용했었으나: &lt;script
+                    type="text/javascript"&gt;.<br>
+                     &nbsp;이제는 type 속성을 필요로 하지 않는다. JavaScript 가 HTML의 기본
+                    스크립트 언어이다.</td>
+                </div>
+            <hr>
+            <h2>JavaScript Functions 과 Events</h2>
+            <p>JavaScript <strong>함수</strong>(<b>function</b>)는 요청되었을 때 실행될 수
+              있는 JavaScript 코드다.<span style="font-weight: bold;"></span> </p>
+            <p>예를 들어, JavaScript 코드는 사용자가 버튼을 클릭 할 때와 같은 <strong>이벤트</strong>가
+              발생할 때 실행될 수 있다.</p>
+            <hr>
+            <h2>JavaScript in &lt;head&gt; or &lt;body&gt;</h2>
+            <p>HTML 문서에 스크립트를 무제한으로 넣을 수 있습니다.</p>
+            <p>스크립트는 HTML의 <code class="w3-codespan">&lt;body&gt;</code> 또는 <code class="w3-codespan">&lt;head&gt;</code> 섹션에서, 또는 두 곳 모두에 올 수
+              있습니다.</p>
+            <p><code class="w3-codespan">&lt;head&gt;</code> 섹션에 함수를 넣고, 또는 페이지의 하단에 넣는 것이 좋은 습관이다. 이렇게 함으로써 한 곳에
+              모든 코드를 모아 페이지의 내용과 섞이지 않게 된다.</p>
+            <hr>
+            <h2>JavaScript in &lt;head&gt;</h2>
+            <p>이 예에서, JavaScript 함수는 HTML 페이지의 <code class="w3-codespan">&lt;head&gt;</code> 섹션에 위치하며, 버튼을 클릭 할 때
+              함수가 호출됩니다: </p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate htmlHigh"> <span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>!DOCTYPE<span style="color:red">
+                    html</span><span style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>html<span
+
+                    style="color:mediumblue">&gt;</span></span>
+                <p><span style="color:brown"><span style="color:mediumblue">&lt;</span>head<span
+
+                      style="color:mediumblue">&gt;</span></span><br>
+                  <span style="color:brown"><span style="color:mediumblue">&lt;</span>script<span
+
+                      style="color:mediumblue">&gt;</span></span><span style="color:black"><br>
+                    <span style="color:mediumblue">function</span> myFunction()
+                    {<br>
+                    &nbsp;&nbsp;&nbsp; document.getElementById(<span style="color:brown">"demo"</span>).innerHTML
+                    = <span style="color:brown">"Paragraph changed."</span>;<br>
+                    }<br>
+                  </span><span style="color:brown"><span style="color:mediumblue">&lt;</span>/script<span
+
+                      style="color:mediumblue">&gt;</span></span><br>
+                  <span style="color:brown"><span style="color:mediumblue">&lt;</span>/head<span
+
+                      style="color:mediumblue">&gt;</span></span></p>
+                <p><span style="color:brown"><span style="color:mediumblue">&lt;</span>body<span
+
+                      style="color:mediumblue">&gt;</span></span></p>
+                <p><span style="color:brown"><span style="color:mediumblue">&lt;</span>h1<span
+
+                      style="color:mediumblue">&gt;</span></span>My Web Page<span
+
+                    style="color:brown"><span style="color:mediumblue">&lt;</span>/h1<span
+
+                      style="color:mediumblue">&gt;</span></span></p>
+                <p><span style="color:brown"><span style="color:mediumblue">&lt;</span>p<span
+
+                      style="color:red"> id<span style="color:mediumblue">="demo"</span></span><span
+
+                      style="color:mediumblue">&gt;</span></span>A Paragraph<span
+
+                    style="color:brown"><span style="color:mediumblue">&lt;</span>/p<span
+
+                      style="color:mediumblue">&gt;</span></span></p>
+                <p><span style="color:brown"><span style="color:mediumblue">&lt;</span>button<span
+
+                      style="color:red"> type<span style="color:mediumblue">="button"</span>
+                      onclick<span style="color:mediumblue">="myFunction()"</span></span><span
+
+                      style="color:mediumblue">&gt;</span></span>Try it<span style="color:brown"><span
+
+                      style="color:mediumblue">&lt;</span>/button<span style="color:mediumblue">&gt;</span></span></p>
+                <p><span style="color:brown"><span style="color:mediumblue">&lt;</span>/body<span
+
+                      style="color:mediumblue">&gt;</span></span><br>
+                  <span style="color:brown"><span style="color:mediumblue">&lt;</span>/html<span
+
+                      style="color:mediumblue">&gt;</span></span> </p>
+              </div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_whereto_head"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <br>
+            <hr>
+            <h2>JavaScript in &lt;body&gt;</h2>
+            <p>이 예에서, JavaScript 함수는 HTML 페이지의 &lt;body&gt; 섹션에 위치하며, 버튼을 클릭 할 때 함수가 호출됩니다: </p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate htmlHigh"> <span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>!DOCTYPE<span style="color:red">
+                    html</span><span style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>html<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>body<span
+
+                    style="color:mediumblue">&gt;</span></span> <br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>h1<span
+
+                    style="color:mediumblue">&gt;</span></span>My Web Page<span
+
+                  style="color:brown"><span style="color:mediumblue">&lt;</span>/h1<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>p<span
+
+                    style="color:red"> id<span style="color:mediumblue">="demo"</span></span><span
+
+                    style="color:mediumblue">&gt;</span></span>A Paragraph<span
+
+                  style="color:brown"><span style="color:mediumblue">&lt;</span>/p<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>button<span
+
+                    style="color:red"> type<span style="color:mediumblue">="button"</span>
+                    onclick<span style="color:mediumblue">="myFunction()"</span></span><span
+
+                    style="color:mediumblue">&gt;</span></span>Try it<span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>/button<span style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>script<span
+
+                    style="color:mediumblue">&gt;</span></span><span style="color:black"><br>
+                  <span style="color:mediumblue">function</span> myFunction() {<br>
+                  &nbsp;&nbsp;&nbsp;document.getElementById(<span style="color:brown">"demo"</span>).innerHTML
+                  = <span style="color:brown">"Paragraph changed."</span>;<br>
+                  }<br>
+                </span><span style="color:brown"><span style="color:mediumblue">&lt;</span>/script<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>/body<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>/html<span
+
+                    style="color:mediumblue">&gt;</span></span> </div>
+              <a target="_blank" class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_whereto_body">Try
+                it Yourself »</a> </div>
+            <br>
+            <p>스크립트 해석이 표시 속도를 늦추기 때문에 <code class="w3-codespan">&lt;body&gt;</code> 요소의 맨 아래에 스크립트를 배치하면 표시 속도가 향상됩니다.</p>
+            <hr>
+            <h2>External JavaScripts</h2>
+            <p>스크립트는 외부 파일에 놓일 수 있습니다. </p>
+            <p>외부 스크립트는 같은 코드가 여러 다른 웹 페이지에서 사용될 때 적절하다.<br>
+              <br>
+              JavaScript 파일은 파일 확장자가 <strong>.js</strong> 입니다. </p>
+            <p>외부 스크립트를 사용하려면 <strong>&lt;script&gt; </strong>태그의 "src" 속성에
+              스크립트 파일의 이름을 입력합니다 :</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate htmlHigh"> <span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>!DOCTYPE<span style="color:red">
+                    html</span><span style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>html<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>body<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>script<span
+
+                    style="color:red"> src<span style="color:mediumblue">="myScript.js"</span></span><span
+
+                    style="color:mediumblue">&gt;</span></span><span style="color:black"></span><span
+
+                  style="color:brown"><span style="color:mediumblue">&lt;</span>/script<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>/body<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>/html<span
+
+                    style="color:mediumblue">&gt;</span></span></div>
+              <a target="_blank" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_whereto_external"
+
+                class="w3-btn w3-margin-bottom">Try it Yourself »</a> </div>
+            <p>외부 스크립트의 참조는 &lt;head&gt; 나 &lt;body&gt; 에 넣을 수 있다.<br>
+            </p>
+            <div class="w3-panel w3-note">외부 스크립트는 &lt;script&gt;
+              태그를 포함 할 수 없습니다. </div>
+            <h3> External JavaScript Advantages</h3>
+            JavaScript 를 외부 파일에 두면 다음과 같은 장점들이 있다:<br>
+            <ul>
+              <li>HTML 과&nbsp; 코드의 분리</li>
+              <li>HTML 과 JavaScript 를 읽고 유지하기 쉽게 해준다.</li>
+              <li>케쉬된(cached) JavaScript 파일은 페이지 로드를 빠르게 해준다.</li>
+            </ul>
+            <br>
+            <div class="chapter">
+              <div class="w3-clear nextprev"> <a class="w3-left w3-btn" href="JavaScript%20Introduction.html">«
+                  Previous</a> <a class="w3-right w3-btn" href="JavaScript%20Output.html">Next
+                  Chapter »</a> </div>
+            </div>
+            <hr><br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

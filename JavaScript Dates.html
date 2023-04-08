@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>JavaScript Dates</title>
+    <style>a.menu_html_images{font-weight:bold;}</style>
+    <meta name="viewport" content="width=device-width">
+    <meta name="Keywords" content="HTML,CSS,XML,JavaScript,DOM,jQuery,ASP.NET,PHP,SQL,colors,tutorial,programming,development,training,learning,quiz,primer,lessons,reference,examples,source code,demos,tips,color table,w3c,cascading style sheets,active server pages,Web building,Webmaster">
+    <meta name="Description" content="Free HTML CSS JavaScript DOM jQuery XML AJAX RSS ASP .NET PHP SQL tutorials, references, examples for web building.">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="w3.css">
+  </head>
+  <body>
+    <div id="belowTopnav" style="width:auto">
+      <div id="page" style="width:auto; padding:30px; margin:10px;">
+        <div>
+          <div id="main" style="width:auto">
+            <h1>JavaScript <span class="color_h1">Dates</span></h1>
+            <div class="chapter">
+              <div class="w3-clear nextprev"> <a class="w3-left w3-btn" href="JavaScript%20Math%20Object.html">«
+                  Previous</a> <a class="w3-right w3-btn" href="JavaScript%20Arrays.html">Next
+                  Chapter »</a> </div>
+            </div>
+            <hr>
+            <p class="intro"> Javascript Date object 는 dates (years, months, days, hours,
+              minutes, seconds, and milliseconds)를 가지고 일 할 수 있게 해준다.</p>
+              <script>xxx=new Date()</script>
+<p class="w3-center"><strong><script>document.write(xxx)</script></strong></p>
+
+<div class="w3-center">
+<a href="tryit.asp?filename=tryjs_date_getfullyear" target="_blank" class="w3-btn w3-margin-bottom">Year: <script>document.write(xxx.getFullYear())</script></a>
+<a href="tryit.asp?filename=tryjs_date_getmonth" target="_blank" class="w3-btn w3-margin-bottom">Month: <script>document.write(xxx.getMonth()+1)</script></a>
+<a href="tryit.asp?filename=tryjs_date_getdate" target="_blank" class="w3-btn w3-margin-bottom">Day: <script>document.write(xxx.getDate())</script></a>
+<a href="tryit.asp?filename=tryjs_date_gethours" target="_blank" class="w3-btn w3-margin-bottom">Hours: <script>document.write(xxx.getHours())</script></a>
+<a href="tryit.asp?filename=tryjs_date_getminutes" target="_blank" class="w3-btn w3-margin-bottom">Minutes: <script>document.write(xxx.getMinutes())</script></a>
+<a href="tryit.asp?filename=tryjs_date_getseconds" target="_blank" class="w3-btn w3-margin-bottom">Seconds: <script>document.write(xxx.getSeconds())</script></a>
+</div>
+            <hr>
+            <h2>JavaScript Date Formats</h2>
+            <p>JavaScript date 는 문자열로 쓸 수 있다:</p>
+            <p><strong>
+                <script>document.write(Date())</script></strong></p>
+            <p>또는 숫자로:</p>
+            <p><strong>
+                <script>document.write(new Date().getTime())</script></strong></p>
+            <p>숫자로 쓰인 Dates는&nbsp; January 1, 1970, 00:00:00 로 부터의 milliseconds
+              숫자를 나타낸다.</p>
+            <hr>
+            <h2>Displaying Dates</h2>
+            <p>이 튜토리얼에서는 우리는 id="demo"인&nbsp; &lt;p&gt; 요소 안에 날짜를 포시하는 스크립트를 사용한다.:</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate htmlHigh"> <span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>p<span style="color:red">
+                    id<span style="color:mediumblue">="demo"</span></span><span
+
+                    style="color:mediumblue">&gt;</span></span><span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>/p<span style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>script<span
+
+                    style="color:mediumblue">&gt;</span></span><span style="color:black"><br>
+                  document.getElementById(<span style="color:brown">"demo"</span>).innerHTML
+                  = Date();<br>
+                </span><span style="color:brown"><span style="color:mediumblue">&lt;</span>/script<span
+
+                    style="color:mediumblue">&gt;</span></span> </div>
+              <a target="_blank" class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_date_current">Try
+                it Yourself »</a> </div>
+            <p>위의 스크립트에서는: Date() 의 값을 id="demo" 를 가진 요소의 내용(innerHTML) 으로 할당합니다. 이 자습서의 뒷부분에서 날짜를 표시하는 다양한 방법들에 대해 더 배울 것입니다.
+            </p>
+            <hr>
+            <h2>Creating Date Objects</h2>
+            <p>Date 객체는 날짜(dates) 가지고 일할 수 있게 해준다.</p>
+            <p>날짜(date)는 a year, a month, a day, an hour, a minute, a second, 과
+              milliseconds 로 구성된다.</p>
+            <p>Date 객체는 <strong>new Date()</strong> 생성자(constructor)로 생성된다..</p>
+            <p>날짜(date)를 시작하는 <strong>4 가지 방법</strong>:</p>
+            <div class="w3-example">
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">new</span> Date()<br>
+                  <span style="color:mediumblue">new</span> Date(milliseconds)<br>
+                  <span style="color:mediumblue">new</span> Date(date String)<br>
+                  <span style="color:mediumblue">new</span> Date(year, month,
+                  day, hours, minutes, seconds, milliseconds) </span></div>
+            </div>
+            <p><code class="w3-codespan"><strong>new Date()</strong></code> 를 사용하여, <strong>현재 날짜와 시간(current date and time)</strong>으로 새로운 날짜 객체가 만들어진다:</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate htmlHigh"> <span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>script<span style="color:mediumblue">&gt;</span></span><span
+
+                  style="color:black"><br>
+                  <span style="color:mediumblue">var</span> d = <span style="color:mediumblue">new</span>
+                  Date();<br>
+                  document.getElementById(<span style="color:brown">"demo"</span>).innerHTML
+                  = d;<br>
+                </span><span style="color:brown"><span style="color:mediumblue">&lt;</span>/script<span
+
+                    style="color:mediumblue">&gt;</span></span> </div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_date_new"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <p><code class="w3-codespan"><strong>new Date(date string)</strong></code>를 사용하여, <strong>특정 날짜와
+                시간(specified date and time</strong>)을 가진 새로운 날짜 객체가 만들어진다.:</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate htmlHigh"> <span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>script<span style="color:mediumblue">&gt;</span></span><span
+
+                  style="color:black"><br>
+                  <span style="color:mediumblue">var</span> d = <span style="color:mediumblue">new</span>
+                  Date(<span style="color:brown">"March 27, 2020 14:45:00"</span>);<br>
+                  document.getElementById(<span style="color:brown">"demo"</span>).innerHTML
+                  = d;<br>
+                </span><span style="color:brown"><span style="color:mediumblue">&lt;</span>/script<span
+
+                    style="color:mediumblue">&gt;</span></span> </div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_date_new_string"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <code class="w3-codespan"><strong>new Date(number)</strong></code>를 사용하여, <strong>zero time</strong>
+            에 <strong>number</strong>를 더한 시간을 가진 새로운 날짜 객체가 만들어진다
+            <p><b>new Date(0)</b>은 01 January 1970 00:00:00 UTC. 숫자는milliseconds 로 주어진다:</p>
+            <p>1970 년 1 월 1 일에서 1 천억 밀리 초를 뺀 값은 대략 1966 년 10 월 31 일입니다.</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate htmlHigh"> <span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>script<span style="color:mediumblue">&gt;</span></span><span
+
+                  style="color:black"><br>
+                  <span style="color:mediumblue">var</span> d = <span style="color:mediumblue">new</span>
+                  Date(<span style="color:red">1585287988641</span>);<br>
+                  document.getElementById(<span style="color:brown">"demo"</span>).innerHTML
+                  = d;<br>
+                </span><span style="color:brown"><span style="color:mediumblue">&lt;</span>/script<span
+
+                    style="color:mediumblue">&gt;</span></span> </div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_date_new_millisec"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <p> </p>
+            <table class="lamp">
+              <tbody>
+                <tr>
+                  <th style="width:34px"><img src="http://www.w3schools.com/images/lamp.jpg"
+
+                      alt="Note" style="height:32px;width:32px"></th>
+                  <td>&nbsp; milliseconds 로 하루는 86,400,000 millisecond 이다.</td>
+                </tr>
+              </tbody>
+            </table>
+            <p><code class="w3-codespan"><strong>new Date(7 numbers)</strong></code>를 사용하여, <strong>특정 날짜와
+                시간(specified date and time</strong>)을 가진 새로운 날짜 객체가 만들어진다.</p>
+            <p>7 numbers 는 the year, month, day, hour, minute, second, 과
+              millisecond 를 순서대로 나타낸다.:</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate htmlHigh"> <span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>script<span style="color:mediumblue">&gt;</span></span><span
+
+                  style="color:black"><br>
+                  <span style="color:mediumblue">var</span> d = <span style="color:mediumblue">new</span>
+                  Date(<span style="color:red">2020</span>,<span style="color:red">2</span>,<span
+
+                    style="color:red">27</span>,<span style="color:red">14</span>,<span
+
+                    style="color:red">33</span>,<span style="color:red">30</span>,<span
+
+                    style="color:red">0</span>);<br>
+                  document.getElementById(<span style="color:brown">"demo"</span>).innerHTML
+                  = d;<br>
+                </span><span style="color:brown"><span style="color:mediumblue">&lt;</span>/script<span
+
+                    style="color:mediumblue">&gt;</span></span> </div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_date_new_all"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <p>위의 예에서, 마지막 4~5 parameters는 생략이 가능하다:</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate htmlHigh"> <span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>script<span style="color:mediumblue">&gt;</span></span><span
+
+                  style="color:black"><br>
+                  <span style="color:mediumblue">var</span> d = <span style="color:mediumblue">new</span>
+                  Date(<span style="color:red">2020</span>,<span style="color:red">2</span>,<span
+
+                    style="color:red">27</span>);<br>
+                  document.getElementById(<span style="color:brown">"demo"</span>).innerHTML
+                  = d;<br>
+                </span><span style="color:brown"><span style="color:mediumblue">&lt;</span>/script<span
+
+                    style="color:mediumblue">&gt;</span></span> </div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_date_new_numbers3"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <p> </p>
+            <table class="lamp">
+              <tbody>
+                <tr>
+                  <th style="width:34px"><img src="http://www.w3schools.com/images/lamp.jpg"
+
+                      alt="Note" style="height:32px;width:32px"></th>
+                  <td>JavaScript 는 월(months)을 0 부터 11까지로 한다. January 는 0.
+                    December 는s 11.</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>월(Month)은 생략 할 수 없습니다. 하나의 매개변수만 제공하면 milli-seconds로 처리됩니다.</p>
+                        <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate htmlHigh"> <span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>script<span style="color:mediumblue">&gt;</span></span><span
+
+                  style="color:black"><br>
+                  <span style="color:mediumblue">var</span> d = <span style="color:mediumblue">new</span>
+                  Date(<span style="color:red">2020</span>);<br>
+                  document.getElementById(<span style="color:brown">"demo"</span>).innerHTML
+                  = d;<br>
+                </span><span style="color:brown"><span style="color:mediumblue">&lt;</span>/script<span
+
+                    style="color:mediumblue">&gt;</span></span> </div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_date_new_numbers1"
+
+                target="_blank">Try it Yourself »</a> </div>
+          
+
+            <hr>
+
+
+
+            <h2>Date Methods</h2>
+            <p>Date 객체가 생성되면, 많은 <strong>methods</strong> 들을 작동할 수 있다.</p>
+            <p>Date 메서드들은 당신이 로컬 시간 또는 UTC (universal, or GMT) 시간을 사용하여
+              객체의&nbsp;year, month, day, hour, minute, second, and millisecond
+              들을 얻거나 설정할 수 있다. </p>
+            <p> </p>
+            <table class="lamp">
+              <tbody>
+                <tr>
+                  <th style="width:34px"><img src="http://www.w3schools.com/images/lamp.jpg"
+
+                      alt="Note" style="height:32px;width:32px"></th>
+                  <td>&nbsp;Date methods are covered in a later chapter.</td>
+                </tr>
+              </tbody>
+            </table>
+            <hr>
+            <h2>Dates 표시</h2>
+            <p>HTML에 date 객체를 표시하면, <strong>toString() </strong>메서드로 자동적으로
+              문자열로 변환된다.&nbsp; </p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate htmlHigh"> <span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>p<span style="color:red">
+                    id<span style="color:mediumblue">="demo"</span></span><span
+
+                    style="color:mediumblue">&gt;</span></span><span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>/p<span style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>script<span
+
+                    style="color:mediumblue">&gt;</span></span><span style="color:black"><br>
+                  d = <span style="color:mediumblue">new</span> Date();<br>
+                  document.getElementById(<span style="color:brown">"demo"</span>).innerHTML
+                  = d;<br>
+                </span><span style="color:brown"><span style="color:mediumblue">&lt;</span>/script<span
+
+                    style="color:mediumblue">&gt;</span></span> </div>
+              <p>Is the same as:</p>
+              <div class="w3-code notranslate htmlHigh"> <span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>p<span style="color:red">
+                    id<span style="color:mediumblue">="demo"</span></span><span
+
+                    style="color:mediumblue">&gt;</span></span><span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>/p<span style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>script<span
+
+                    style="color:mediumblue">&gt;</span></span><span style="color:black"><br>
+                  d = <span style="color:mediumblue">new</span> Date();<br>
+                  document.getElementById(<span style="color:brown">"demo"</span>).innerHTML
+                  = d.toString();<br>
+                </span><span style="color:brown"><span style="color:mediumblue">&lt;</span>/script<span
+
+                    style="color:mediumblue">&gt;</span></span> </div>
+              <a target="_blank" class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_date_tostring">Try
+                it Yourself »</a> </div>
+            <p><strong>toUTCString()</strong> method는 date를 UTC 문자열(date 표시 표준)로
+              변환한다.</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate htmlHigh"> <span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>script<span style="color:mediumblue">&gt;</span></span><span
+
+                  style="color:black"><br>
+                  <span style="color:mediumblue">var</span> d = <span style="color:mediumblue">new</span>
+                  Date();<br>
+                  document.getElementById(<span style="color:brown">"demo"</span>).innerHTML
+                  = d.toUTCString();<br>
+                </span><span style="color:brown"><span style="color:mediumblue">&lt;</span>/script<span
+
+                    style="color:mediumblue">&gt;</span></span> </div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_date_toutcstring"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <p><strong>toDateString()</strong> method는 date를 좀더 읽기 쉬운 형식으로
+              변환한다.:</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate htmlHigh"> <span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>script<span style="color:mediumblue">&gt;</span></span><span
+
+                  style="color:black"><br>
+                  <span style="color:mediumblue">var</span> d = <span style="color:mediumblue">new</span>
+                  Date();<br>
+                  document.getElementById(<span style="color:brown">"demo"</span>).innerHTML
+                  = d.toDateString();<br>
+                </span><span style="color:brown"><span style="color:mediumblue">&lt;</span>/script<span
+
+                    style="color:mediumblue">&gt;</span></span> </div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_date_todatestring"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <p> </p>
+            <table class="lamp">
+              <tbody>
+                <tr>
+                  <th style="width:34px"><img src="http://www.w3schools.com/images/lamp.jpg"
+
+                      alt="Note" style="height:32px;width:32px"></th>
+                  <td>&nbsp; Date 객체는 정적(static)이지, 동적(dynamic)이지 않다. 컴퓨터 타임을
+                    시간에 따라 변하지만 date 객체는 한번 생성되면 변화하지 않는다. </td>
+                </tr>
+              </tbody>
+            </table>
+            <hr>
+            <h2>Test Yourself with Exercises!</h2>
+            <p> <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_dates1"
+
+                target="_blank">Exercise 1 »</a>&nbsp;&nbsp; <a class="w3-btn"
+
+                href="http://www.w3schools.com/js/exercise.asp?filename=exercise_dates2"
+
+                target="_blank">Exercise 2 »</a>&nbsp;&nbsp; <a class="w3-btn"
+
+                href="http://www.w3schools.com/js/exercise.asp?filename=exercise_dates3"
+
+                target="_blank">Exercise 3 »</a> </p>
+            <hr>
+            <h1>JavaScript <span class="color_h1">Date Formats</span></h1>
+            <h2>유효한 JavaScript Date 문자열</h2>
+            <p>세 가지 유효한 JavaScript date 포멧이 있다:</p>
+<table class="w3-table-all">
+ <tr>
+  <th>Type</th>
+  <th>Example</th>
+ </tr>
+ <tr>
+  <td>ISO Date</td>
+  <td>&quot;2020-03-25&quot;  (The International Standard)</td>
+ </tr>
+ <tr>
+  <td>Short Date</td>
+  <td>&quot;03/25/2020&quot;</td>
+ </tr>
+ <tr>
+  <td>Long Date</td>
+  <td>&quot;Mar 25 2020&quot; or &quot;25 Mar 2020&quot;</td>
+ </tr>
+</table>
+            <hr>
+            <h2>JavaScript ISO Dates</h2>
+            <p>ISO 8601 syntax (YYYY-MM-DD)는 최신의(선호되는) JavaScript date 포맷이다:</p>
+            <div class="w3-example">
+              <h3>Example (Complete date)</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> d = <span style="color:mediumblue">new</span>
+                  Date(<span style="color:brown">"2020-03-25"</span>); </span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_date_string_iso1"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <p>Or as: "2020-12" (YYYY-MM):</p>
+            <div class="w3-example">
+              <h3>Example (Year and month)</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> d = <span style="color:mediumblue">new</span>
+                  Date(<span style="color:brown">"2020-03"</span>); </span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_date_string_iso2"
+
+                target="_blank">Try it Yourself »</a>  </div>
+            <p>Or as "2020" (YYYY):</p>
+            <div class="w3-example">
+              <h3>Example (Only year)</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> d = <span style="color:mediumblue">new</span>
+                  Date(<span style="color:brown">"2020"</span>); </span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_date_string_iso3"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <p>Or as "2020-12-24T12:00:00":</p>
+            <div class="w3-example">
+              <h3>Example (Complete date plus hours, minutes, and seconds)</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> d = <span style="color:mediumblue">new</span>
+                  Date(<span style="color:brown">"2020-03-25T12:00:00"</span>);
+                </span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_date_string_iso4"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <p>&nbsp;date 문자열에서 T(date 와 time 사이)는 UTC time 임을 나타낸다.</p>
+            <table class="lamp">
+              <tbody>
+                <tr>
+                  <th style="width:34px"> <img src="http://www.w3schools.com/images/lamp.jpg"
+
+                      alt="Note" style="height:32px;width:32px"></th>
+                  <td>&nbsp; UTC (Universal Time Coordinated)&nbsp; 는 GMT
+                    (Greenwich Mean Time) 과 같다. </td>
+                </tr>
+              </tbody>
+            </table>
+            <hr>
+            <h2>JavaScript Long Dates.</h2>
+            <p>Long dates 는 다음과 같이 "MMM DD YYYY" 구문으로 쓴다: </p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> d = <span style="color:mediumblue">new</span>
+                  Date(<span style="color:brown">"Mar 25 2020"</span>); </span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_date_string_1"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <p>하지만,&nbsp; year, month, 과 day 는 어떤 순서로도 가능하다:</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> d = <span style="color:mediumblue">new</span>
+                  Date(<span style="color:brown">"25 Mar 2020"</span>); </span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_date_string_2"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <p>그리고, month 는 full (January), 또는 abbreviated (Jan) 오로 쓸 수 있다.:</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> d = <span style="color:mediumblue">new</span>
+                  Date(<span style="color:brown">"January 25 2020"</span>); </span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_date_string_4"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> d = <span style="color:mediumblue">new</span>
+                  Date(<span style="color:brown">"Jan 25 2020"</span>); </span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_date_string_5"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <p>쉼표는 무시됩니다. 이름은 대소 문자를 구분하지 않습니다 ::</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> d = <span style="color:mediumblue">new</span>
+                  Date(<span style="color:brown">"JANUARY, 25, 2020"</span>); </span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_date_string_6"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <hr>
+            <h2>JavaScript Short Dates.</h2>
+            <p>Short dates 은 다음과 같이 "MM/DD/YYYY" 구문으로 사용한다.:</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> d = <span style="color:mediumblue">new</span>
+                  Date(<span style="color:brown">"03/25/2020"</span>);</span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_date_string_7"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <p>어떤 브라우져에서는 "-" 를 구분자로 쓸 수 있다.:</p>
+            <p>JavaScript 는 "YYYY/MM/DD" 도 허용한다.:</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> d = <span style="color:mediumblue">new</span>
+                  Date(<span style="color:brown">"2020/03/25"</span>); </span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_date_string_9"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <table class="lamp">
+              <tbody>
+                <tr>
+                  <th style="width:34px"> <img src="http://www.w3schools.com/images/lamp.jpg"
+
+                      alt="Note" style="height:32px;width:32px"></th>
+                  <td>모든 Short date 및 ISO 날짜 형식에서 Month는 Day 앞에 옵니다. </td>
+                </tr>
+              </tbody>
+            </table>
+            <hr>
+            <h1>JavaScript <span class="color_h1">Date Methods</span></h1>
+            <p class="intro">Date methods 는 date 값들 (years, months, days, hours,
+              minutes, seconds, milliseconds)을 얻거나 설정하도록 해준다.&nbsp; </p>
+            <hr>
+            <h2>Date Get Methods</h2>
+            <p>Get methods 들은 date의 일부분을 얻는데 사용된다. :</p>
+            <table class="w3-table-all notranslate">
+              <tbody>
+                <tr>
+                  <th>Method</th>
+                  <th>Description</th>
+                </tr>
+                <tr>
+                  <td>getDate()</td>
+                  <td>Get the day as a number (1-31)</td>
+                </tr>
+                <tr>
+                  <td>getDay()</td>
+                  <td>Get the weekday as a number (0-6)</td>
+                </tr>
+                <tr>
+                  <td>getFullYear()</td>
+                  <td>Get the four digit year (yyyy)</td>
+                </tr>
+                <tr>
+                  <td>getHours()</td>
+                  <td>Get the hour (0-23)</td>
+                </tr>
+                <tr>
+                  <td>getMilliseconds()</td>
+                  <td>Get the milliseconds (0-999)</td>
+                </tr>
+                <tr>
+                  <td>getMinutes()</td>
+                  <td>Get the minutes (0-59)</td>
+                </tr>
+                <tr>
+                  <td>getMonth()</td>
+                  <td>Get the month (0-11)</td>
+                </tr>
+                <tr>
+                  <td>getSeconds()</td>
+                  <td>Get the seconds (0-59)</td>
+                </tr>
+                <tr>
+                  <td>getTime()</td>
+                  <td>Get the time (milliseconds since January 1, 1970)</td>
+                </tr>
+              </tbody>
+            </table>
+            <hr>
+            <h2>getTime() Method</h2>
+            <p><strong>getTime()</strong> 는 01.01.1970 로부터 milliseconds 수를
+              반환한다.:</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate htmlHigh"> <span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>script<span style="color:mediumblue">&gt;</span></span><span
+
+                  style="color:black"><br>
+                  <span style="color:mediumblue">var</span> d = <span style="color:mediumblue">new</span>
+                  Date();<br>
+                  document.getElementById(<span style="color:brown">"demo"</span>).innerHTML
+                  = d.getTime();<br>
+                </span><span style="color:brown"><span style="color:mediumblue">&lt;</span>/script<span
+
+                    style="color:mediumblue">&gt;</span></span> </div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_date_gettime"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <hr>
+            <h2>getFullYear() Method</h2>
+            <p><strong>getFullYear()</strong> 는 date의 year를 네자리 숫자로 반환한다.:</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate htmlHigh"> <span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>script<span style="color:mediumblue">&gt;</span></span><span
+
+                  style="color:black"><br>
+                  <span style="color:mediumblue">var</span> d = <span style="color:mediumblue">new</span>
+                  Date();<br>
+                  document.getElementById(<span style="color:brown">"demo"</span>).innerHTML
+                  = d.getFullYear();<br>
+                </span><span style="color:brown"><span style="color:mediumblue">&lt;</span>/script<span
+
+                    style="color:mediumblue">&gt;</span></span> </div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_date_getfullyear"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <hr>
+            <h2>getDay() Method</h2>
+            <p><strong>getDay()</strong> 는 요일(weekday) 을 숫자 (0-6)로 반환한다.:</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate htmlHigh"> <span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>script<span style="color:mediumblue">&gt;</span></span><span
+
+                  style="color:black"><br>
+                  <span style="color:mediumblue">var</span> d = <span style="color:mediumblue">new</span>
+                  Date();<br>
+                  document.getElementById(<span style="color:brown">"demo"</span>).innerHTML
+                  = d.getDay();<br>
+                </span><span style="color:brown"><span style="color:mediumblue">&lt;</span>/script<span
+
+                    style="color:mediumblue">&gt;</span></span> </div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_date_getday"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <p>당신은 이름 배열과 getDay() 를 사용하여 요일(weekday)을 이름으로 얻어낼 수 있다:</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate htmlHigh"> <span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>script<span style="color:mediumblue">&gt;</span></span><span
+
+                  style="color:black"><br>
+                  <span style="color:mediumblue">var</span> d = <span style="color:mediumblue">new</span>
+                  Date();<br>
+                  <span style="color:mediumblue">var</span> days = [<span style="color:brown">"Sunday"</span>,<span
+
+                    style="color:brown">"Monday"</span>,<span style="color:brown">"Tuesday"</span>,<span
+
+                    style="color:brown">"Wednesday"</span>,<span style="color:brown">"Thursday"</span>,<span
+
+                    style="color:brown">"Friday"</span>,<span style="color:brown">"Saturday"</span>];<br>
+                  document.getElementById(<span style="color:brown">"demo"</span>).innerHTML
+                  = days[d.getDay()];<br>
+                </span><span style="color:brown"><span style="color:mediumblue">&lt;</span>/script<span
+
+                    style="color:mediumblue">&gt;</span></span> </div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_date_weekday"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <hr>
+            <h2>Date Set Methods</h2>
+            <p>Set methods 는 date의 일 부분을 설정하는데 사용한다.:</p>
+            <table class="w3-table-all notranslate">
+              <tbody>
+                <tr>
+                  <th>Method</th>
+                  <th>Description</th>
+                </tr>
+                <tr>
+                  <td>setDate()</td>
+                  <td>Set the day as a number (1-31)</td>
+                </tr>
+                <tr>
+                  <td>setFullYear()</td>
+                  <td>Set the year (optionally month and day)</td>
+                </tr>
+                <tr>
+                  <td>setHours()</td>
+                  <td>Set the hour (0-23)</td>
+                </tr>
+                <tr>
+                  <td>setMilliseconds()</td>
+                  <td>Set the milliseconds (0-999)</td>
+                </tr>
+                <tr>
+                  <td>setMinutes()</td>
+                  <td>Set the minutes (0-59)</td>
+                </tr>
+                <tr>
+                  <td>setMonth()</td>
+                  <td>Set the month (0-11)</td>
+                </tr>
+                <tr>
+                  <td>setSeconds()</td>
+                  <td>Set the seconds (0-59)</td>
+                </tr>
+                <tr>
+                  <td>setTime()</td>
+                  <td>Set the time (milliseconds since January 1, 1970)</td>
+                </tr>
+              </tbody>
+            </table>
+            <hr>
+            <h2>setFullYear() Method</h2>
+            <p><strong>setFullYear()</strong> 는 date 객체를 특정 date 로
+              설정한다.eg)&nbsp; January 14, 2020:</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate htmlHigh"> <span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>script<span style="color:mediumblue">&gt;</span></span><span
+
+                  style="color:black"><br>
+                  <span style="color:mediumblue">var</span> d = <span style="color:mediumblue">new</span>
+                  Date();<br>
+                  d.setFullYear(<span style="color:red">2025</span>, <span style="color:red">0</span>,
+                  <span style="color:red">14</span>);<br>
+                  document.getElementById(<span style="color:brown">"demo"</span>).innerHTML
+                  = d;<br>
+                </span><span style="color:brown"><span style="color:mediumblue">&lt;</span>/script<span
+
+                    style="color:mediumblue">&gt;</span></span> </div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_date_setfullyear"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <hr>
+            <h2>setDate() Method</h2>
+            <p><strong>setDate()</strong> 는 월(month)의 일을 (1-31) 설정한다:</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate htmlHigh"> <span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>script<span style="color:mediumblue">&gt;</span></span><span
+
+                  style="color:black"><br>
+                  <span style="color:mediumblue">var</span> d = <span style="color:mediumblue">new</span>
+                  Date();<br>
+                  d.setDate(<span style="color:red">20</span>);<br>
+                  document.getElementById(<span style="color:brown">"demo"</span>).innerHTML
+                  = d;<br>
+                </span><span style="color:brown"><span style="color:mediumblue">&lt;</span>/script<span
+
+                    style="color:mediumblue">&gt;</span></span> </div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_date_setdate"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <p>setDate() <strong>는 </strong>date 에 일들(days)을 더하는데 사용될 수 도 있다.:</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate htmlHigh"> <span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>script<span style="color:mediumblue">&gt;</span></span><span
+
+                  style="color:black"><br>
+                  <span style="color:mediumblue">var</span> d = <span style="color:mediumblue">new</span>
+                  Date();<br>
+                  d.setDate(d.getDate() + <span style="color:red">50</span>);<br>
+                  document.getElementById(<span style="color:brown">"demo"</span>).innerHTML
+                  = d;<br>
+                </span><span style="color:brown"><span style="color:mediumblue">&lt;</span>/script<span
+
+                    style="color:mediumblue">&gt;</span></span> </div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_date_ahead"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <p> </p>
+            <table class="lamp">
+              <tbody>
+                <tr>
+                  <th style="width:34px"><img src="http://www.w3schools.com/images/lamp.jpg"
+
+                      alt="Note" style="height:32px;width:32px"></th>
+                  <td>&nbsp; 일들을 더하면, 월과 년의 이동이 date 객체에 의해서 자동적으로 처리된다.</td>
+                </tr>
+              </tbody>
+            </table>
+            <hr>
+            <h2>Date 입력 - Dates 구문 분석</h2>
+            <p>유효한 date 문자열을 가지고 있다면, 이를 milliseconds 로 변환하는데 <strong>
+                Date.parse()</strong> method 를 사용할 수 있다.&nbsp;</p>
+            <p><strong>Date.parse()</strong> 는 date 와&nbsp; January 1, 1970 사이의
+              milliseconds 수를 반환한다: </p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate htmlHigh"> <span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>script<span style="color:mediumblue">&gt;</span></span><span
+
+                  style="color:black"><br>
+                  <span style="color:mediumblue">var</span> msec = Date.parse(<span
+
+                    style="color:brown">"March 21, 2012"</span>);<br>
+                  document.getElementById(<span style="color:brown">"demo"</span>).innerHTML
+                  = msec;<br>
+                </span><span style="color:brown"><span style="color:mediumblue">&lt;</span>/script<span
+
+                    style="color:mediumblue">&gt;</span></span> </div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_date_parse"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <p>그 다음에 number of milliseconds 를 <strong>date</strong> object 로
+              변환할 수 있다:</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate htmlHigh"> <span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>script<span style="color:mediumblue">&gt;</span></span><span
+
+                  style="color:black"><br>
+                  <span style="color:mediumblue">var</span> msec = Date.parse(<span
+
+                    style="color:brown">"March 21, 2012"</span>);<br>
+                  <span style="color:mediumblue">var</span> d = <span style="color:mediumblue">new</span>
+                  Date(msec);<br>
+                  document.getElementById(<span style="color:brown">"demo"</span>).innerHTML
+                  = d;<br>
+                </span><span style="color:brown"><span style="color:mediumblue">&lt;</span>/script<span
+
+                    style="color:mediumblue">&gt;</span></span> </div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_date_convert"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <hr>
+            <h2>Dates 비교</h2>
+            <p>Dates 는 쉽게 비교될 수 있다.</p>
+            <p>다음 예는오늘 date 를 January 14, 2100 과 비교한다:</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> today, someday,
+                  text;<br>
+                  today = <span style="color:mediumblue">new</span> Date();<br>
+                  someday = <span style="color:mediumblue">new</span> Date();<br>
+                  someday.setFullYear(<span style="color:red">2100</span>, <span
+
+                    style="color:red">0</span>, <span style="color:red">14</span>);<br>
+                  <br>
+                  <span style="color:mediumblue">if</span> (someday &gt; today)
+                  {<br>
+                  &nbsp;&nbsp;&nbsp; text = <span style="color:brown">"Today is
+                    before January 14, 2100."</span>;<br>
+                  } <span style="color:mediumblue">else</span> {<br>
+                  &nbsp;&nbsp;&nbsp; text = <span style="color:brown">"Today is
+                    after January 14, 2100."</span>;<br>
+                  }<br>
+                  document.getElementById(<span style="color:brown">"demo"</span>).innerHTML
+                  = text; </span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_date_compare"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <p> </p>
+            <table class="lamp">
+              <tbody>
+                <tr>
+                  <th style="width:34px"><img src="http://www.w3schools.com/images/lamp.jpg"
+
+                      alt="Note" style="height:32px;width:32px"></th>
+                  <td>&nbsp;&nbsp; JavaScript 는 월을 0 부터 11 까지로 한다. January is 0.
+                    December is 11.</td>
+                </tr>
+              </tbody>
+            </table>
+            <hr>
+            <h2>Complete JavaScript Date Reference</h2>
+            <p>For a complete reference, go to our <a href="http://www.w3schools.com/jsref/jsref_obj_date.asp">Complete
+                JavaScript Date Reference</a>.</p>
+            <p>The reference contains descriptions and examples of all Date
+              properties and methods.</p>
+            <hr>
+            <div class="chapter">
+              <div class="w3-clear nextprev"> <a class="w3-left w3-btn" href="JavaScript%20Math%20Object.html">«
+                  Previous</a> <a class="w3-right w3-btn" href="JavaScript%20Arrays.html">Next
+                  Chapter »</a> </div>
+            </div>
+            <br>
+          </div>
+        </div>
+        <br>
+      </div>
+      <br>
+    </div>
+  </body>
+</html>

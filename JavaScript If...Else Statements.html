@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+     <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>JavaScript If...Else</title>
+    <style>a.menu_html_images{font-weight:bold;}</style>
+    <meta name="viewport" content="width=device-width">
+    <meta name="Keywords" content="HTML,CSS,XML,JavaScript,DOM,jQuery,ASP.NET,PHP,SQL,colors,tutorial,programming,development,training,learning,quiz,primer,lessons,reference,examples,source code,demos,tips,color table,w3c,cascading style sheets,active server pages,Web building,Webmaster">
+    <meta name="Description" content="Free HTML CSS JavaScript DOM jQuery XML AJAX RSS ASP .NET PHP SQL tutorials, references, examples for web building.">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="w3.css">
+  </head>
+  <body>
+    <div id="belowTopnav" style="width:auto">
+      <div id="page" style="width:auto; padding:30px; margin:10px;">
+        <div>
+          <div id="main" style="width:auto">
+            <h1>JavaScript <span class="color_h1">If...Else</span>
+              Statements</h1>
+            <div class="chapter">
+              <div class="w3-clear nextprev"> <a class="w3-left w3-btn" href="JavaScript%20Timing%20Events.html">«
+                  Previous</a> <a class="w3-right w3-btn" href="JavaScript%20Switch%20Statement.html">Next
+                  Chapter »</a> </div>
+
+            </div>
+            <hr>
+            <p class="intro">조건문(Conditional statements)은 다른 조건에 따라 서로 다른 작업을
+              수행하는 데 사용됩니다. </p>
+            <hr>
+            <h2>Conditional Statements</h2>
+            <p>코드를 작성할 때 매우 자주, 다른 조건에 따라 다른 작업을 수행 하고 싶은 경우,&nbsp; 조건문을 사용할 수
+              있습니다.<br>
+              <br>
+              JavaScript 에서는 다음과 같은 조건문이 있다 :</p>
+            <ul>
+              <li><b>if statement</b> - 지정된 조건이 true 인 경우에만 특정 코드를 실행하려면 사용</li>
+              <li><b>if...else statement</b> - 조건이 true 이면 일부 코드를 실행하고, 조건이
+                false 인 경우에는 다른 코드를 실행하려면 사용</li>
+              <li><b>if...else if....else statement</b> - 많은 블록 중 하나를 선택하여 실행하려면
+                사용 </li>
+              <li><b>switch statement</b> - 많은 블록 중 하나를 선택하여 실행하려면 사용 </li>
+            </ul>
+            <hr>
+            <h2>If 문</h2>
+            <p>지정된 조건이 true 인 경우에만 코드를 실행하기 위해 if 문을 사용합니다.</p>
+            <h3>Syntax</h3>
+            <div class="w3-code w3-border notranslate">
+              <div>
+                if (<i>condition</i>) {<br>
+                <em>&nbsp;&nbsp;&nbsp; block of code to be executed if the
+                  condition is true<br>
+                </em>}
+              </div>
+            </div>
+            <p>참고&nbsp; <em>if </em>는 소문자로 기록합니다. 대문자(IF)를 사용하면 자바 스크립트 오류가
+              발생합니다!<em style="text-decoration: underline;"></em></p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <p>Make a "Good day" greeting if the hour is less than 18:00:</p>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">if</span> (hour &lt; <span style="color:red">18</span>)
+                  {<br>
+                  <span style="color:red">
+                  </span>&nbsp;&nbsp;&nbsp; greeting = <span style="color:brown">"Good
+                    day"</span>;<br>
+                  <span style="color:red"> </span>}</span></div>
+              <p>The result of greeting will be:</p>
+              <div class="w3-code notranslate">
+                <script>
+var d=new Date();
+var time=d.getHours();
+if (time<20)
+  {
+  document.write("Good day");
+  }
+</script>Good day
+              </div>
+              <a target="_blank" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_ifthen"
+
+                class="w3-btn w3-margin-bottom">Try it Yourself »</a>
+            </div>
+            <p>Notice that there is no ..else.. in this syntax. You tell the
+              browser to execute some code <b>only if the specified condition
+                is true</b>.</p>
+            <hr>
+            <h2>If...else 문</h2>
+            <p>조건이 true 이면 어떤 코드를 실행하고, true가 아닌 경우에는 다른 코드를 실행시키는데 if....else
+              statement 를 사용합니다. </p>
+            <h3>Syntax</h3>
+            <div class="w3-code w3-border notranslate">
+              <div>
+                if (<i>condition</i>) {<br>
+                <em>&nbsp;&nbsp;&nbsp; block of code to be executed if the
+                  condition is true<br>
+                </em>}
+                else {
+                <br>
+                <em>&nbsp;&nbsp;&nbsp; block of code to be executed if the
+                  condition is false<br>
+                </em>}</div>
+            </div>
+            <br>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <p>If the hour is less than 18, create a "Good day" greeting,
+                otherwise "Good evening":</p>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">if</span> (hour &lt; <span style="color:red">18</span>)
+                  {<br>
+                  <span style="color:red">
+                  </span>&nbsp;<span style="color:red">
+                  </span>&nbsp;&nbsp;greeting = <span style="color:brown">"Good
+                    day"</span>;<br>
+                  <span style="color:red"> </span>}
+                  <span style="color:mediumblue">else</span> {<br>
+                  <span style="color:red">
+                  </span>&nbsp;&nbsp;&nbsp; greeting = <span style="color:brown">"Good
+                    evening"</span>;<br>
+                  <span style="color:red"> </span>}
+                </span></div>
+              <p>The result of greeting will be:</p>
+              <div class="w3-code notranslate">
+                <script>
+var d=new Date();
+var time=d.getHours();
+if (time<20)
+  {
+  document.write("Good day");
+  }
+else
+  {
+  document.write("Good evening");
+  }
+</script>Good day
+              </div>
+              <a target="_blank" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_ifthenelse"
+
+                class="w3-btn w3-margin-bottom">Try it Yourself »</a>
+            </div>
+            <br>
+            <hr>
+            <h2>If...else if...else Statement</h2>
+            <p>몇 개의 코드 블록 중에서 하나를 선택하려면 if....else if...else statement 를 사용한다.</p>
+            <h3>Syntax</h3>
+            <div class="w3-code w3-border notranslate">
+              <div>
+                if (<i>condition1</i>) {<br>
+                <em>&nbsp;&nbsp;&nbsp; block of code to be executed if
+                  condition1 is true<br>
+                </em>}
+                else if (<i>condition2</i>) {<br>
+                <em>&nbsp;&nbsp;&nbsp; block of code to be executed if the
+                  condition1 is false and condition2 is true</em><br>
+                } else {<br>
+                <em>&nbsp;&nbsp;&nbsp; block of code to be executed if the
+                  condition1 is false and condition2 is false<br>
+                </em>}</div>
+            </div>
+            <br>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <p>If time is less than 10:00, create a "Good morning" greeting,
+                if not, but time is less than 20:00, create a "Good day"
+                greeting, otherwise a "Good evening":</p>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">if</span> (time &lt; <span style="color:red">10</span>)
+                  {<br>
+                  <span style="color:red">
+                  </span>&nbsp;&nbsp;&nbsp; greeting = <span style="color:brown">"Good
+                    morning"</span>;<br>
+                  <span style="color:red"> </span>}
+                  <span style="color:mediumblue">else</span> <span style="color:mediumblue">if</span>
+                  (time &lt; <span style="color:red">20</span>)&nbsp;{<br>
+                  <span style="color:red">
+                  </span>&nbsp;&nbsp;&nbsp; greeting = <span style="color:brown">"Good
+                    day"</span>;<br>
+                  <span style="color:red"> </span>}
+                  <span style="color:mediumblue">else</span>&nbsp;{<br>
+                  <span style="color:red">
+                  </span>&nbsp;&nbsp;&nbsp; greeting = <span style="color:brown">"Good
+                    evening"</span>;<br>
+                  <span style="color:red"> </span>}
+                </span></div>
+              <p>The result of greeting will be:</p>
+              <div class="w3-code notranslate">
+                <script>
+var d=new Date();
+var time=d.getHours();
+if (time<10)
+  {
+  document.write("Good morning");
+  }
+else if (time<20)
+  {
+  document.write("Good day");
+  }
+else
+  {
+  document.write("Good evening");
+  }
+</script>Good morning
+              </div>
+              <a target="_blank" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_elseif"
+
+                class="w3-btn w3-margin-bottom">Try it Yourself »</a>
+            </div>
+            <br>
+            <hr>
+            <div class="tryit_ex"> <img src="http://www.w3schools.com/images/tryitimg.gif"
+
+                style="width:40px;height:46px" alt="Examples">
+              <h2>More Examples</h2>
+            </div>
+            <p><a target="_blank" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_randomlink">Random
+                link</a><br>
+              This example will write a link to either W3Schools or to the World
+              Wildlife Foundation (WWF). By using a random number, there is a
+              50% chance for each of the links.</p>
+            <br>
+            <hr>
+            <h2>Test Yourself with Exercises!</h2>
+            <p>
+              <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_conditions1"
+
+                target="_blank">Exercise 1 »</a>&nbsp;
+              <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_conditions2"
+
+                target="_blank">Exercise 2 »</a>&nbsp;
+              <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_conditions3"
+
+                target="_blank">Exercise 3 »</a>&nbsp;
+              <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_conditions4"
+
+                target="_blank">Exercise 4 »</a>&nbsp;
+              <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_conditions5"
+
+                target="_blank">Exercise 5 »</a>&nbsp;
+              <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_conditions6"
+
+                target="_blank">Exercise 6 »</a>
+            </p>
+            <div class="chapter">
+ <div class="w3-clear nextprev"> <a class="w3-left w3-btn" href="JavaScript%20Timing%20Events.html">«
+                  Previous</a> <a class="w3-right w3-btn" href="JavaScript%20Switch%20Statement.html">Next
+                  Chapter »</a> </div>
+            </div>
+            <hr> </div>
+        </div>
+      </div>
+      <br>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>JavaScript Objects</title>
+    <style>a.menu_html_images{font-weight:bold;}</style>
+    <meta name="viewport" content="width=device-width">
+    <meta name="Keywords" content="HTML,CSS,XML,JavaScript,DOM,jQuery,ASP.NET,PHP,SQL,colors,tutorial,programming,development,training,learning,quiz,primer,lessons,reference,examples,source code,demos,tips,color table,w3c,cascading style sheets,active server pages,Web building,Webmaster">
+    <meta name="Description" content="Free HTML CSS JavaScript DOM jQuery XML AJAX RSS ASP .NET PHP SQL tutorials, references, examples for web building.">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="w3.css">
+  </head>
+  <body>
+    <div id="belowTopnav" style="width:auto">
+      <div id="page" style="width:auto; padding:30px; margin:10px;">
+        <div>
+          <div id="main" style="width:auto">
+            <h1>JavaScript <span class="color_h1">객체(Objects)</span></h1>
+            <div class="chapter">
+              <div class="w3-clear nextprev"> <a class="w3-left w3-btn" href="JavaScript%20Data%20Types.html">«
+                  Previous</a> <a class="w3-right w3-btn" href="JavaScript%20Scope.html">Next
+                  Chapter »</a> </div>
+            </div>
+            <hr>
+            <p class="intro">JavaScript 에있는 거의 모든 객체가 될 수 있습니다 : Strings,
+              Functions, Arrays, Dates.... </p>
+            <p class="intro">객체는 속성(properties) 및 메서드(methods)를 갖는 단지 데이터입니다.</p>
+            <hr>
+            <h2>속성(Properties) and 메서드(Methods)</h2>
+            <p><strong>속성</strong>들<strong>(Properties)</strong>은 객체와 관련된<strong>
+                값</strong>들(<strong>values) </strong>입니다. </p>
+            <p><strong>메서드</strong>들<strong>(Methods)</strong>는 객체가 수행할 <strong>작업</strong>들(<strong>actions)</strong> 입니다.</p>
+            <hr>
+            <h2>실제 객체,&nbsp; 속성(property) 과 메서드(method)</h2>
+            <p>실제 세계에서, 자동차(car)는 객체(object)이다.</p>
+            <p>자동차는 무게와 색 같은 속성(property)과 시동과 멈춤 같은 메서드(method)들을 갖는다.</p>
+            <table class="w3-table-all">
+              <tbody>
+                <tr>
+                  <th style="width:370px"> Object </th>
+                  <th> Properties </th>
+                  <th> Methods </th>
+                </tr>
+                <tr>
+                  <td> <img src="http://www.w3schools.com/js/objectExplained.gif">
+                  </td>
+                  <td> <br>
+                    car.name = Fiat<br>
+                    <br>
+                    car.model = 500<br>
+                    <br>
+                    car.weight = 850kg<br>
+                    <br>
+                    car.color = white </td>
+                  <td> <br>
+                    car.start()<br>
+                    <br>
+                    car.drive()<br>
+                    <br>
+                    car.brake()<br>
+                    <br>
+                    car.stop()</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>모든 자동차는 같은 속성(property)을 가지고 있지만, 속성 값은 자동차 마다 다릅니다.</p>
+            <p>모든 자동차는 같은 메서드(method)을 가지고 있지만, 그들은 다른 시간에 실행됩니다.<br>
+            </p>
+            <hr>
+            <h2>JavaScript 객체:</h2>
+            <p>우리는 이미 JavaScript 변수가 데이타 값의 용기임을 배웠다.</p>
+            <p>다음 코드는 car 라는 변수에 단순한 값(Fiat)을 할당한다.</p>
+            <div class="w3-example">
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> car = <span style="color:brown">"Fiat"</span>;
+                </span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_objects_variable"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <p>객체 또한 변수다. 하지만 객체는 많은 값들을 담을 수 있다.</p>
+            <p>다음 코드는 car 라는 변수에 많은 값들(Fiat, 500, white)을 할당한다.</p>
+            <div class="w3-example">
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> car = {type:<span style="color:brown">"Fiat"</span>,
+                  model:<span style="color:brown">"500"</span>, color:<span style="color:brown">"white"</span>};
+                  </span></div> <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_objects_object"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <p>값들은 name:value 쌍으로 쓰여진다.</p>
+            <hr>
+            <h2>객체 속성(object property)</h2>
+            (JavaScript 객체에서) name:value 쌍을&nbsp; 속성(property)이라 부른다.<br>
+            <br>
+            <div class="w3-example">
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> person = {firstName:<span
+
+                    style="color:brown">"John"</span>, lastName:<span style="color:brown">"Doe"</span>,
+                  age:50, eyeColor:<span style="color:brown">"blue"</span>};<br>
+                </span></div>
+            </div>
+            <table class="w3-table-all">
+              <tbody>
+                <tr>
+                  <th style="width:20%">Property</th>
+                  <th>Property Value</th>
+                </tr>
+                <tr>
+                  <td>firstName</td>
+                  <td>John</td>
+                </tr>
+                <tr>
+                  <td>lastName</td>
+                  <td>Doe</td>
+                </tr>
+                <tr>
+                  <td>age</td>
+                  <td>50</td>
+                </tr>
+                <tr>
+                  <td>eyeColor</td>
+                  <td>blue</td>
+                </tr>
+              </tbody>
+            </table>
+            <hr>
+            <h2>객체 메서드(object method)</h2>
+            <p> 메서드(method)는 객체에 실행될 수 있는 행동들이다.</p>
+            메서드(method)는 <strong>함수 정의</strong>로 속성(property)에 저장된다.<br>
+            <br>
+            <table class="w3-table-all">
+              <tbody>
+                <tr>
+                  <th style="width:20%">Property</th>
+                  <th>Property Value</th>
+                </tr>
+                <tr>
+                  <td>firstName</td>
+                  <td>John</td>
+                </tr>
+                <tr>
+                  <td>lastName</td>
+                  <td>Doe</td>
+                </tr>
+                <tr>
+                  <td>age</td>
+                  <td>50</td>
+                </tr>
+                <tr>
+                  <td>eyeColor</td>
+                  <td>blue</td>
+                </tr>
+                <tr>
+                  <td>fullName</td>
+                  <td>function() {return this.firstName + " " + this.lastName;}</td>
+                </tr>
+              </tbody>
+            </table>
+            <hr>
+            <h2>객체 선언</h2>
+            <p>JavaScript 객체는 객체 문장으로 선언(생성)한다.</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> person = {firstName:<span
+
+                    style="color:brown">"John"</span>, lastName:<span style="color:brown">"Doe"</span>,
+                  age:50, eyeColor:<span style="color:brown">"blue"</span>};<br>
+                </span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_objects_create_1"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <p> </p>
+            <p>빈 공백과 불 바꿈은 중요하지 않으며, 객체 선언은 여러 줄로 확장해도 된다:</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> person = {<br>
+                  &nbsp;&nbsp;&nbsp; firstName:<span style="color:brown">"John"</span>,<br>
+                  &nbsp;&nbsp;&nbsp; lastName:<span style="color:brown">"Doe"</span>,<br>
+                  &nbsp;&nbsp;&nbsp; age:50,<br>
+                  &nbsp;&nbsp;&nbsp; eyeColor:<span style="color:brown">"blue"</span><br>
+                  }; </span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_objects_create_2"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <p> </p>
+            <hr>
+            <h2>객체 속성에 접근(Accessing) </h2>
+            <p>객체의 속성에는 두 가지 방법으로 접근할 수 있다.</p>
+            <p> </p>
+            <div class="w3-example">
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <i>objectName.propertyName</i></span></div>
+            </div>
+            <p>또는</p>
+            <div class="w3-example">
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <i>objectName[<span style="color:brown">"propertyName"</span>]</i>
+                </span></div>
+            </div>
+            <div class="w3-example">
+              <h3>Example1</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  person.lastName; </span></div>
+              <a target="_blank" class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_objects_properties_1">Try
+                it Yourself »</a> </div>
+            <div class="w3-example">
+              <h3>Example2</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  person[<span style="color:brown">"lastName"</span>]; </span></div>
+              <a target="_blank" class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_objects_properties_2">Try
+                it Yourself »</a> </div>
+            <br>
+            <hr>
+            <h2>객체 메서드에 접근</h2>
+            <p>객체의 메서드는 다음과 같이 접급한다.</p>
+            <div class="w3-example">
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <i>objectName.methodName()</i> </span></div>
+            </div>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate"> name = person.fullName();</div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_objects_method"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <p>만약에 () 없이 fullName 속성에 접근하면, 함수 정의가 반환될 것이다. </p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate"> name = person.fullName;</div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_objects_function"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <br>
+            <hr>
+            <h2>String, Number, 와 Boolean 을 객체로 선언하지 마시오! </h2>
+            JavaScript 변수가 키워드 "new"로 선언되면, 변수는 객체로 생성된다:<br>
+            <div class="w3-example">
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> x = <span style="color:mediumblue">new</span>
+                  String();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+
+                    style="color:green">// Declares x as a String object<br>
+                  </span> <span style="color:mediumblue">var</span> y =&nbsp;<span
+
+                    style="color:mediumblue">new</span>
+                  Number();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+
+                    style="color:green">// Declares y as a Number object<br>
+                  </span> <span style="color:mediumblue">var</span> z =&nbsp;<span
+
+                    style="color:mediumblue">new</span>
+                  Boolean();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green">//
+                    Declares z as a Boolean object </span></span></div>
+            </div>
+          </div>
+          String, Number, Boolean 객체로 선언 하지 마시오, 그러면 실행속도가 느려집니다.<br>
+          <hr>
+          <h2>Test Yourself with Exercises !</h2>
+          <p> <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_objects1"
+
+              target="_blank">Exercise 1 »</a>&nbsp;&nbsp; <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_objects2"
+
+              target="_blank">Exercise 2 »</a>&nbsp;&nbsp; <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_objects3"
+
+              target="_blank">Exercise 3 »</a> </p>
+          <div class="chapter">
+            <div class="w3-clear nextprev"> <a class="w3-left w3-btn" href="JavaScript%20Data%20Types.html">«
+                Previous</a> <a class="w3-right w3-btn" href="JavaScript%20Scope.html">Next
+                Chapter »</a> </div>
+          </div>
+          <hr> </div>
+      </div>
+    </div>
+  </body>
+</html>

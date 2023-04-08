@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>JavaScript HTML DOM Nodes</title>
+    <style>a.menu_js_htmldom_nodes{font-weight:bold;}</style>
+    <meta name="viewport" content="width=device-width">
+    <meta name="Keywords" content="HTML,CSS,XML,JavaScript,DOM,jQuery,ASP.NET,PHP,SQL,colors,tutorial,programming,development,training,learning,quiz,primer,lessons,reference,examples,source code,demos,tips,color table,w3c,cascading style sheets,active server pages,Web building,Webmaster">
+    <meta name="Description" content="Free HTML CSS JavaScript DOM jQuery XML AJAX RSS ASP .NET PHP SQL tutorials, references, examples for web building.">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="w3.css">
+  </head>
+  <body>
+    <div id="belowTopnav" style="width:auto">
+      <div id="page" style="width:auto; padding:30px; margin:10px;">
+        <div>
+          <div id="main" style="width:auto"><br>
+            <h1>JavaScript <span class="color_h1">HTML DOM 요소 (Nodes)</span></h1>
+            <div class="chapter">
+                            <div class="w3-clear nextprev"> <a class="w3-left w3-btn" href="JavaScript%20HTML%20DOM%20Navigation.html">«
+                  Previous</a> <a class="w3-right w3-btn" href="index.html">The END »</a> </div>
+
+            </div>
+            <hr>
+            <p class="intro">노드 (HTML Elements) 추가 및 제거</p>
+            <hr>
+            <h2>새로운 HTML Elements (Nodes) 만들기</h2>
+            <p>HTML DOM 에 새 요소를 추가하려면 먼저 요소(요소 노드)를 생성해야하고, 다음은 기존 요소에
+              덧붙입니다(append). </p>
+            <div class="w3-example">
+              <h3>&nbsp;Example</h3>
+              <div class="w3-code notranslate htmlHigh"> <span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>div<span style="color:red">
+                    id<span style="color:mediumblue">="div1"</span></span><span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>p<span
+
+                    style="color:red"> id<span style="color:mediumblue">="p1"</span></span><span
+
+                    style="color:mediumblue">&gt;</span></span>This is a
+                paragraph.<span style="color:brown"><span style="color:mediumblue">&lt;</span>/p<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>p<span
+
+                    style="color:red"> id<span style="color:mediumblue">="p2"</span></span><span
+
+                    style="color:mediumblue">&gt;</span></span>This is another
+                paragraph.<span style="color:brown"><span style="color:mediumblue">&lt;</span>/p<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>/div<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>script<span
+
+                    style="color:mediumblue">&gt;</span></span><span style="color:black"><br>
+                  <span style="color:mediumblue">var</span> para =
+                  document.createElement(<span style="color:brown">"p"</span>);<br>
+                  <span style="color:mediumblue">var</span> node =
+                  document.createTextNode(<span style="color:brown">"This is
+                    new."</span>);<br>
+                  para.appendChild(node);<br>
+                  <br>
+                  <span style="color:mediumblue">var</span> element =
+                  document.getElementById(<span style="color:brown">"div1"</span>);<br>
+                  element.appendChild(para);<br>
+                </span><span style="color:brown"><span style="color:mediumblue">&lt;</span>/script<span
+
+                    style="color:mediumblue">&gt;</span></span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_dom_elementcreate"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <br>
+            <hr>
+            <h2>Example Explained&nbsp;</h2>
+            <p>이 코드는 새로운 &lt;p&gt; 요소를 만듭니다:</p>
+            <div class="w3-code w3-border notranslate">
+              <div> var para = document.createElement("p");</div>
+            </div>
+            <p>&lt;p&gt; 요소에 텍스트를 추가하려면, 먼저 텍스트 노드를 생성해야 합니다. 이 코드는 텍스트 노드를
+              생성합니다 :</p>
+            <div class="w3-code w3-border notranslate">
+              <div> var node = document.createTextNode("This is a new
+                paragraph.");</div>
+            </div>
+            <p>그 다음 &lt;p&gt; 요소에 텍스트 노드를 추가해야 합니다 :</p>
+            <div class="w3-code w3-border notranslate">
+              <div> para.appendChild(node);</div>
+            </div>
+            <p>마지막으로 기존 요소에 새로운 요소를 추가해야합니다.</p>
+            <p>이 코드는 기존 요소를 찾습니다:</p>
+            <div class="w3-code w3-border notranslate">
+              <div> var element = document.getElementById("div1");</div>
+            </div>
+            <p>이 코드는 기존의 요소에 새로운 요소를 추가합니다 :</p>
+            <div class="w3-code w3-border notranslate">
+              <div> element.appendChild(para);</div>
+            </div>
+            <br>
+            <hr>
+            <h2>새로운 HTML 요소 만들기 - insertBefore()</h2>
+            <p>앞의 예에서 appendChild() method 는 부모의 마지막 자식으로 새 요소를 추가 합니다.</p>
+            <p>그것을 원하지 않는다면 insertBefore() method 를 사용할 수 있습니다.: </p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate htmlHigh"> <span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>div<span style="color:red">
+                    id<span style="color:mediumblue">="div1"</span></span><span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>p<span
+
+                    style="color:red"> id<span style="color:mediumblue">="p1"</span></span><span
+
+                    style="color:mediumblue">&gt;</span></span>This is a
+                paragraph.<span style="color:brown"><span style="color:mediumblue">&lt;</span>/p<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>p<span
+
+                    style="color:red"> id<span style="color:mediumblue">="p2"</span></span><span
+
+                    style="color:mediumblue">&gt;</span></span>This is another
+                paragraph.<span style="color:brown"><span style="color:mediumblue">&lt;</span>/p<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>/div<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>script<span
+
+                    style="color:mediumblue">&gt;</span></span><span style="color:black"><br>
+                  <span style="color:mediumblue">var</span> para =
+                  document.createElement(<span style="color:brown">"p"</span>);<br>
+                  <span style="color:mediumblue">var</span> node =
+                  document.createTextNode(<span style="color:brown">"This is
+                    new."</span>);<br>
+                  para.appendChild(node);<br>
+                  <br>
+                  <span style="color:mediumblue">var</span> element =
+                  document.getElementById(<span style="color:brown">"div1"</span>);<br>
+                  <span style="color:mediumblue">var</span> child =
+                  document.getElementById(<span style="color:brown">"p1"</span>);<br>
+                  element.insertBefore(para,child);<br>
+                </span><span style="color:brown"><span style="color:mediumblue">&lt;</span>/script<span
+
+                    style="color:mediumblue">&gt;</span></span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_dom_elementcreate2"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <br>
+            <hr>
+            <h2>기존의 HTML 요소 제거</h2>
+            <p>HTML 요소를 제거하려면 요소의 부모를 알고 있어야 합니다 :</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate htmlHigh"> <span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>div<span style="color:red">
+                    id<span style="color:mediumblue">="div1"</span></span><span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>p<span
+
+                    style="color:red"> id<span style="color:mediumblue">="p1"</span></span><span
+
+                    style="color:mediumblue">&gt;</span></span>This is a
+                paragraph.<span style="color:brown"><span style="color:mediumblue">&lt;</span>/p<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>p<span
+
+                    style="color:red"> id<span style="color:mediumblue">="p2"</span></span><span
+
+                    style="color:mediumblue">&gt;</span></span>This is another
+                paragraph.<span style="color:brown"><span style="color:mediumblue">&lt;</span>/p<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>/div<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>script<span
+
+                    style="color:mediumblue">&gt;</span></span><span style="color:black"><br>
+                  <span style="color:mediumblue">var</span> parent =
+                  document.getElementById(<span style="color:brown">"div1"</span>);<br>
+                  <span style="color:mediumblue">var</span> child =
+                  document.getElementById(<span style="color:brown">"p1"</span>);<br>
+                  parent.removeChild(child);<br>
+                </span><span style="color:brown"><span style="color:mediumblue">&lt;</span>/script<span
+
+                    style="color:mediumblue">&gt;</span></span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_dom_elementremove"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <br>
+            <hr>
+            <h2>Example Explained&nbsp;</h2>
+            <p>이 HTML 문서는 두 개의 자식 노드 (두 &lt;p&gt; 요소) 를 갖는 &lt;div&gt; 요소를
+              갖습니다.:</p>
+            <div class="w3-code w3-border notranslate">
+              <div> &lt;div id="div1"&gt;<br>
+                &lt;p id="p1"&gt;This is a paragraph.&lt;/p&gt;<br>
+                &lt;p id="p2"&gt;This is another paragraph.&lt;/p&gt;<br>
+                &lt;/div&gt;</div>
+            </div>
+            <p>id="div1" 를 가진 요소를 찾습니다:</p>
+            <div class="w3-code w3-border notranslate">
+              <div> var parent = document.getElementById("div1");</div>
+            </div>
+            <p>id="p1" 를 가진 &lt;p&gt; 요소를 찾습니다::</p>
+            <div class="w3-code w3-border notranslate">
+              <div> var child = document.getElementById("p1");</div>
+            </div>
+            <p>부모로부터 자식을 제거합니다:</p>
+            <div class="w3-code w3-border notranslate">
+              <div> parent.removeChild(child);</div>
+            </div>
+            <br>
+            <table class="lamp">
+              <tbody>
+                <tr>
+                  <th style="width:34px"><img src="http://www.w3schools.com/images/lamp.jpg"
+
+                      alt="Note" style="height:32px;width:32px"></th>
+                  <td>&nbsp; 부모를 참조하지 않고 요소를 제거 할 수있다면 좋을 것이다. 하지만. DOM은 제거 할 요소
+                    및&nbsp;&nbsp; 그의 부모 모두를 알 필요가 있다.</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>다음은 일반적인 해결 방법입니다 : 제거 할 자식를 찾아 부모를 찾기 위해서 parentNode 속성을
+              사용합니다&nbsp;</p>
+            <div class="w3-code w3-border notranslate">
+              <div class="auto-style1"> var child =
+                document.getElementById("p1");<br>
+                child.parentNode.removeChild(child);</div>
+            </div>
+            <br>
+            <hr>
+            <h2>HTML 요소 교체</h2>
+            <p>HTML DOM에 요소를 교체하려면, replaceChild() 메서드를 사용 :</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate htmlHigh"> <span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>div<span style="color:red">
+                    id<span style="color:mediumblue">="div1"</span></span><span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>p<span
+
+                    style="color:red"> id<span style="color:mediumblue">="p1"</span></span><span
+
+                    style="color:mediumblue">&gt;</span></span>This is a
+                paragraph.<span style="color:brown"><span style="color:mediumblue">&lt;</span>/p<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>p<span
+
+                    style="color:red"> id<span style="color:mediumblue">="p2"</span></span><span
+
+                    style="color:mediumblue">&gt;</span></span>This is another
+                paragraph.<span style="color:brown"><span style="color:mediumblue">&lt;</span>/p<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>/div<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>script<span
+
+                    style="color:mediumblue">&gt;</span></span><span style="color:black"><br>
+                  <span style="color:mediumblue">var</span> para =
+                  document.createElement(<span style="color:brown">"p"</span>);<br>
+                  <span style="color:mediumblue">var</span> node =
+                  document.createTextNode(<span style="color:brown">"This is
+                    new."</span>);<br>
+                  para.appendChild(node);<br>
+                  <span style="color:red"> </span><br>
+                  <span style="color:mediumblue">var</span> parent =
+                  document.getElementById(<span style="color:brown">"div1"</span>);<br>
+                  <span style="color:mediumblue">var</span> child =
+                  document.getElementById(<span style="color:brown">"p1"</span>);<br>
+                  parent.replaceChild(para,child);<br>
+                </span><span style="color:brown"><span style="color:mediumblue">&lt;</span>/script<span
+
+                    style="color:mediumblue">&gt;</span></span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_dom_elementreplace"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <br>
+            <hr>
+            <h1>JavaScript <span class="color_h1">HTML DOM<strong> 노드목록</strong>(Nodelist)</span></h1>
+            <hr>
+            <p class="intro">노드목록(nodelist)은 노드의 배열 (모든 HTML 요소의 배열과 같이) 이다.</p>
+            <hr>
+            <h2>HTML DOM Node List</h2>
+            <p>getElementsByTagName() method 는 <b>노드목록(node list) </b>을 반환한다.
+              노드 목록은 노드의 배열이다.</p>
+            <p>다음 코드는 문서에 있는 모든 &lt;p&gt; 노드를 선택합니다:</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> x =
+                  document.getElementsByTagName(<span style="color:brown">"p"</span>);
+                  </span></div> <br>
+              <p>The nodes can be accessed by an index number. To access the
+                second &lt;p&gt; node you can write:</p>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  y = x[<span style="color:red">1</span>]; </span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_dom_nodelist"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <p><b>Note:</b> The index starts at 0.</p>
+            <hr>
+            <h2>HTML DOM Node List Length</h2>
+            <p>length 속성은 노드 목록에 있는 노드의 수를 정의합니다.</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> myNodelist =
+                  document.getElementsByTagName(<span style="color:brown">"p"</span>);<br>
+                  document.getElementById(<span style="color:brown">"demo"</span>).innerHTML
+                  = myNodelist.length; </span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_dom_nodelist_length"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <p>Example explained:</p>
+            <ol>
+              <li>노드 목록(배열)에 모든 &lt;p&gt; 요소를 가져온다</li>
+              <li>노드 목록의 길이를 표시</li>
+            </ol>
+            length 속성은 노드 목록의 노드들에 대하여 반복하기를 원할 때 유용하다:<br>
+            <br>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <p>Change the background color of all &lt;p&gt; elements in a node
+                list:</p>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> myNodelist =
+                  document.getElementsByTagName(<span style="color:brown">"p"</span>);<br>
+                  <span style="color:mediumblue">var</span> i;<br>
+                  <span style="color:mediumblue">for</span> (i = <span style="color:red">0</span>;
+                  i &lt; myNodelist.length; i++) {<br>
+                  <span style="color:red"> </span>&nbsp;&nbsp;&nbsp;
+                  myNodelist[i].style.backgroundColor = <span style="color:brown">"red"</span>;<br>
+                  <span style="color:red"> </span>} </span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_dom_nodelist_loop"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <br>
+            <table class="lamp">
+              <tbody>
+                <tr>
+                  <th style="width:34px"><img src="http://www.w3schools.com/images/lamp.jpg"
+
+                      alt="Note" style="height:32px;width:32px"></th>
+                  <td><strong>&nbsp; 노드목록(node list)은 배열이 아니다!</strong><br>
+                    <br>
+                    &nbsp; 노드목록은 배열처럼 보이나, 아니다. 노드목록에 반복하여 배열처럼 노드들을 접근할 수있다.
+                    하지만,&nbsp; 노드목록에 대하여 valueOf() 또는 join() 같은 Array 메서드를 사용할
+                    수는 없다.&nbsp; </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="chapter">
+         <div class="w3-clear nextprev"> <a class="w3-left w3-btn" href="JavaScript%20HTML%20DOM%20Navigation.html">«
+                  Previous</a> <a class="w3-right w3-btn"  href="index.html">The END »</a> </div>
+            </div>
+            <hr></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)http://jun.hansung.ac.kr/CWP/Javascript/JavaScript%20Timing%20Events.html -->
+<html style=" height: 100%;" lang="en-US">
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <title>JavaScript Timing Events</title>
+    <style>a.menu_js_timing{font-weight:bold;}</style>
+    <meta name="viewport" content="width=device-width">
+    <meta name="Keywords" content="HTML,CSS,XML,JavaScript,DOM,jQuery,ASP.NET,PHP,SQL,colors,tutorial,programming,development,training,learning,quiz,primer,lessons,reference,examples,source code,demos,tips,color table,w3c,cascading style sheets,active server pages,Web building,Webmaster">
+    <meta name="Description" content="Free HTML CSS JavaScript DOM jQuery XML AJAX RSS ASP .NET PHP SQL tutorials, references, examples for web building.">
+    <link rel="icon" href="http://jun.hansung.ac.kr/favicon.ico" type="image/x-icon">
+    <script type="text/javascript" async="" src="./JavaScript%20Timing%20Events_files/cse.js"></script>
+    <script async="" type="text/javascript" src="./JavaScript%20Timing%20Events_files/gpt.js"></script>
+    <script type="text/javascript" async="" src="./JavaScript%20Timing%20Events_files/dc.js"></script>
+    <script>
+  (function() {
+    var cx = '012971019331610648934:m2tou3_miwy';
+    var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
+  })();
+</script> <link rel="stylesheet" type="text/css" href="./JavaScript%20Timing%20Events_files/stdtheme.css">
+    <script>
+<!-- Standard Scroll Clock by kurt.grigg@virgin.net
+var H='....';
+var H=H.split('');
+var M='.....';
+var M=M.split('');
+var S='......';
+var S=S.split('');
+var Ypos=0;
+var Xpos=0;
+var Ybase=8;
+var Xbase=8;
+var dots=12;
+
+function clock(){
+var time=new Date ();
+var secs=time.getSeconds();
+var sec=-1.57 + Math.PI * secs/30;
+var mins=time.getMinutes();
+var min=-1.57 + Math.PI * mins/30;
+var hr=time.getHours();
+var hrs=-1.57 + Math.PI * hr/6 + Math.PI*parseInt(time.getMinutes())/360;
+for (i=0; i < dots; ++i){
+document.getElementById("dig" + (i+1)).style.top=0-15+40*Math.sin(-0.49+dots+i/1.9).toString() + "px";
+document.getElementById("dig" + (i+1)).style.left=0-14+40*Math.cos(-0.49+dots+i/1.9).toString() + "px";
+}
+for (i=0; i < S.length; i++){
+document.getElementById("sec" + (i+1)).style.top =Ypos+i*Ybase*Math.sin(sec).toString() + "px";
+document.getElementById("sec" + (i+1)).style.left=Xpos+i*Xbase*Math.cos(sec).toString() + "px";
+}
+for (i=0; i < M.length; i++){
+document.getElementById("min" + (i+1)).style.top =Ypos+i*Ybase*Math.sin(min).toString() + "px";
+document.getElementById("min" + (i+1)).style.left=Xpos+i*Xbase*Math.cos(min).toString() + "px";
+}
+for (i=0; i < H.length; i++){
+document.getElementById("hour" + (i+1)).style.top =Ypos+i*Ybase*Math.sin(hrs).toString() + "px";
+document.getElementById("hour" + (i+1)).style.left=Xpos+i*Xbase*Math.cos(hrs).toString() + "px";
+} 
+setTimeout('clock()',50);
+}
+//-->
+</script> <style type="text/css">
+div.dig, div.hour, div.min, div.sec
+{
+position:absolute;
+}
+div.hour, div.min, div.sec
+{
+width:2px;
+height:2px;
+font-size:2px;
+}
+div.dig
+{
+width:30px;
+height:30px;
+font-family:arial,verdana,sans-serif;
+font-size:10px;
+color:#000000;
+text-align:center;
+padding-top:10px
+}
+div.min
+{
+background:#0000FF;
+}
+div.hour
+{
+background:#000000;
+}
+div.sec
+{
+background:#FF0000;
+}
+</style> <link type="text/css" rel="stylesheet" charset="UTF-8" href="./JavaScript%20Timing%20Events_files/translateelement.css">
+    <script type="text/javascript" charset="UTF-8" src="./JavaScript%20Timing%20Events_files/main.js"></script>
+    <script src="./JavaScript%20Timing%20Events_files/pubads_impl_87.js" async=""></script>
+    <link rel="prefetch" href="http://tpc.googlesyndication.com/safeframe/1-0-2/html/container.html">
+    <script type="text/javascript" charset="UTF-8" src="./JavaScript%20Timing%20Events_files/element_main.js"></script>
+    <style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style> <script src="./JavaScript%20Timing%20Events_files/jsapi" type="text/javascript"></script>
+    <link type="text/css" href="./JavaScript%20Timing%20Events_files/default+en.css"
+
+      rel="stylesheet">
+    <link type="text/css" href="./JavaScript%20Timing%20Events_files/default.css"
+
+      rel="stylesheet">
+    <script type="text/javascript" src="./JavaScript%20Timing%20Events_files/default+en.I.js"></script>
+    <style type="text/css">
+.gsc-control-cse {
+font-family: Arial, sans-serif;
+border-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gsc-control-cse .gsc-table-result {
+font-family: Arial, sans-serif;
+}
+input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus {
+border-color: #D9D9D9;
+}
+input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:focus {
+border-color: #2F5BB7;
+background-color: #357AE8;
+background-image: none;
+filter: none;
+}
+.gsc-tabHeader.gsc-tabhInactive {
+border-color: #CCCCCC;
+background-color: #FFFFFF;
+}
+.gsc-tabHeader.gsc-tabhActive {
+border-color: #CCCCCC;
+border-bottom-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gsc-tabsArea {
+border-color: #CCCCCC;
+}
+.gsc-webResult.gsc-result,
+.gsc-results .gsc-imageResult {
+border-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gsc-webResult.gsc-result:hover,
+.gsc-imageResult:hover {
+border-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gs-webResult.gs-result a.gs-title:link,
+.gs-webResult.gs-result a.gs-title:link b,
+.gs-imageResult a.gs-title:link,
+.gs-imageResult a.gs-title:link b {
+color: #1155CC;
+}
+.gs-webResult.gs-result a.gs-title:visited,
+.gs-webResult.gs-result a.gs-title:visited b,
+.gs-imageResult a.gs-title:visited,
+.gs-imageResult a.gs-title:visited b {
+color: #1155CC;
+}
+.gs-webResult.gs-result a.gs-title:hover,
+.gs-webResult.gs-result a.gs-title:hover b,
+.gs-imageResult a.gs-title:hover,
+.gs-imageResult a.gs-title:hover b {
+color: #1155CC;
+}
+.gs-webResult.gs-result a.gs-title:active,
+.gs-webResult.gs-result a.gs-title:active b,
+.gs-imageResult a.gs-title:active,
+.gs-imageResult a.gs-title:active b {
+color: #1155CC;
+}
+.gsc-cursor-page {
+color: #1155CC;
+}
+a.gsc-trailing-more-results:link {
+color: #1155CC;
+}
+.gs-webResult .gs-snippet,
+.gs-imageResult .gs-snippet,
+.gs-fileFormatType {
+color: #333333;
+}
+.gs-webResult div.gs-visibleUrl,
+.gs-imageResult div.gs-visibleUrl {
+color: #009933;
+}
+.gs-webResult div.gs-visibleUrl-short {
+color: #009933;
+}
+.gs-webResult div.gs-visibleUrl-short {
+display: none;
+}
+.gs-webResult div.gs-visibleUrl-long {
+display: block;
+}
+.gs-promotion div.gs-visibleUrl-short {
+display: none;
+}
+.gs-promotion div.gs-visibleUrl-long {
+display: block;
+}
+.gsc-cursor-box {
+border-color: #FFFFFF;
+}
+.gsc-results .gsc-cursor-box .gsc-cursor-page {
+border-color: #CCCCCC;
+background-color: #FFFFFF;
+color: #1155CC;
+}
+.gsc-results .gsc-cursor-box .gsc-cursor-current-page {
+border-color: #CCCCCC;
+background-color: #FFFFFF;
+color: #1155CC;
+}
+.gsc-webResult.gsc-result.gsc-promotion {
+border-color: #F6F6F6;
+background-color: #F6F6F6;
+}
+.gsc-completion-title {
+color: #1155CC;
+}
+.gsc-completion-snippet {
+color: #333333;
+}
+.gs-promotion a.gs-title:link,
+.gs-promotion a.gs-title:link *,
+.gs-promotion .gs-snippet a:link {
+color: #1155CC;
+}
+.gs-promotion a.gs-title:visited,
+.gs-promotion a.gs-title:visited *,
+.gs-promotion .gs-snippet a:visited {
+color: #1155CC;
+}
+.gs-promotion a.gs-title:hover,
+.gs-promotion a.gs-title:hover *,
+.gs-promotion .gs-snippet a:hover {
+color: #1155CC;
+}
+.gs-promotion a.gs-title:active,
+.gs-promotion a.gs-title:active *,
+.gs-promotion .gs-snippet a:active {
+color: #1155CC;
+}
+.gs-promotion .gs-snippet,
+.gs-promotion .gs-title .gs-promotion-title-right,
+.gs-promotion .gs-title .gs-promotion-title-right * {
+color: #333333;
+}
+.gs-promotion .gs-visibleUrl,
+.gs-promotion .gs-visibleUrl-short {
+color: #009933;
+}</style>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>JavaScript Arrays</title>
+    <style>a.menu_html_images{font-weight:bold;}</style>
+    <meta name="viewport" content="width=device-width">
+    <meta name="Keywords" content="HTML,CSS,XML,JavaScript,DOM,jQuery,ASP.NET,PHP,SQL,colors,tutorial,programming,development,training,learning,quiz,primer,lessons,reference,examples,source code,demos,tips,color table,w3c,cascading style sheets,active server pages,Web building,Webmaster">
+    <meta name="Description" content="Free HTML CSS JavaScript DOM jQuery XML AJAX RSS ASP .NET PHP SQL tutorials, references, examples for web building.">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="w3.css">
+  </head>
+  <body onload="clock()" style=" position: relative; min-height: 100%; top: 0px;">
+    <div id="belowTopnav" style="width:auto"> <br>
+      <div id="page" style="width:auto; padding:30px; margin:10px;">
+        <div>
+          <div id="main" style="width:auto"><br>
+            <h1>JavaScript <span class="color_h1">타이밍 이벤트(Timing Events)</span></h1>
+            <div class="chapter">
+              <div class="w3-clear nextprev"> <a class="w3-left w3-btn" href="JavaScript%20Operators.html">«
+                  Previous</a> <a class="w3-right w3-btn" href="JavaScript%20If...Else%20Statements.html">Next
+                  Chapter »</a> </div>
+            </div>
+            <hr>
+            <div class="w3-example">
+              <table>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div style="width:120px;height:100px;position:relative;left:58px;top:50px;">
+                        <div id="dig1" class="dig" style="top: -49.823px; left: 5.6814px;">1</div>
+                        <div id="dig2" class="dig" style="top: -35.2232px; left: 20.5112px;">2</div>
+                        <div id="dig3" class="dig" style="top: -15.1496px; left: 25.9997px;">3</div>
+                        <div id="dig4" class="dig" style="top: 4.96459px; left: 20.6614px;">4</div>
+                        <div id="dig5" class="dig" style="top: 19.6749px; left: 5.94126px;">5</div>
+                        <div id="dig6" class="dig" style="top: 24.9996px; left: -14.1765px;">6</div>
+                        <div id="dig7" class="dig" style="top: 19.4976px; left: -34.2464px;">7</div>
+                        <div id="dig8" class="dig" style="top: 4.65796px; left: -48.8363px;">8</div>
+                        <div id="dig9" class="dig" style="top: -15.5025px; left: -53.9968px;">9</div>
+                        <div id="dig10" class="dig" style="top: -35.527px; left: -48.3314px;">10</div>
+                        <div id="dig11" class="dig" style="top: -49.9953px; left: -33.3734px;">11</div>
+                        <div id="dig12" class="dig" style="top: -54.9914px; left: -13.1715px;">12</div>
+                        <div id="hour1" class="hour" style="top: 0px; left: 0px;"></div>
+                        <div id="hour2" class="hour" style="top: 0.621322px; left: -7.97584px;"></div>
+                        <div id="hour3" class="hour" style="top: 1.24264px; left: -15.9517px;"></div>
+                        <div id="hour4" class="hour" style="top: 1.86396px; left: -23.9275px;"></div>
+                        <div id="min1" class="min" style="top: 0px; left: 0px;"></div>
+                        <div id="min2" class="min" style="top: -4.70743px; left: -6.46839px;"></div>
+                        <div id="min3" class="min" style="top: -9.41487px; left: -12.9368px;"></div>
+                        <div id="min4" class="min" style="top: -14.1223px; left: -19.4052px;"></div>
+                        <div id="min5" class="min" style="top: -18.8297px; left: -25.8736px;"></div>
+                        <div id="sec1" class="sec" style="top: 0px; left: 0px;"></div>
+                        <div id="sec2" class="sec" style="top: 2.47819px; left: 7.60648px;"></div>
+                        <div id="sec3" class="sec" style="top: 4.95639px; left: 15.213px;"></div>
+                        <div id="sec4" class="sec" style="top: 7.43458px; left: 22.8194px;"></div>
+                        <div id="sec5" class="sec" style="top: 9.91278px; left: 30.4259px;"></div>
+                        <div id="sec6" class="sec" style="top: 12.391px; left: 38.0324px;"></div>
+                      </div>
+                    </td>
+                    <td>
+                      <p class="intro">JavaScript 시간 간격(time-intervals)으로 실행될 수
+                        있다.</p>
+                      <p class="intro">이를 타이밍 이벤트(timing event)라 부른다.</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <hr>
+            <h2>JavaScript Timing Events</h2>
+            <p>JavaScript 로 , 지정된 시간 간격으로 코드를 실행할 수 있으며, 이를 타이밍 이벤트(timing
+              events)라고 합니다. </p>
+            <p>자바 스크립트에서 이벤트에 시간을 할당하기 매우 쉽습니다. 사용되는 두 가지 주요 방법이 있습니다 :</p>
+            <ul>
+              <li><strong>setInterval</strong>() - 지정된 시간 간격으로, 계속 반복해서
+                함수(function)를 실행</li>
+              <li><strong>setTimeout</strong>() - 지정된 밀리 초(milliseconds) 대기 후, 한
+                번, 함수(function)를 실행</li>
+            </ul>
+            <p><b>Note:&nbsp;</b> <strong>setInterval</strong>() 와 <strong>setTimeout</strong>()
+              는&nbsp; HTML DOM Window 객체의 두 가지 메서드입니다</p>
+            <hr>
+            <h2>setInterval() Method</h2>
+            <p>setInterval() 메소드는 지정된 밀리 초(milliseconds)를 기다린 후 지정된 함수를 실행하고, 주어진 시간 간격으로 함수를 계속 실행하는 것입니다 , </p>
+            <h3>Syntax</h3>
+            <div class="code notranslate">
+              <div> window.setInterval("<i>javascript function</i>",<i>milliseconds</i>);</div>
+            </div>
+            <p><strong>window.setInterval()</strong> 메서드는 window prefix 없이 쓸 수
+              있습니다.</p>
+            <p><strong>setInterval()</strong> 메서드의 첫번째 매개 변수는 <strong>함수(function)</strong>이어야 한다. .</p>
+            <p>두번째 매개변수는 각 실행 사이의 시간 간격의 길이를 나타냅니다.</p>
+            <p><b>Note:</b> 1000 milliseconds = one second.</p>
+            <div class="w3-example">
+              <h2 class="example">Example</h2>
+              <p>Alert "hello" every 3 seconds:</p>
+              <div class="w3-code notranslate">
+                setInterval(function(){alert("Hello")},3000);</div>
+              <br>
+              <a target="_blank" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_setinterval1"
+
+                class="w3-btn w3-margin-bottom">Try it yourself »</a> </div>
+            <p>아래의 예는 현재 시간을 표시합니다.&nbsp; setInterval() 메소드는 디지털 시계와 같이 함수를 1 초 마다 한 번씩 실행하는 데 사용됩니다.</p>
+            <div class="w3-example">
+              <h2 class="example">Example</h2>
+              <p>Display the current time:</p>
+              <div class="w3-code notranslate"> var
+                myVar=setInterval(function(){myTimer()},1000);<br>
+                <br>
+                function myTimer()<br>
+                {<br>
+                var d=new Date();<br>
+                var t=d.toLocaleTimeString();<br>
+                document.getElementById("demo").innerHTML=t;<br>
+                }</div>
+              <br>
+              <a target="_blank" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_setinterval2"
+
+                class="w3-btn w3-margin-bottom">Try it yourself »</a> </div>
+            <br>
+            <hr>
+            <h2>실행 정지</h2>
+            <p><strong>clearInterval()</strong> 메서드가 setInterval() 메소드에 의한 지정된
+              함수의 추가적인 실행을 중지하는 데 사용됩니다.</p>
+            <h3>Syntax</h3>
+            <div class="code notranslate">
+              <div> window.clearInterval(<em>intervalVariable</em>)</div>
+            </div>
+            <p><strong>window.clearInterval()</strong> 메서드는 window prefix 없이 쓸 수
+              있습니다.</p>
+            <p><strong>clearInterval()</strong> 메서드를 사용 할 수 있으려면,&nbsp; interval 메서드를 생성할 때 <strong>전역 변수(global variable)</strong>를 사용해야 합니다 : </p>
+            <div class="code notranslate">
+              <div> myVar=setInterval("<i>javascript function</i>",<i>milliseconds</i>);</div>
+            </div>
+            <p>그러면, clearInterval() 메서드를 호출하여 실행을 중지 할 수 있습니다. </p>
+            <div class="w3-example">
+              <h2 class="example">Example</h2>
+              <p>Same example as above, but we have added a "Stop time" button:</p>
+              <div class="w3-code notranslate"> &lt;p
+                id="demo"&gt;&lt;/p&gt;<br>
+                &lt;button onclick="myStopFunction()"&gt;Stop
+                time&lt;/button&gt;<br>
+                <br>
+                &lt;script&gt;<br>
+                var myVar=setInterval(function(){myTimer()},1000);<br>
+                function myTimer()<br>
+                {<br>
+                var d=new Date();<br>
+                var t=d.toLocaleTimeString();<br>
+                document.getElementById("demo").innerHTML=t;<br>
+                }<br>
+                function myStopFunction()<br>
+                {<br>
+                clearInterval(myVar);<br>
+                }<br>
+                &lt;/script&gt;</div>
+              <br>
+              <a target="_blank" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_setinterval3"
+
+                class="w3-btn w3-margin-bottom">Try it yourself »</a> </div>
+            <br>
+            <hr>
+            <h2>The setTimeout() Method</h2>
+            <h3>Syntax</h3>
+            <div class="code notranslate">
+              <div> window.setTimeout("<i>javascript function</i>",<i>milliseconds</i>);</div>
+            </div>
+            <p><strong>window.setTimeout()</strong> 메서드는 window prefix 없이 쓸 수
+              있습니다.</p>
+            <p>setTimeout () 메서드는 지정된 밀리 초(milliseconds)를 기다린 후 지정된 함수를 실행합니다. </p>
+            <p>setTimeout() 첫 번째 인자는 함수이어야한다.</p>
+            <p>두 번째 매개 변수는 첫 번째 매개 변수를 실행하기 전에, 지금부터 기다릴 시간을 밀리 초 단위로 나타냅니다 </p>
+            <div class="w3-example">
+              <h2 class="example">Example</h2>
+              <p>Wait 3 seconds, then alert "Hello":</p>
+              <div class="w3-code notranslate">
+                setTimeout(function(){alert("Hello")},3000);</div>
+              <br>
+              <a target="_blank" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_timing1"
+
+                class="w3-btn w3-margin-bottom">Try it yourself »</a> </div>
+            <br>
+            <hr>
+            <h2>How to Stop the Execution?</h2>
+            <p><strong>clearTimeout</strong>() 메서드의 <strong>setTimeout</strong>()
+              메서드에 지정된 함수의 실행을 중지하는 데 사용됩니다.</p>
+            <h3>Syntax</h3>
+            <div class="code notranslate">
+              <div> window.clearTimeout(<em>timeoutVariable</em>)</div>
+            </div>
+            <p><strong>window.clearTimeout()</strong> 메서드는 window prefix 없이 쓸 수
+              있습니다.</p>
+            <p><strong>clearTimeout</strong>() 메서드를 사용 할 수 있으려면,&nbsp; timeout
+              메서드를 생성할 때 전역 변수(global variable)를 사용해야합니다 :</p>
+            <div class="code notranslate">
+              <div> myVar=setTimeout("<i>javascript function</i>",<i>milliseconds</i>);</div>
+            </div>
+            <p>그러면, 함수가 아직 실행되지 않은 경우, <strong>clearTimeout</strong>() 메서드를
+              호출하여 실행을 중지 할 수 있습니다.</p>
+            <div class="w3-example">
+              <h2 class="example">Example</h2>
+              <p>Same example as above, but we have added a "Stop the alert"
+                button:</p>
+              <div class="w3-code notranslate"> var myVar;<br>
+                <br>
+                function myFunction()<br>
+                {<br>
+                myVar=setTimeout(function(){alert("Hello")},3000);<br>
+                }<br>
+                <br>
+                function myStopFunction()<br>
+                {<br>
+                clearTimeout(myVar);<br>
+                }</div>
+              <br>
+              <a target="_blank" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_settimeout2"
+
+                class="w3-btn w3-margin-bottom">Try it yourself »</a> </div>
+            <br>
+            <hr>
+            <div class="tryit_ex"> <img src="./JavaScript%20Timing%20Events_files/tryitimg.gif"
+
+                style="width:40px;height:46px" alt="Examples">
+              <h2>More Examples</h2>
+            </div>
+            <p><a target="_blank" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_timing2">Another
+                simple timing</a></p>
+            <p><a target="_blank" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock">A
+                clock created with a timing event</a></p>
+            <br>
+            <div class="chapter">
+              <div class="w3-clear nextprev"> <a class="w3-left w3-btn" href="JavaScript%20Operators.html">«
+                  Previous</a> <a class="w3-right w3-btn" href="JavaScript%20If...Else%20Statements.html">Next
+                  Chapter »</a> </div>
+            </div>
+            <hr></div>
+        </div>
+      </div>
+      </div>
+    <br>
+    <hr style="height:5px;">
+   
+  </body>
+</html>

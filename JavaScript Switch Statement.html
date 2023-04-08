@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>JavaScript Switch Statement</title>
+    <style>a.menu_js_switch{font-weight:bold;}</style>
+    <meta name="viewport" content="width=device-width">
+    <meta name="Keywords" content="HTML,CSS,XML,JavaScript,DOM,jQuery,ASP.NET,PHP,SQL,colors,tutorial,programming,development,training,learning,quiz,primer,lessons,reference,examples,source code,demos,tips,color table,w3c,cascading style sheets,active server pages,Web building,Webmaster">
+    <meta name="Description" content="Free HTML CSS JavaScript DOM jQuery XML AJAX RSS ASP .NET PHP SQL tutorials, references, examples for web building.">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="w3.css">
+  </head>
+  <body>
+    <div id="belowTopnav" style="width:auto">
+      <div id="page" style="width:auto; padding:30px; margin:10px;">
+        <div>
+          <div id="main" style="width:auto">
+            <h1>JavaScript <span class="color_h1">Switch</span> Statement</h1>
+            <div class="chapter">
+              <div class="w3-clear nextprev"> <a class="w3-left w3-btn" href="JavaScript%20If...Else%20Statements.html">«
+                  Previous</a> <a class="w3-right w3-btn" href="JavaScript%20for%20Loop.html">Next
+                  Chapter »</a> </div>
+            </div>
+            <hr>
+            <p class="intro">switch 문은 다른 조건에 따라 다른 동작을 수행하기 위해 사용된다.</p>
+            <hr>
+            <h2>The JavaScript Switch Statement</h2>
+            <p>실행될 코드의 많은 블록들 중 하나를 선택할 때 switch 문을 사용합니다. </p>
+            <h3>Syntax</h3>
+            <div class="w3-code w3-border notranslate">
+              <div> switch(<em>expression</em>) {<br>
+                &nbsp;&nbsp;&nbsp; case <em>n</em>:<br>
+                <em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; code block<br>
+                </em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;<br>
+                &nbsp;&nbsp;&nbsp; case <em>n</em>:<br>
+                <em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; code block<br>
+                </em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;<br>
+                &nbsp;&nbsp;&nbsp; default:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <em>default code
+                  block</em><br>
+                } </div>
+            </div>
+            <p>작동하는 방법 : </p>
+            <ul>
+              <li>switch 식이 한 번 평가됩니다. </li>
+              <li>식의 값은 구조의 각 경우에 대한 값과 비교된다. </li>
+              <li>일치가 있다면, 그 경우와 연관된 코드의 블록이 실행된다. <b>break</b> 사용하여 자동으로 다음의
+                경우를 실행하는 것을 방지 할 수 있습니다.</li>
+            </ul>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <p>The getDay() method returns the weekday as a number between 0
+                and 6. (Sunday=0, Monday=1, Tuesday=2 ..)</p>
+              <p>Use the weekday number to calculate weekday name:</p>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">switch</span> (<span style="color:mediumblue">new</span>
+                  Date().getDay()) {<br>
+                  <span style="color:red"> </span>&nbsp;&nbsp;&nbsp; <span style="color:mediumblue">case</span>
+                  <span style="color:red">0</span>:<br>
+                  <span style="color:red"> </span>&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; day = <span style="color:brown">"Sunday"</span>;<br>
+                  <span style="color:red"> </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span style="color:mediumblue">break</span>;<br>
+                  <span style="color:red"> </span>&nbsp;&nbsp;&nbsp; <span style="color:mediumblue">case</span>
+                  <span style="color:red">1</span>:<br>
+                  <span style="color:red"> </span>&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; day = <span style="color:brown">"Monday"</span>;<br>
+                  <span style="color:red"> </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span style="color:mediumblue">break</span>;<br>
+                  <span style="color:red"> </span>&nbsp;&nbsp;&nbsp; <span style="color:mediumblue">case</span>
+                  <span style="color:red">2</span>:<br>
+                  <span style="color:red"> </span>&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; day = <span style="color:brown">"Tuesday"</span>;<br>
+                  <span style="color:red"> </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span style="color:mediumblue">break</span>;<br>
+                  <span style="color:red"> </span>&nbsp;&nbsp;&nbsp; <span style="color:mediumblue">case</span>
+                  <span style="color:red">3</span>:<br>
+                  <span style="color:red"> </span>&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; day = <span style="color:brown">"Wednesday"</span>;<br>
+                  <span style="color:red"> </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span style="color:mediumblue">break</span>;<br>
+                  <span style="color:red"> </span>&nbsp;&nbsp;&nbsp; <span style="color:mediumblue">case</span>
+                  <span style="color:red">4</span>:<br>
+                  <span style="color:red"> </span>&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; day = <span style="color:brown">"Thursday"</span>;<br>
+                  <span style="color:red"> </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span style="color:mediumblue">break</span>;<br>
+                  <span style="color:red"> </span>&nbsp;&nbsp;&nbsp; <span style="color:mediumblue">case</span>
+                  <span style="color:red">5</span>:<br>
+                  <span style="color:red"> </span>&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; day = <span style="color:brown">"Friday"</span>;<br>
+                  <span style="color:red"> </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span style="color:mediumblue">break</span>;<br>
+                  <span style="color:red"> </span>&nbsp;&nbsp;&nbsp; <span style="color:mediumblue">case</span>
+                  <span style="color:red">6</span>:<br>
+                  <span style="color:red"> </span>&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; day = <span style="color:brown">"Saturday"</span>;<br>
+                  <span style="color:red"> </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span style="color:mediumblue">break</span>;<br>
+                  <span style="color:red"> </span>} </span></div>
+              <p>The result of day will be:</p>
+              <div class="w3-code notranslate">
+                <script>
+var d=new Date().getDay();
+switch (d) {
+case 0:
+  x="Sunday";
+  break;
+case 1:
+  x="Monday";
+  break;
+case 2:
+  x="Tuesday";
+  break;
+case 3:
+  x="Wednesday";
+  break;
+case 4:
+  x="Thursday";
+  break;
+case 5:
+  x="Friday";
+  break;
+case 6:
+  x="Saturday";
+  break;
+}
+document.write(x);
+</script>Thursday </div>
+              <a target="_blank" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_switch"
+
+                class="w3-btn w3-margin-bottom">Try it Yourself »</a> </div>
+            <h2>The <em>default</em> Keyword</h2>
+            <p>일치가 없는 경우 수행 할 작업을 지정하는데 <em>default</em> keyword 를 사용:</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <p>The getDay() method returns the weekday as a number between 0
+                and 6.</p>
+              <p>If today is neither Saturday (6) nor Sunday (0), write a
+                default message:</p>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">switch</span> (<span style="color:mediumblue">new</span>
+                  Date().getDay()) {<br>
+                  <span style="color:red"> </span>&nbsp;&nbsp;&nbsp; <span style="color:mediumblue">case</span>
+                  <span style="color:red">6</span>:<br>
+                  <span style="color:red"> </span>&nbsp;<span style="color:red">
+                  </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; text = <span style="color:brown">"Today
+                    is Saturday"</span>;<br>
+                  <span style="color:red"> </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span style="color:mediumblue">break</span>; <br>
+                  <span style="color:red"> </span>&nbsp;&nbsp;&nbsp; <span style="color:mediumblue">case</span>
+                  <span style="color:red">0</span>:<br>
+                  <span style="color:red"> </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  text = <span style="color:brown">"Today is Sunday"</span>;<br>
+                  <span style="color:red"> </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span style="color:mediumblue">break</span>; <br>
+                  <span style="color:red"> </span>&nbsp;&nbsp;&nbsp; <span style="color:mediumblue">default</span>:
+                  <br>
+                  <span style="color:red"> </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  text = <span style="color:brown">"Looking forward to the
+                    Weekend"</span>;<br>
+                  } </span></div>
+              <p>The result of text will be:</p>
+              <div class="w3-code notranslate">
+                <script>
+switch (new Date().getDay()) {
+case 6:
+     x= "Today is Saturday";
+    break;
+case 0:
+    x = "Today is Sunday";
+    break;
+default:
+    x = "Looking forward to the Weekend";
+}
+document.write(x);
+</script>Looking forward to the Weekend </div>
+              <a target="_blank" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_switch2"
+
+                class="w3-btn w3-margin-bottom">Try it Yourself »</a> </div>
+            <hr>
+            <h2>Common Code and Fall-Through</h2>
+            <p> 때때로 switch 블록에서 서로 다른 여러 경우에도 같은 코드를 사용하기를 원하거나, 공통의 default 까지
+              이르기를 원할 경우가 있다.</p>
+            <p>다음의 예를 보면, 동일한 코드를 공유하는 경우와 default 가&nbsp; switch 블록의 마지막 경우로 올
+              필요가 없음을 알 수 있다. :</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">switch</span> (<span style="color:mediumblue">new</span>
+                  Date().getDay()) {<br>
+                  <span style="color:red"> </span>&nbsp;&nbsp;&nbsp; <span style="color:mediumblue">case</span>
+                  <span style="color:red">1</span>:<br>
+                  <span style="color:red"> </span>&nbsp;&nbsp;&nbsp; <span style="color:mediumblue">case</span>
+                  <span style="color:red">2</span>:<br>
+                  <span style="color:red"> </span>&nbsp;&nbsp;&nbsp; <span style="color:mediumblue">case</span>
+                  <span style="color:red">3</span>:<br>
+                  <span style="color:red"> </span>&nbsp;&nbsp;&nbsp; <span style="color:mediumblue">default</span>:
+                  <br>
+                  <span style="color:red"> </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  text = <span style="color:brown">"Looking forward to the
+                    Weekend"</span>;<br>
+                  <span style="color:red"> </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span style="color:mediumblue">break</span>; <br>
+                  <span style="color:red"> </span>&nbsp;&nbsp;&nbsp; <span style="color:mediumblue">case</span>
+                  <span style="color:red">4</span>:<br>
+                  &nbsp;&nbsp;&nbsp; <span style="color:mediumblue">case</span>
+                  <span style="color:red">5</span>:<br>
+                  <span style="color:red"> </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  text = <span style="color:brown">"Soon it is Weekend"</span>;<br>
+                  <span style="color:red"> </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span style="color:mediumblue">break</span>; <br>
+                  <span style="color:red"> </span>&nbsp;&nbsp;&nbsp; <span style="color:mediumblue">case</span>
+                  <span style="color:red">0</span>:<br>
+                  <span style="color:red"> </span>&nbsp;&nbsp;&nbsp; <span style="color:mediumblue">case</span>
+                  <span style="color:red">6</span>:<br>
+                  <span style="color:red"> </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  text = <span style="color:brown">"It is Weekend"</span>;<br>
+                  <span style="color:red"> </span>} </span></div>
+              <a target="_blank" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_switch3"
+
+                class="w3-btn w3-margin-bottom">Try it Yourself »</a> </div>
+            <table class="lamp">
+              <tbody>
+                <tr>
+                  <th style="width:34px"><img src="http://www.w3schools.com/images/lamp.jpg"
+
+                      alt="Note" style="height:32px;width:32px"></th>
+                  <td>&nbsp;&nbsp; 기본(default)이 switch 블록의 마지막 경우가 아니면, break 로
+                    종료해야하는 것을 기억하시오. </td>
+                </tr>
+              </tbody>
+            </table>
+            <hr>
+            <h2>Test Yourself with Exercises!</h2>
+            <p> <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_switch1"
+
+                target="_blank">Exercise 1 »</a>&nbsp;&nbsp; <a class="w3-btn"
+
+                href="http://www.w3schools.com/js/exercise.asp?filename=exercise_switch2"
+
+                target="_blank">Exercise 2 »</a>&nbsp;&nbsp; <a class="w3-btn"
+
+                href="http://www.w3schools.com/js/exercise.asp?filename=exercise_switch3"
+
+                target="_blank">Exercise 3 »</a>&nbsp;&nbsp; <a class="w3-btn"
+
+                href="http://www.w3schools.com/js/exercise.asp?filename=exercise_switch4"
+
+                target="_blank">Exercise 4 »</a>&nbsp; </p>
+            <br>
+            <div class="chapter">
+              <div class="w3-clear nextprev"> <a class="w3-left w3-btn" href="JavaScript%20If...Else%20Statements.html">«
+                  Previous</a> <a class="w3-right w3-btn" href="JavaScript%20for%20Loop.html">Next
+                  Chapter »</a> </div>
+            </div>
+            <hr></div>
+        </div>
+      </div>
+    </div>
+    <hr style="height:5px;">
+    
+  </body>
+</html>

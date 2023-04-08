@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>JavaScript Data                Types</title>
+    <style>a.menu_html_images{font-weight:bold;}</style>
+    <meta name="viewport" content="width=device-width">
+    <meta name="Keywords" content="HTML,CSS,XML,JavaScript,DOM,jQuery,ASP.NET,PHP,SQL,colors,tutorial,programming,development,training,learning,quiz,primer,lessons,reference,examples,source code,demos,tips,color table,w3c,cascading style sheets,active server pages,Web building,Webmaster">
+    <meta name="Description" content="Free HTML CSS JavaScript DOM jQuery XML AJAX RSS ASP .NET PHP SQL tutorials, references, examples for web building.">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="w3.css">
+  </head>
+  <body>
+    <div id="belowTopnav" style="width:auto">
+      <div id="page" style="width:auto; padding:30px; margin:10px;">
+        <div>
+          <div id="main" style="width:auto">
+            <h1>JavaScript <span class="color_h1">데이터 형식(Data
+                Types)</span></h1>
+            <div class="chapter">
+                             <div class="w3-clear nextprev"> <a class="w3-left w3-btn" href="JavaScript%20Data%20Types.html">«
+                  Previous</a> <a class="w3-right w3-btn" href="JavaScript%20Functions.html">Next
+                  Chapter »</a> </div>
+            </div>
+            <hr>
+            <p class="intro">문자열(String), 숫자(Number), 부울(Boolean), 배열(Array),
+              객체(Object)</p>
+            <hr>
+            <h2>JavaScript 데이터 타입</h2>
+            <p>JavaScript 변수는 다양한 데이터 타입을 담을 수 있다: 숫자, 문자열, 배열, 객체 등. : </p>
+            <div class="w3-example">
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> length =
+                  16;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span style="color:green">// Number<br>
+                  </span>
+                  <span style="color:mediumblue">var</span> lastName = <span style="color:brown">"Johnson"</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span style="color:green">// String<br>
+                  </span>
+                  <span style="color:mediumblue">var</span> cars = [<span style="color:brown">"Saab"</span>,
+                  <span style="color:brown">"Volvo"</span>, <span style="color:brown">"BMW"</span>];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span style="color:green">// Array<br>
+                  </span>var x = {firstName:<span style="color:brown">"John"</span>,
+                  lastName:<span style="color:brown">"Doe"</span>};&nbsp;&nbsp;&nbsp;
+                  <span style="color:green">// Object
+                  </span></span></div>
+            </div>
+            <hr>
+            <h2>데이터 타입의 개념</h2>
+            <p>프로그래밍에서 데이터 타입은 중요한 개념이다.</p>
+            <p>변수에 연산을 적용하기 위해서는, 타입에 대하여 아는 것이 중요하다. </p>
+            <p>데이터 타입 없이, 컴퓨터는 다음을 해결할 수 없다:</p>
+            <div class="w3-example">
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> x =
+                  16 + <span style="color:brown">"Volvo"</span>;</span></div>
+            </div>
+            <p> "Volvo"에 16을 더하는 것이 의미있는가? 결과가 있는가? 에러를 발생시키는가?</p>
+            <p>JavaScript는 위의 것을 다음과 같이 간주할 것이다:</p>
+            <div class="w3-example">
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> x =
+                  16 + <span style="color:brown">"Volvo"</span>;</span></div>
+            </div>
+            <p> </p>
+            <table class="lamp">
+              <tbody>
+                <tr>
+                  <th style="width:34px"><img src="http://www.w3schools.com/images/lamp.jpg"
+
+                      alt="Note" style="height:32px;width:32px"></th>
+                  <td> &nbsp; 만약에 두 번째 피연산자가 문자열이면,&nbsp; JavaScript 는 첫 번째 피
+                    연산자를 문자열로 처리한다. </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> x = 16 + <span style="color:brown">"Volvo"</span>;</span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_datatypes_addstring"
+
+                target="_blank">Try it Yourself »</a>
+            </div>
+            JavaScript는 수식을 왼쪽에서 오른쪽으로 평가한다. 다른 서열은 다른 결과를 만든다.<br>
+            <div class="w3-example">
+              <h3>JavaScript:</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> x = 16 + 4 + <span
+
+                    style="color:brown">"Volvo"</span>;
+                </span></div>
+              <h3>Result:</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  20Volvo
+                </span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_datatypes_addstrings_1"
+
+                target="_blank">Try it Yourself »</a>
+            </div>
+            <div class="w3-example">
+              <h3>JavaScript:</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> x = <span style="color:brown">"Volvo"</span>
+                  + 16 + 4;
+                </span></div>
+              <h3>Result:</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  Volvo164
+                </span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_datatypes_addstrings_2"
+
+                target="_blank">Try it Yourself »</a>
+            </div>
+            첫 번째 예에서는,&nbsp; JavaScript는 16과 4를 ,"Volvo"를 만나기 전 까지는, 숫자로 다룬다.<br>
+            두 번째 예에서, 첫 번째 피 연산자가 문자열이므로, 모든 피 연산자는 문자열로 간주 된다. <br>
+            <hr>
+            <h2>JavaScript 는 동적형식(Dynamic Types)을 가진다</h2>
+            <p>JavaScript 는 동적 형식(dynamic types)을 가진다. 이는 같은 변수가 다른 형식으로 사용될 수
+              있다는 것을 의미한다 : </p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span>
+                  x;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span style="color:green">// Now x is undefined<br>
+                  </span>var x =
+                  5;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span style="color:green">// Now x is a Number<br>
+                  </span>
+                  <span style="color:mediumblue">var</span> x = <span style="color:brown">"John"</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span style="color:green">// Now x is a String</span></span></div>
+            </div>
+            <br>
+            <hr>
+            <h2>JavaScript 문자열(Strings)</h2>
+            <p>문자열(string)은&nbsp; "John Doe" 와 같은 일련의 문자를 저장하는 변수입니다.</p>
+            <p>문자열은 인용 부호 안에 어떤 텍스트도 올 수 있습니다.&nbsp; 단일 또는 이중 따옴표를 사용할 수 있습니다 :<br>
+            </p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span>
+                  carName = <span style="color:brown">"Volvo XC60"</span>;&nbsp;&nbsp;
+                  <span style="color:green">// Using double quotes<br>
+                  </span>
+                  <span style="color:mediumblue">var</span>
+                  carName = <span style="color:brown">'Volvo XC60'</span>;&nbsp;&nbsp;
+                  <span style="color:green">// Using single quotes</span></span></div>
+            </div>
+            <p>문자열을 둘러싼 인용 부호와 일치하지 않는 따옴표를 문자열 안에 사용할 수 있습니다 :</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> answer = <span style="color:brown">"It's
+                    alright"</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span style="color:green">// Single quote inside double quotes<br>
+                  </span>
+                  <span style="color:mediumblue">var</span> answer = <span style="color:brown">"He
+                    is called 'Johnny'"</span>;&nbsp;&nbsp;&nbsp;
+                  <span style="color:green">// Single quotes inside double
+                    quotes<br>
+                  </span>
+                  <span style="color:mediumblue">var</span> answer = <span style="color:brown">'He
+                    is called "Johnny"'</span>;&nbsp;&nbsp;&nbsp;
+                  <span style="color:green">// Double quotes inside single
+                    quotes
+                  </span></span></div>
+              <a target="_blank" class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_datatypes_string">Try
+                it yourself »</a></div>
+            <hr>
+            <h2>JavaScript Numbers</h2>
+            <p>JavaScript 는 숫자에 하나의 형식만 있습니다. 숫자는 소수점(decimals)과 함께, 또는 없이 쓸 수
+              있다 : <br>
+            </p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> x1 =
+                  34.00;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:green">//
+                    Written with decimals<br>
+                  </span>
+                  <span style="color:mediumblue">var</span> x2 =
+                  34;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:green">//
+                    Written without decimals
+                  </span></span></div>
+            </div>
+            <p>특별히 크거나 작은 숫자는 과학적(지수:exponential) 표기법으로 쓸 수 있다 :</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> y =
+                  123e5;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green">//
+                    12300000<br>
+                  </span>
+                  <span style="color:mediumblue">var</span> z =
+                  123e-5;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green">//
+                    0.00123</span></span></div>
+              <a target="_blank" class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_datatypes_numbers">Try
+                it yourself »</a></div>
+            <hr>
+            <h2>JavaScript Booleans</h2>
+            <p>부울(Booleans)은 true 또는 false 두 개의 값을 가질 수 있습니다.: </p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span>
+                  x = <span style="color:mediumblue">true</span>;<br>
+                  <span style="color:mediumblue">var</span> y = <span style="color:mediumblue">false</span>;</span></div>
+            </div>
+            <p>부울은 종종 조건부 테스트에 사용됩니다.</p>
+            <hr>
+            <h2>JavaScript 배열(Arrays)</h2>
+            <p>JavaScript 배열은 각진괄호(square brackets)로 쓴다.</p>
+            <p>배열의 항목들은 쉼표(comma)로 구분된다.</p>
+            <p>다음은 세개의 항목(자동차 이름)을 갖는 cars 라는 이름의 배열을 선언(생성)한다.</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> cars = [<span style="color:brown">"Saab"</span>,
+                  <span style="color:brown">"Volvo"</span>, <span style="color:brown">"BMW"</span>];
+                </span></div>
+              <a target="_blank" class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_datatypes_array">Try
+                it Yourself »</a>
+            </div>
+            <p>배열 인덱스는 0부터 시작하며, 첫 번째 항목 [0], 두 번째는 [1], 등 이 됨을 의미한다.</p>
+            <hr>
+            <h2>JavaScript 객체(Objects)</h2>
+            <p>JavaScript 객체는 중괄호(curly braces)로 쓰입니다. </p>
+            <p>중괄호 안에 객체의 속성(property)은 쉼표로 구분된 이름:값(name : value)의 쌍으로 정의된다 .</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> person = {firstName:<span
+
+                    style="color:brown">"John"</span>, lastName:<span style="color:brown">"Doe"</span>,
+                  age:50, eyeColor:<span style="color:brown">"blue"</span>};<br>
+                </span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_datatypes_object"
+
+                target="_blank">Try it Yourself »</a>
+            </div>
+            <p> 위의 예에서 객체(person)은 4가지 성질(property)를 가진다: firstName, lastName,
+              age, eyeColor.</p>
+            <hr>
+            <h2>typeof&nbsp; 연산자</h2>
+            JavaScript 변수의 형식을 찾기 위해&nbsp; typeof 연산자를 사용할 수 있습니다.<br>
+            <br>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">typeof</span> <span style="color:brown">"John"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+
+                    style="color:green">// Returns string <br>
+                  </span>
+                  <span style="color:mediumblue">typeof</span>
+3.14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+
+                    style="color:green">// Returns number<br>
+                  </span>
+                  <span style="color:mediumblue">typeof</span> <span style="color:mediumblue">false</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+
+                    style="color:green">// Returns boolean<br>
+                  </span>
+                  <span style="color:mediumblue">typeof</span>
+[1,2,3,4]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+
+                    style="color:green">// Returns object<br>
+                  </span>
+                  <span style="color:mediumblue">typeof</span> {name:<span style="color:brown">'John'</span>,
+                  age:34}&nbsp;<span style="color:green">// Returns object
+                  </span></span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_datatypes_typeof"
+
+                target="_blank">Try it Yourself »</a>
+            </div>
+            <table class="lamp">
+              <tbody>
+                <tr>
+                  <th style="width:34px"><img src="http://www.w3schools.com/images/lamp.jpg"
+
+                      alt="Note" style="height:32px;width:32px"></th>
+                  <td> &nbsp; JavaScript 에서, 배열은 객체의 특별한 형태이다. 따라서 typeof
+                    [1,2,3,4]는 객체를 반환한다.&nbsp;</td>
+                </tr>
+              </tbody>
+            </table>
+            <hr>
+            <h2>Undefined</h2>
+            <p><strong>JavaScript</strong> 에서 값이 없는 변수는 <strong>undefined </strong>값
+              을 가진다. <strong>typeof </strong>또한 <strong>undefined </strong>이
+              다. </p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span>
+                  person;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span style="color:green">// Value is undefined, type is
+                    undefined</span></span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_datatypes_undefined"
+
+                target="_blank">Try it Yourself »</a>
+            </div>
+            어떤 변수도 값을 <strong>undefined </strong>로 설정하여 비어 있을 수 있다. 형식 또한
+            undefined 가 된다. <br>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  person =
+                  undefined;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span style="color:green">// Value is undefined, type is
+                    undefined</span></span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_datatypes_undefined_2"
+
+                target="_blank">Try it Yourself »</a>
+            </div>
+            <hr>
+            <h2>빈 값(empty value)</h2>
+            <p>빈 값은 <strong>undefined </strong>와는 아무 관련이 없다.</p>
+            <p>빈 문자열 변수는 값과 type을 가진다.. </p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> car = <span style="color:brown">""</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:green">//
+                    The value is "", the typeof is string</span></span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_datatypes_empty"
+
+                target="_blank">Try it Yourself »</a>
+            </div>
+            <hr>
+            <h2>Null</h2>
+            <p><strong>JavaScript</strong> 에서 <strong>null </strong>은<strong>
+              </strong>"<strong>아무것도 아님</strong>(<strong>nothing</strong>)"이다.</p>
+            <p>이는 존재 하지 않는 무언가를 상징한다.</p>
+            <p>불행히도, JavaScript에서, null 의 데이타형식은 객체(object)이다.</p>
+            <table class="lamp">
+              <tbody>
+                <tr>
+                  <th style="width:34px"><img src="http://www.w3schools.com/images/lamp.jpg"
+
+                      alt="Note" style="height:32px;width:32px"></th>
+                  <td> &nbsp; JavaScript 에서, 배열은 객체의 특별한 형태이다. 따라서 typeof
+                    [1,2,3,4]는 객체를 반환한다.&nbsp;</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>객체를 <strong>null </strong>로 설정하여 비울 수 있다. <strong></strong></p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span>
+                  person = <span style="color:mediumblue">null</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span style="color:green">// Value is null, but type is still
+                    an object<br>
+                  </span>
+                </span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_datatypes_null"
+
+                target="_blank">Try it Yourself »</a>
+            </div>
+            <p>또는 객체를 <strong>undefined</strong>로<strong> </strong>설정하여 비울 수 도
+              있다.</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span>
+                  person = undefined;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:green">//
+                    Value is undefined, type is undefined<br>
+                  </span>
+                </span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_datatypes_undefined_1"
+
+                target="_blank">Try it Yourself »</a>
+            </div>
+            <hr>
+            <h2>undefined 와 null 의 차이</h2>
+            <div class="w3-example">
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">typeof</span>
+                  undefined&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span style="color:green">// undefined<br>
+                  </span>typeof <span style="color:mediumblue">null</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span style="color:green">// object<br>
+                  </span>null ===
+                  undefined&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span style="color:green">// false<br>
+                  </span>null ==
+                  undefined&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span style="color:green">// true</span></span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_typeof_undefined_3"
+
+                target="_blank">Try it Yourself »</a>
+            </div>
+            <br>
+            <div class="chapter">
+  <div class="w3-clear nextprev"> <a class="w3-left w3-btn" href="JavaScript%20Data%20Types.html">«
+                  Previous</a> <a class="w3-right w3-btn" href="JavaScript%20Functions.html">Next
+                  Chapter »</a> </div>
+            </div>
+            <hr> </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

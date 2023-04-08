@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>JavaScript HTML DOM Events</title>
+    <style>a.menu_js_htmldom_events{font-weight:bold;}</style>
+    <meta name="viewport" content="width=device-width">
+    <meta name="Keywords" content="HTML,CSS,XML,JavaScript,DOM,jQuery,ASP.NET,PHP,SQL,colors,tutorial,programming,development,training,learning,quiz,primer,lessons,reference,examples,source code,demos,tips,color table,w3c,cascading style sheets,active server pages,Web building,Webmaster">
+    <meta name="Description" content="Free HTML CSS JavaScript DOM jQuery XML AJAX RSS ASP .NET PHP SQL tutorials, references, examples for web building.">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="w3.css">
+  </head>
+  <body>
+    <div id="belowTopnav" style="width:auto">
+      <div id="page" style="width:auto; padding:30px; margin:10px;">
+        <div>
+          <div id="main" style="width:auto"><br>
+            <h1>JavaScript <span class="color_h1">HTML DOM <strong>이벤트</strong></span></h1>
+            <div class="chapter">
+              <div class="w3-clear nextprev"> <a class="w3-left w3-btn" href="JavaScript%20HTML%20DOM%20Changing%20CSS.html">«
+                  Previous</a> <a class="w3-right w3-btn" href="JavaScript%20HTML%20DOM%20Navigation.html">Next
+                  Chapter »</a> </div>
+            </div>
+            <hr>
+            <p class="intro">HTML DOM 은 JavaScript 가 HTML 이벤트에 반응 할 수 있게 해줍니다.</p>
+            <div class="example">
+              <h2 class="example">Example</h2>
+              <div class="example_code notranslate">
+                <div style="width:100%;height:140px;">
+                  <div style="background-color:#D94A38;width:170px;height:80px;margin:20px;padding-top:20px;color:#ffffff;font-weight:bold;font-size:18px;float:left;text-align:center;"
+
+                    onmouseover="this.innerHTML='Thank You'" onmouseout="this.innerHTML='Mouse Over Me'">Mouse
+                    Over Me</div>
+                  <div style="background-color:#D94A38;width:170px;height:80px;margin:20px;padding-top:20px;color:#ffffff;font-weight:bold;font-size:18px;float:left;text-align:center;"
+
+                    onclick="clickMeEvent(this)">Click Me</div>
+                  <script type="application/javascript">
+	<!--
+	function clickMeEvent(obj)
+	{
+	if (obj.innerHTML=="Goodbye")
+		{
+		obj.style.display="none";
+		}
+	else if (obj.innerHTML=="Thank You")
+		{
+		obj.innerHTML="Goodbye";		
+		}
+	else if (obj.innerHTML=="Click Me<br>Click Me Again<br>And Again")
+		{
+		obj.innerHTML="Thank You";		
+		}
+	else if (obj.innerHTML=="Click Me<br>Click Me Again")
+		{
+		obj.innerHTML=obj.innerHTML+"<br>And Again";		
+		}
+	else
+		{
+		obj.innerHTML=obj.innerHTML+"<br>Click Me Again";
+		}
+	}
+	//-->
+	</script> </div>
+              </div>
+            </div>
+            <br>
+            <hr>
+            <h2><strong>이벤트에 반응하기</strong></h2>
+            <p>사용자가 HTML 요소를 클릭 할 때와 마찬가지로,&nbsp; 이벤트가 발생할 때 JavaScript 가 실행될 수
+              있다.</p>
+            <p>사용자가 요소를 클릭 할 때 코드를 실행하려면, HTML 이벤트 속성에 JavaScript 코드를 추가합니다 :</p>
+            <div class="w3-code w3-border notranslate">
+              <div> onclick=<i>JavaScript</i> </div>
+            </div>
+            <p>Examples of HTML events:</p>
+            <ul>
+              <li>사용자가 마우스를 클릭할 때</li>
+              <li>웹 페이지가 로드되면</li>
+              <li>이미지가 로드되면</li>
+              <li>마우스가 요소 위에서 움직일 때</li>
+              <li>input 필드가 변경되면 </li>
+              <li>HTML form 이 제출되면</li>
+              <li>사용자가 키를 누를 때 </li>
+            </ul>
+            <p>이 예에서는 사용자가&nbsp; &lt;h1&gt; 요소를 클릭 할 때 요소의 내용이 변경된다 :</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate htmlHigh"> <span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>!DOCTYPE<span style="color:red">
+                    html</span><span style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>html<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>body<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>h1<span
+
+                    style="color:red"> onclick<span style="color:mediumblue">="this.innerHTML='Ooops!'"</span></span><span
+
+                    style="color:mediumblue">&gt;</span></span>Click on this
+                text!<span style="color:brown"><span style="color:mediumblue">&lt;</span>/h1<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>/body<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>/html<span
+
+                    style="color:mediumblue">&gt;</span></span> </div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_event_onclick2"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <p>이 예에서는, 이벤트 핸들러로부터 함수가 호출된다:</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate htmlHigh"> <span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>!DOCTYPE<span style="color:red">
+                    html</span><span style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>html<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>body<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>h1<span
+
+                    style="color:red"> onclick<span style="color:mediumblue">="changeText(this)"</span></span><span
+
+                    style="color:mediumblue">&gt;</span></span>Click on this
+                text!<span style="color:brown"><span style="color:mediumblue">&lt;</span>/h1<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>script<span
+
+                    style="color:mediumblue">&gt;</span></span><span style="color:black"><br>
+                  <span style="color:mediumblue">function</span> changeText(id)
+                  {<span style="color:red"> </span><br>
+                  <span style="color:red"> </span>&nbsp;&nbsp;&nbsp;
+                  id.innerHTML = <span style="color:brown">"Ooops!"</span>;<br>
+                  <span style="color:red"> </span>}<br>
+                </span><span style="color:brown"><span style="color:mediumblue">&lt;</span>/script<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>/body<span
+
+                    style="color:mediumblue">&gt;</span></span><br>
+                <span style="color:brown"><span style="color:mediumblue">&lt;</span>/html<span
+
+                    style="color:mediumblue">&gt;</span></span> </div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_event_onclick3"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <br>
+            <hr>
+            <h2>HTML <strong>이벤트 속성</strong></h2>
+            <p>HTML 요소에 이벤트를 할당하려면, 이벤트 속성을 사용합니다.</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <p>Assign an onclick event to a button element:</p>
+              <div class="w3-code notranslate htmlHigh"> <span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>button<span style="color:red">
+                    onclick<span style="color:mediumblue">="displayDate()"</span></span><span
+
+                    style="color:mediumblue">&gt;</span></span>Try it<span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>/button<span style="color:mediumblue">&gt;</span></span>
+              </div>
+              <a target="_blank" class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_events1">Try
+                it Yourself »</a> </div>
+            <p>위의 예에서, 버튼을 클릭 하면 <em>displayDate</em> 라는 함수가 실행됩니다.&nbsp;</p>
+            <hr>
+            <h2>HTML DOM<strong>을 사용하여 이벤트 할당</strong></h2>
+            <p>HTML DOM은&nbsp; JavaScript 를 사용하여 HTML 요소에 이벤트를 할당 할 수 있게 해줍니다 :</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <p>Assign an onclick event to a button element:</p>
+              <div class="w3-code notranslate htmlHigh"> <span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>script<span style="color:mediumblue">&gt;</span></span><span
+
+                  style="color:black"><br>
+                  document.getElementById(<span style="color:brown">"myBtn"</span>).onclick
+                  = displayDate;<br>
+                </span><span style="color:brown"><span style="color:mediumblue">&lt;</span>/script<span
+
+                    style="color:mediumblue">&gt;</span></span> </div>
+              <a target="_blank" class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_events2">Try
+                it Yourself »</a> </div>
+            <p>위의 예에서, id="myBtn" 인 HTML 요소에 displayDate 라는 이름의 함수가 할당됩니다.&nbsp;</p>
+            <p>버튼이 클릭 될 때 함수가 실행됩니다.</p>
+            <hr>
+            <h2>onload 와 onunload <strong>이벤트</strong></h2>
+            <p>사용자가 페이지에 들어가거나 나올 때 onload 와 onunload 이벤트가 작동됩니다.</p>
+            <p>onLoad 이벤트는 방문자의 브라우저 유형 및 브라우저 버전을 확인하고, 그 정보에 기초하여 웹 페이지의 적절한
+              버전을 load하는 데 사용될 수있다.</p>
+            <p>onload 와 onunload 이벤트는 cookies 를 처리하는 데 사용될 수 있습니다.</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate htmlHigh"> <span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>body<span style="color:red">
+                    onload<span style="color:mediumblue">="checkCookies()"</span></span><span
+
+                    style="color:mediumblue">&gt;</span></span> </div>
+              <a target="_blank" class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_events_onload">Try
+                it Yourself »</a> </div>
+            <br>
+            <hr>
+            <h2>onchange 이벤트</h2>
+            <p>onchange 이벤트는 input 필드의 유효성 검사와 함께 자주 사용된다. </p>
+            <p>다음은 onchange 를 사용하는 방법의 예입니다. 사용자가&nbsp; input 필드의 내용을 변경하는 경우
+              upperCase() 함수가 호출 될 것이다.</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate htmlHigh"> <span style="color:brown"><span
+
+                    style="color:mediumblue">&lt;</span>input<span style="color:red">
+                    type<span style="color:mediumblue">="text"</span> id<span style="color:mediumblue">="fname"</span>
+                    onchange<span style="color:mediumblue">="upperCase()"</span></span><span
+
+                    style="color:mediumblue">&gt;</span></span></div>
+              <a target="_blank" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_onchange"
+
+                class="w3-btn w3-margin-bottom">Try it Yourself »</a> </div>
+            <br>
+            <hr>
+            <h2>onmouseover 와 onmouseout <strong>이벤트</strong></h2>
+            <p>onmouseover 와 onmouseout 이벤트는 사용자 마이스가&nbsp; HTML 요소 위에 있을 때 또는
+              벗어 날 때 함수가 작동되도록 하는데 사용될 수있다.</p>
+            <div class="w3-padding w3-xxlarge w3-red" onmouseover="this.innerHTML='Thank You'"
+
+              onmouseout="this.innerHTML='Mouse Over Me'">Mouse Over Me</div>
+            <p> <a target="_blank" class="w3-btn" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_events_mouseover">Try
+                it Yourself »</a> </p>
+            <br>
+            <hr>
+            <h2>onmousedown, onmouseup 와 onclick 이벤트</h2>
+            <p>onmousedown, onmouseup, 그리고&nbsp; onclick 이벤트는 마우스 클릭의 모든 부분입니다.
+              첫째, 마우스 버튼을 클릭하면 onmousedown 이벤트가 유발되고(triggered), 다음 마우스 단추를 놓을
+              때, onmouseup 이벤트가 유발되며, 마지막으로, 마우스 클릭이 완료되면 onclick 이벤트가 유발됩니다.</p>
+            <div class="w3-padding w3-red w3-xxlarge notranslate " onmousedown="mDown(this)"
+
+              onmouseup="mUp(this)"> Click Me </div>
+            <script type="application/javascript">
+	<!--
+	function mDown(obj)
+	{
+	obj.style.backgroundColor="#1ec5e5";
+	obj.innerHTML="Release Me"
+	}
+
+	function mUp(obj)
+	{
+	obj.style.backgroundColor="#D94A38";
+	obj.innerHTML="Thank You"
+	}
+
+	//-->
+	</script>
+            <p> <a target="_blank" class="w3-btn" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_events_mousedown">Try
+                it Yourself »</a> </p>
+            <br>
+            <hr>
+            <h2>More Examples</h2>
+            <p><a href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_event_onmousedown"
+
+                target="_blank">onmousedown and onmouseup</a><br>
+              Change an image when a user holds down the mouse button.</p>
+            <p><a href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_event_onload"
+
+                target="_blank">onload</a><br>
+              Display an alert box when the page has finished loading.</p>
+            <p><a href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_event_onfocus"
+
+                target="_blank">onfocus</a><br>
+              Change the background-color of an input field when it gets focus.</p>
+            <p><a href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_event_onmouse"
+
+                target="_blank">Mouse Events</a><br>
+              Change the color of an element when the cursor moves over it.</p>
+            <hr>
+            <h2>HTML DOM Event Object Reference</h2>
+            <p><a href="http://www.w3schools.com/jsref/dom_obj_event.asp">HTML
+                DOM Event Object Reference</a>.</p>
+            <br>
+            <h2>Test Yourself with Exercises!</h2>
+            <p> <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_dom_events1"
+
+                target="_blank">Exercise 1 »</a>&nbsp;&nbsp; <a class="w3-btn"
+
+                href="http://www.w3schools.com/js/exercise.asp?filename=exercise_dom_events2"
+
+                target="_blank">Exercise 2 »</a>&nbsp;&nbsp; <a class="w3-btn"
+
+                href="http://www.w3schools.com/js/exercise.asp?filename=exercise_dom_events3"
+
+                target="_blank">Exercise 3 »</a> </p>
+            <div class="chapter">
+              <div class="w3-clear nextprev"> <a class="w3-left w3-btn" href="JavaScript%20HTML%20DOM%20Changing%20CSS.html">«
+                  Previous</a> <a class="w3-right w3-btn" href="JavaScript%20HTML%20DOM%20Navigation.html">Next
+                  Chapter »</a> </div>
+            </div>
+            <hr></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

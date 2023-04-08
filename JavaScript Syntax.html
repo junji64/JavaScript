@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>JavaScript Syntax</title>
+    <style>a.menu_html_images{font-weight:bold;}</style>
+    <meta name="viewport" content="width=device-width">
+    <meta name="Keywords" content="HTML,CSS,XML,JavaScript,DOM,jQuery,ASP.NET,PHP,SQL,colors,tutorial,programming,development,training,learning,quiz,primer,lessons,reference,examples,source code,demos,tips,color table,w3c,cascading style sheets,active server pages,Web building,Webmaster">
+    <meta name="Description" content="Free HTML CSS JavaScript DOM jQuery XML AJAX RSS ASP .NET PHP SQL tutorials, references, examples for web building.">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="w3.css">
+  </head>
+  <body>
+    <div id="belowTopnav" style="width:auto">
+      <div id="page" style="width:auto; padding:30px; margin:10px;">
+        <div>
+          <div id="main" style="width:auto">
+            <h1>JavaScript <span class="color_h1">Syntax</span></h1>
+            <div class="chapter">
+              <div class="w3-clear nextprev"> <a class="w3-left w3-btn" href="JavaScript%20Output.html">«
+                  Previous</a> <a class="w3-right w3-btn" href="JavaScript%20Statements.html">Next
+                  Chapter »</a> </div>
+            </div>
+            <hr>
+            <p class="intro">JavaScript <strong>문법(syntax)은 </strong>JavaScript
+              programs 이 어떻게 구성되는지를 설명하는 규칙들의 집합이다. </p>
+            <hr>
+            <h2>JavaScript Programs</h2>
+            <p><strong>컴퓨터 프로그램</strong>(<strong>computer program</strong>)은
+              컴퓨터에 의해서 "실행(executed)" 될 "명령(instructions)"들의 목록이다.</p>
+            <p>프로그래밍 언어로, 이러한 프로그램 명령들을 문(<strong>statements</strong>)이라고 부른다.</p>
+            <p>JavaScript 는 프로그램 언어(<strong>programming language</strong>)다.</p>
+            <p>JavaScript 문(statements) 은 <strong>세미콜론</strong>(<strong>semicolon</strong>)
+              으로<strong> </strong>구분된다.</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> x = 5;<br>
+                  <span style="color:mediumblue">var</span> y = 6;<br>
+                  <span style="color:mediumblue">var</span> z = x + y; </span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_syntax_statements"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <p> </p>
+            <div class="w3-panel w3-note"> &nbsp; HTML 에서, JavaScript programs 은
+              웹 브라우져에 의해 실행될 수 있다. </div>
+            <hr>
+            <h2>JavaScript 문(Statements)</h2>
+            <p>JavaScript statements 은 다음과 같은 것들로 구성된다.:</p>
+            <p>값(Values), 연산자(Operators), 수식(Expressions), 키워드(Keywords), and
+              주석(Comments).</p>
+            <hr>
+            <h2>JavaScript Values</h2>
+            <p>JavaScript 문법에서는 두가지 타입의 값을 정의한다: 고정 값(Fixed values)과 변수
+              값(variable values).</p>
+            <p>고정 값(Fixed values) 은 리터럴(<strong>literals</strong>)이라고 하고, 변수
+              값(Variable values)은 변수(<strong>variables</strong>)라고 부른다.</p>
+            <hr>
+            <h2>JavaScript 리터럴(Literals)</h2>
+            <p>고정 값을 사용하는 데 가장 중요한 규칙:</p>
+            <p><strong>숫자(Numbers)</strong> 는 소수점(decimals)과 또는 없이 사용된다.:</p>
+            <div class="w3-example">
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  10.50<br>
+                  <br>
+                  1001</span></div>
+              <a target="_blank" class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_syntax_numbers">Try
+                it Yourself »</a> </div>
+            <p><strong>문자열(Strings)</strong> 은 이중 또는 단일 따옴표로 쓴 텍스트이다. :</p>
+            <div class="w3-example">
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:brown">"John Doe"</span><br>
+                  <br>
+                  <span style="color:brown">'John Doe'</span> </span></div>
+              <a target="_blank" class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_syntax_strings">Try
+                it Yourself »</a> </div>
+           
+            <hr>
+            <h2>JavaScript 변수(Variables)</h2>
+            <p>프로그래밍 언어에서, <strong>변수</strong>(<strong>variables</strong>)는 데이터
+              값을 <strong>저장</strong>하는데 사용된다.</p>
+            <p>JavaScript 는 변수를 정의하는데 <strong>var </strong>키워드를 사용한다.&nbsp;</p>
+            <p><strong>등호(equal sign)</strong> 는 변수에 <strong>값을 할당</strong>하는데
+              사용한다.&nbsp;</p>
+            <p>이 예에서, x 는 변수로 선언되고, 값 6 이 할당된다. :</p>
+            <div class="w3-example">
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> x;<br>
+                  <br>
+                  x = 6; </span></div>
+              <a target="_blank" class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_syntax_variables">Try
+                it Yourself »</a> </div>
+            <hr>
+            <h2>JavaScript 연산자(Operators)</h2>
+            <p>JavaScript 는 변수에 값을 할당(<strong>assign</strong>)하는데 <strong>assignment
+                operator</strong> ( = ) 를 사용한다. : </p>
+            <div class="w3-example">
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> x = 5;<br>
+                  <span style="color:mediumblue">var</span> y = 6;</span></div>
+              <a target="_blank" class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_syntax_assign">Try
+                it Yourself »</a> </div>
+            <p>JavaScript 는 값을 계산하는데 산술연산자(<strong>arithmetic operators</strong>)&nbsp;
+              ( + - *&nbsp; / ) 를 사용한다. : </p>
+            <div class="w3-example">
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  (5 + 6) * 10<br>
+                </span></div>
+              <a target="_blank" class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_syntax_operators">Try
+                it Yourself »</a> </div>
+            <hr>
+            <h2>JavaScript 키워드(Keywords)</h2>
+            <p>JavaScript <strong>키워드(keywords)</strong> 는 구분된 행동을 수행하는데 사용된다.
+            </p>
+            <p><strong>var</strong> keyword 는 브라우져에게 새로운 변수를 생성하라고 말한다.:</p>
+            <div class="w3-example">
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> x = 5 + 6;<br>
+                  <span style="color:mediumblue">var</span> y = x * 10; </span></div>
+              <a target="_blank" class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_syntax_keywords">Try
+                it Yourself »</a> </div>
+            <hr>
+            <h2>JavaScript 주석(Comments)</h2>
+            <p>모든 JavaScript 문들이 "실행(executed)"되지는 않는다.</p>
+            <p>double slashes <strong>//</strong> 다음의, 또는&nbsp; <strong>/*</strong>
+              과 <strong>*/</strong> 사이의 코드는 주석(<strong>comment</strong>)으로
+              간주된다.</p>
+            <p>주석(Comments)은 무시되며, 실행되지 않는다. :</p>
+            <div class="w3-example">
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> x = 5;&nbsp;&nbsp; <span
+
+                    style="color:green">// I will be executed<br>
+                  </span><br>
+                  <span style="color:green">// var x = 6;&nbsp;&nbsp; I will NOT
+                    be executed</span></span></div>
+              <a target="_blank" class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_syntax_comments">Try
+                it Yourself »</a> </div>
+            <hr>
+            <h2>JavaScript 는 대소문자를 구분(Case Sensitive)</h2>
+            <p>모든 JavaScript 식별자들은 대소 분자를 구분한다(<strong>case sensitive</strong>).&nbsp;
+              </p>
+            <p>변수 <strong>lastName</strong> 과 <strong>lastname </strong>는 두개의
+              서로 다른 변수이다.</p>
+            <div class="w3-example">
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  lastName = <span style="color:brown">"Doe"</span>;<br>
+                  lastname = <span style="color:brown">"Peterson"</span>; </span></div>
+              <a target="_blank" class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_syntax_case">Try
+                it Yourself »</a> </div>
+            <p>JavaScript 는 <strong>VAR</strong> 또는 <strong>Var</strong> 를
+              keyword <strong>var</strong> 로 해석하지 않는다.</p>
+            <hr>
+            <h2>JavaScript 와 Camel Case</h2>
+            <p>역사적으로, 프로그래머들은 여러 단어들을 결합해서 하나의 변수명을 만들 때 세 가지 방법들 사용해왔다.:</p>
+            <p>하이픈(Hyphens):</p>
+            <p>first-name, last-name, master-card, inter-city.</p>
+            <p>밑줄(Underscore):</p>
+            <p>first_name, last_name, master_card, inter_city.</p>
+            <p>케멀 케이스(Camel Case):</p>
+            <p>FirstName, LastName, MasterCard, InterCity.</p>
+            <p> <img alt="camelCase" src="http://www.w3schools.com/js/pic_camelcase.jpg"
+
+                style="width: 200px; height: 221px"></p>
+            <p>프로그래밍 언어들, 특히 JavaScript, 에서는 camel case 를 종종 소문자로 시작한다. :</p>
+            <p>firstName, lastName, masterCard, interCity.</p>
+            <div class="w3-panel w3-note"> Hyphens 은 JavaScript 에서 허용되지 않는다.
+              뺄셈(subtractions)에 할당되어 있다. </div>
+            <hr>
+            <h2>JavaScript Character Set</h2>
+            <p>JavaScript uses the <strong>Unicode</strong> character set.</p>
+            <p>Unicode covers (almost) all the characters, punctuations, and
+              symbols in the world.</p>
+            <p>For a closer look, please study our <a href="http://www.w3schools.com/charsets/ref_html_utf8.asp">Complete
+                Unicode Reference</a>.</p>
+            <br>
+            <div class="chapter">
+              <div class="w3-clear nextprev"> <a class="w3-left w3-btn" href="JavaScript%20Output.html">«
+                  Previous</a> <a class="w3-right w3-btn" href="JavaScript%20Statements.html">Next
+                  Chapter »</a> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

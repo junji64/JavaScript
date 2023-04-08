@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>JavaScript Strings</title>
+    <style>a.menu_html_images{font-weight:bold;}</style>
+    <meta name="viewport" content="width=device-width">
+    <meta name="Keywords" content="HTML,CSS,XML,JavaScript,DOM,jQuery,ASP.NET,PHP,SQL,colors,tutorial,programming,development,training,learning,quiz,primer,lessons,reference,examples,source code,demos,tips,color table,w3c,cascading style sheets,active server pages,Web building,Webmaster">
+    <meta name="Description" content="Free HTML CSS JavaScript DOM jQuery XML AJAX RSS ASP .NET PHP SQL tutorials, references, examples for web building.">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="w3.css">
+  </head>
+  <body>
+    <div id="belowTopnav" style="width:auto">
+      <div id="page" style="width:auto; padding:30px; margin:10px;">
+        <div>
+          <div id="main" style="width:auto">
+            <h1>JavaScript <span class="color_h1">문자열(Strings)</span></h1>
+            <div class="chapter">
+              <div class="w3-clear nextprev"> <a class="w3-left w3-btn" href="JavaScript%20Events.html">«
+                  Previous</a> <a class="w3-right w3-btn" href="JavaScript%20Numbers.html">Next
+                  Chapter »</a> </div>
+            </div>
+            <hr>
+            <p class="intro">JavaScript 문자열은 텍스트를 저장하고 조작하는데 사용됩니다.</p>
+            <hr>
+            <h2>JavaScript Strings</h2>
+            <p>문자열은 단순히 "John Doe"과 같은 일련의 문자들을 저장합니다.</p>
+            <p>문자열은 인용 부호 안에 어떤 텍스트도 될 수 있습니다. 단일 또는 이중 따옴표를 사용할 수 있습니다 :</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> carname = <span style="color:brown">"Volvo
+                    XC60"</span>;<br>
+                  <span style="color:mediumblue">var</span> carname = <span style="color:brown">'Volvo
+                    XC60'</span>; </span></div>
+              <a target="_blank" class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_strings">Try
+                it Yourself »</a> </div>
+            <p>문자열을 둘러싼 인용 부호와 일치하지 않는 따옴표를 문자열 안에서 사용할 수 있습니다 : </p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> answer = <span style="color:brown">"It's
+                    alright"</span>;<br>
+                  <span style="color:mediumblue">var</span> answer = <span style="color:brown">"He
+                    is called 'Johnny'"</span>;<br>
+                  <span style="color:mediumblue">var</span> answer = <span style="color:brown">'He
+                    is called "Johnny"'</span>;<br>
+                </span></div>
+              <a target="_blank" class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_strings_quotes">Try
+                it Yourself »</a> </div>
+            <hr>
+            <h2>String Length</h2>
+            <p>문자열(String 객체)의 길이는 내장된 속성(property) <strong>length </strong>에서
+              알 수 있다 :</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> txt = <span style="color:brown">"ABCDEFGHIJKLMNOPQRSTUVWXYZ"</span>;<br>
+                  <span style="color:mediumblue">var</span> sln = txt.length;</span></div>
+              <a target="_blank" class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_string_length">Try
+                it Yourself »</a> </div>
+            <hr>
+            <h2>특수 문자(Special Characters)</h2>
+            <p>문자열은 인용부호 안에 쓰여야 하기 때문에,&nbsp; JavaScript 는 다음과 같은 문자열을 잘못 이해할
+              것이다:</p>
+            <div class="w3-example">
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> y = <span style="color:brown">"We
+                    are the so-called "</span>Vikings<span style="color:brown">"
+                    from the north."</span><br>
+                </span></div>
+            </div>
+            <p> 문자열은&nbsp; "We are the so-called "로 잘릴 것이다. </p>
+            <p> 이 문제를 피하기 위한 해결책은,&nbsp; \&nbsp; escape 문자를 사용하는 것이다.</p>
+            <p>백슬래시(backslash) escape 문자 는 특수문자(special character)를 문자열 문자로
+              바꾸어준다:</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate"> <span class="highELE">var</span>
+                x = <span class="highVAL">'It\'s alright';</span><br>
+                <span class="highELE">var</span> y = <span class="highVAL">"We
+                  are the so-called \"Vikings\" from the north."</span></div>
+              <a target="_blank" class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_strings_escape">Try
+                it Yourself »</a> </div>
+            <p>escape 문자 (\) 는 문자열에 다른 특수 문자들을 넣는데도 사용될 수 있다.</p>
+            <p>다음은 백슬래시(backslash) 기호로 텍스트 문자열에 추가 할 수 있는 다른 특수 문자들 목록이다 :</p>
+            <table class="w3-table-all notranslate">
+              <tbody>
+                <tr>
+                  <th>Code</th>
+                  <th>Outputs</th>
+                </tr>
+                <tr>
+                  <td>\'</td>
+                  <td>single quote</td>
+                </tr>
+                <tr>
+                  <td>\"</td>
+                  <td>double quote</td>
+                </tr>
+                <tr>
+                  <td>\\</td>
+                  <td>backslash</td>
+                </tr>
+                <tr>
+                  <td>\n</td>
+                  <td>new line</td>
+                </tr>
+                <tr>
+                  <td>\r</td>
+                  <td>carriage return</td>
+                </tr>
+                <tr>
+                  <td>\t</td>
+                  <td>tab</td>
+                </tr>
+                <tr>
+                  <td>\b</td>
+                  <td>backspace</td>
+                </tr>
+                <tr>
+                  <td>\f</td>
+                  <td>form feed</td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <hr>
+            <h2>긴 코드 줄을 나누기 </h2>
+            <p>최적의 가독성을 위해서, 프로그래머들은 종종 80자 보다 긴 코드 줄을 피하기를 좋아한다.&nbsp;</p>
+            <p>JavaScript 문이 한 줄에 들어가지 않으면, 나누기 가장 좋은 곳은 연산자(operator) 다음이다:</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  document.getElementById(<span style="color:brown">"demo"</span>).innerHTML
+                  =<br>
+                  <span style="color:brown">"Hello Dolly."</span>;</span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_statements_linebreak"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <p>또는, 백슬래시(backslash)를 가지고 텍스트 문자열 안에서 코드 줄을 나눌 수도 있다.</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  document.getElementById(<span style="color:brown">"demo"</span>).innerHTML
+                  = <span style="color:brown">"Hello \<br>
+                    Dolly!"</span>; </span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_string_break"
+
+                target="_blank">Try it Yourself »</a> </div>
+            긴 문자열을 나눌 가장 안전한(약간 느릴지라도) 방법은 문자열 더하기를 사용하는 것이다:<br>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  document.getElementById(<span style="color:brown">"demo"</span>).innerHTML
+                  = <span style="color:brown">"Hello"</span> + <br>
+                  <span style="color:brown">"Dolly!"</span>; </span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_string_break_ok"
+
+                target="_blank">Try it Yourself »</a> </div>
+            &nbsp;백슬래시(backslash)를 가지고 코드 줄(code line)을 나눌 수 는 없다 !! :<br>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  document.getElementById(<span style="color:brown">"demo"</span>).innerHTML
+                  = \ <br>
+                  <span style="color:brown">"Hello Dolly!"</span>; </span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_strings_codebreak"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <hr>
+            <h2>문자열은 객체도 될 수 있다</h2>
+            <p>일반적으로는, JavaScript 문자열은 var firstName = "John"&nbsp; 처럼 문자적으로 생성된
+              기본 값(primitive value)일 수 있습니다.</p>
+            <p>그러나,&nbsp; var firstName = new String("John") 처럼&nbsp; new
+              keyword 를 사용하여 객체로 생성 할 수 도 있습니다.</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> x = <span style="color:brown">"John"</span>;<br>
+                  <span style="color:mediumblue">var</span> y = <span style="color:mediumblue">new</span>
+                  String(<span style="color:brown">"John"</span>);<br>
+                  <br>
+                  <span style="color:green">// typeof x will return string<br>
+                  </span><span style="color:green">// typeof y will return
+                    object</span></span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_string_object"
+
+                target="_blank">Try it Yourself »</a></div>
+            <table class="lamp">
+              <tbody>
+                <tr>
+                  <th style="width:34px"><img src="http://www.w3schools.com/images/lamp.jpg"
+
+                      alt="Note" style="height:32px;width:32px"></th>
+                  <td>&nbsp; 문자열을 객체로 생성하지 마시오. 실행 속도가 느려지며, 바람직하지 않은 부작용이
+                    발생합니다. <br>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <hr>
+            <h2>Test Yourself with Exercises!</h2>
+            <p> <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_strings1"
+
+                target="_blank">Exercise 1 »</a>&nbsp;&nbsp; <a class="w3-btn"
+
+                href="http://www.w3schools.com/js/exercise.asp?filename=exercise_strings2"
+
+                target="_blank">Exercise 2 »</a>&nbsp;&nbsp; <a class="w3-btn"
+
+                href="http://www.w3schools.com/js/exercise.asp?filename=exercise_strings3"
+
+                target="_blank">Exercise 3 »</a>&nbsp;&nbsp; <a class="w3-btn"
+
+                href="http://www.w3schools.com/js/exercise.asp?filename=exercise_strings4"
+
+                target="_blank">Exercise 4 »</a> </p>
+            <hr>
+            <h2>String 속성 및 메서드</h2>
+            <p>"John Doe"와 같은 원시 값(primitive values)은 (객체가 아니기 때문에) 속성과 메서드를 가질
+              수 없다.&nbsp;</p>
+            <p>하지만 JavaScript 에서는 속성과 메서드가 실행될 때는 원시 값(primitive value)을 객체처럼
+              취급하기 때문에 원시 값(primitive value)에도 속성과 메서드가 사용가능하다.</p>
+            <hr>
+            <h2>문자열에서 문자열 찾기(finding)</h2>
+            <p><strong>indexOf()</strong> 메서드는 문자열 안에서 지정된 텍스트가 <strong>처음</strong>으로 발견되는 <strong>index(위치</strong>)를 반환한다:</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> str = <span style="color:brown">"Please
+                    locate where 'locate' occurs!"</span>;<br>
+                  <span style="color:mediumblue">var</span> pos = str.indexOf(<span
+
+                    style="color:brown">"locate"</span>); </span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_string_indexof"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <strong>lastIndexOf() </strong>메서드는 문자열 안에서 지정된 텍스트가 <strong>마지막</strong>으로 발견되는 <strong>index(위치</strong>)를 반환한다
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> str = <span style="color:brown">"Please
+                    locate where 'locate' occurs!"</span>;<br>
+                  <span style="color:mediumblue">var</span> pos =
+                  str.lastIndexOf(<span style="color:brown">"locate"</span>); </span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_string_lastindexof"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <p>지정된 텍스트를 찾을 수없는 경우, <strong>indexOf()</strong> 메소드와 <strong>lastIndexOf()
+                </strong>메서드 모두&nbsp; -1 을 반환한다 .</p>
+            <hr>
+            <h2>문자열에서 문자열 탐색(searching)</h2>
+            <p> </p>
+            <p><strong>search()</strong> 메서드는 문자열 안에서 지정된 텍스트를 탐색하여 일치하는 곳의 위치를 반환한다:</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> str = <span style="color:brown">"Please
+                    locate where 'locate' occurs!"</span>;<br>
+                  <span style="color:mediumblue">var</span> pos = str.search(<span
+
+                    style="color:brown">"locate"</span>); </span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_string_search_locate"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <table class="lamp">
+              <tbody>
+                <tr>
+                  <th style="width:34px"><img src="http://www.w3schools.com/images/lamp.jpg"
+
+                      alt="Note" style="height:32px;width:32px"></th>
+                  <td>&nbsp; 눈치 챘습니까? <br>
+                    &nbsp; <strong>indexOf() 와 </strong><strong>search()</strong>
+                    두 메서드는 같습니다.<br>
+                    &nbsp; 둘 다 같은 매개변수를 받아서 같은 같을 반환합니다.<br>
+                    &nbsp; 두 메서드는 같습니다, 그러나 <strong></strong><strong>search() </strong>메서드는 더 강력한&nbsp; 탐색 값을 취할 수 있습니다.<br>
+                    &nbsp; 강력한 탐색 값에 대하여서는&nbsp; regular expression 에 관한&nbsp;
+                    장에서 배울 것입니다. </td>
+                </tr>
+              </tbody>
+            </table>
+            <hr>
+            <h2>문자열의 부분 추출</h2>
+            문자열의 일부분을 추출하는데는 세가지 메서드가 있다:<br>
+            <ul>
+              <li>slice(start,end) </li>
+              <li> substring(start,end)</li>
+              <li>substr(start,length)</li>
+            </ul>
+            <h2>slice() method</h2>
+            slice()는 문자열의 일부를 추출하여 추출된 부분을 새로운 문자열로 반환한다.<br>
+            메서드는 2 매개변수: 시작 인덱스(위치) 와 끝 인덱스(위치)를 가진다. <br>
+            다음 예는 문자열의 위치 7 부터 13 까지의 부분을 잘라낸다.<br>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> str = <span style="color:brown">"Apple,
+                    Banana, Kiwi"</span>;<br>
+                  <span style="color:mediumblue">var</span> res =
+                  str.slice(7,13); </span></div>
+              <p>The result of res will be:</p>
+              <div class="w3-code notranslate"> Banana</div>
+              <a target="_blank" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_string_slice"
+
+                class="w3-btn w3-margin-bottom">Try it Yourself »</a> </div>
+            파라메터가 음수이면, 위치는 문자열의 끝에서 부터 계수된다. <br>
+            다음 예는 문자열의 위치 -12 부터 -6 까지의 부분을 잘라낸다.<br>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> str = <span style="color:brown">"Apple,
+                    Banana, Kiwi"</span>;<br>
+                  <span style="color:mediumblue">var</span> res =
+                  str.slice(-12,-6); </span></div>
+              <p>The result of res will be:</p>
+              <div class="w3-code notranslate"> Banana</div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_string_slice_negative"
+
+                target="_blank">Try it Yourself »</a> </div>
+            두번 째 파라메터를 생략하면, 메서드는 문자열의 나머지 모두를 잘라낸다.<br>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> res = str.slice(7);
+                </span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_string_slice_rest"
+
+                target="_blank">Try it Yourself »</a> </div>
+            또는, 끝에서 부터 계수하여 ...
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> res =
+                  str.slice(-12); </span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_string_slice_rest_negative"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <br>
+            <h2>substring() method</h2>
+            substring()은 slice()와 유사하다.<br>
+            다른 점은 substring()은 음수 인덱스를 허용하지 않는 것이다.<br>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> str = <span style="color:brown">"Apple,
+                    Banana, Kiwi"</span>;<br>
+                  <span style="color:mediumblue">var</span> res =
+                  str.substring(7,13); </span></div>
+              <p>The result of <em>res</em> will be:</p>
+              <div class="w3-code notranslate"> Banana</div>
+              <a target="_blank" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_string_substring"
+
+                class="w3-btn w3-margin-bottom">Try it Yourself »</a> </div>
+            두 번째 파라메터를 생략하면, substring()은 문자열의 나머지 모두를 잘라낸다.<br>
+            <br>
+            <h2>substr() method</h2>
+            substr()은 slice()와 유사하다.<br>
+            다른 점은 두 번째 파라매터가 추출될 부분의 길이(length)를 지정한 다는 것이다.<br>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> str = <span style="color:brown">"Apple,
+                    Banana, Kiwi"</span>;<br>
+                  <span style="color:mediumblue">var</span> res =
+                  str.substr(7,6); </span></div>
+              <p>The result of res will be:</p>
+              <div class="w3-code notranslate"> Banana</div>
+              <a target="_blank" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_string_substr"
+
+                class="w3-btn w3-margin-bottom">Try it Yourself »</a> </div>
+            첫 번째 파라메터가 음수이면, 위치는 문자열의 끝부터 계수된다.<br>
+            두 번째 파라메터는 길이를 정의하므로 음수 일 수 없다.<br>
+            두 번째 파라메타를 생략하면, substr()는 문자열의 나머지 모두를 잘라낸다.<br>
+            <hr>
+            <h2>문자열 내용 교채(replacing)</h2>
+            <p><strong>replace()</strong> 메서드는 문자열에서 특정 값을 다른 값으로 대체합니다.</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  str = <span style="color:brown">"Please visit Microsoft!"</span>;<br>
+                  <span style="color:mediumblue">var</span> n = str.replace(<span
+
+                    style="color:brown">"Microsoft"</span>,<span style="color:brown">"W3Schools"</span>);<br>
+                </span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_string_replace"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <strong>replace()</strong> 메서드 또한&nbsp; 탐색 값으로 regular expression을
+            취할 수 있다.
+            <hr>
+            <h2>Upper Case and Lower Case</h2>
+            <p><strong>toUpperCase() </strong>/<strong> toLowerCase()</strong>
+              메서드를 사용하여 문자열을 대문자/소문자로 변환할 수 있다.:</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> text1 = <span style="color:brown">"Hello
+                    World!"</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:green">//
+                    String<br>
+                  </span> <span style="color:mediumblue">var</span> text2 =
+                  text1.toUpperCase();&nbsp;&nbsp;<span style="color:green">//
+                    text2 is text1 converted to upper</span></span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_string_toupper"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> text1 = <span style="color:brown">"Hello
+                    World!"</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:green">//
+                    String<br>
+                  </span> <span style="color:mediumblue">var</span> text2 =
+                  text1.toLowerCase();&nbsp;&nbsp;<span style="color:green">//
+                    text2 is text1 converted to lower </span></span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_string_tolower"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <hr>
+            <h2>concat() method</h2>
+            <p><strong>concat()</strong> 은 둘 이상의 문자열을 연결해준다.</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> text1 = <span style="color:brown">"Hello"</span>;<br>
+                  <span style="color:mediumblue">var</span> text2 = <span style="color:brown">"World"</span>;<br>
+                  text3 = text1.concat(<span style="color:brown">" "</span>,text2);
+                  </span></div> <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_string_concat"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <strong>concat() </strong>method 는 + 연산자 대신에 사용될 수 있다. 다음의 두 코드 줄은 같다:<br>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> text = <span style="color:brown">"Hello"</span>
+                  + <span style="color:brown">" "</span> + <span style="color:brown">"World!"</span>;<br>
+                  <span style="color:mediumblue">var</span> text = <span style="color:brown">"Hello"</span>.concat(<span
+
+                    style="color:brown">" "</span>,<span style="color:brown">"World!"</span>);</span></div>
+            </div>
+            <hr>
+            <h2>문자열에서 문자 추출</h2>
+            문자열의 문잘르 추출하는&nbsp; 두 가지 method 가 있다.<br>
+            <ul>
+              <li>charAt(position)</li>
+              <li> charCodeAt(position)</li>
+            </ul>
+            <h2>charAt() method<br>
+            </h2>
+            <h2> </h2>
+            <p><strong>charAt</strong>() method 는 문자열에서 지정한 인덱스(위치)의 문자를 반환한다.</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> str = <span style="color:brown">"HELLO
+                    WORLD"</span>;<br>
+                  str.charAt(0);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span style="color:green">// returns H </span></span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_string_charat"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <h2>charCodeAt() method</h2>
+            <p><strong>charCodeAt</strong>() method 는 문자열에서 지정한 인덱스(위치)의 문자의
+              unicode를 반환한다.</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> str = <span style="color:brown">"HELLO
+                    WORLD"</span>;<br>
+                  <br>
+                  str.charCodeAt(0);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span style="color:green">// returns 72 </span></span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_string_charcodeat"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <hr>
+            <h2>문자열을 배열로 변환</h2>
+            <p>문자열은 <strong>split() </strong>메서드를 사용하여 배열로 변환될 수 있다. :</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> txt = <span style="color:brown">"a,b,c,d,e"</span>;&nbsp;&nbsp;&nbsp;<span
+
+                    style="color:green">// String<br>
+                  </span> txt.split(<span style="color:brown">","</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green">// Split on
+                    commas<br>
+                  </span> txt.split(<span style="color:brown">" "</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+
+                    style="color:green">// Split on spaces<br>
+                  </span> txt.split(<span style="color:brown">"|"</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+
+                    style="color:green">// Split on pipe </span></span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_string_split"
+
+                target="_blank">Try it Yourself »</a> </div>
+            구분자(separator)가 생략되면, 반환된 배열은 인덱스 [0]에 전체 문자열을 갖을 것이다. <br>
+            구분자가 "" 이면, 반환된 배열은 단일 문자들의 배열이 된다.<br>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <div class="w3-code notranslate jsHigh"><span style="color:black">
+                  <span style="color:mediumblue">var</span> txt = <span style="color:brown">"Hello"</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+
+                    style="color:green">// String<br>
+                  </span> txt.split(<span style="color:brown">""</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green">//
+                    Split in characters </span></span></div>
+              <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_string_split_char"
+
+                target="_blank">Try it Yourself »</a> </div>
+            <hr>
+            <h2>Complete String Object Reference</h2>
+            <p><a href="http://www.w3schools.com/jsref/jsref_obj_string.asp">Complete
+                String Object Reference</a>.</p>
+            <p>The reference contains both descriptions and examples, for each
+              property and method.</p>
+            <hr>
+            <h2>Test Yourself with Exercises!</h2>
+            <p> <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_stringsmet1"
+
+                target="_blank">Exercise 1 »</a>&nbsp; <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_stringsmet2"
+
+                target="_blank">Exercise 2 »</a>&nbsp; <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_stringsmet3"
+
+                target="_blank">Exercise 3 »</a>&nbsp; <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_stringsmet4"
+
+                target="_blank">Exercise 4 »</a>&nbsp; <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_stringsmet5"
+
+                target="_blank">Exercise 5 »</a>&nbsp; <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_stringsmet6"
+
+                target="_blank">Exercise 6 »</a> </p>
+            <div class="chapter">
+              <div class="w3-clear nextprev"> <a class="w3-left w3-btn" href="JavaScript%20Events.html">«
+                  Previous</a> <a class="w3-right w3-btn" href="JavaScript%20Numbers.html">Next
+                  Chapter »</a> </div>
+            </div>
+            <hr> </div>
+        </div>
+      </div>
+      <br>
+    </div>
+  </body>
+</html>
