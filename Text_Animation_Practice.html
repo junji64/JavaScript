@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<!-- saved from url=(0094)file:///C:/Bitnami/wampstack-7.1.27-2/apache2/htdocs/CWP/examples/Text-Animation-Practice.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <title> Practice - Text Animation</title>
+    <script>
+      var slideCount=0;
+      var speed = 250;
+      
+       window.onload = function() {
+        document.getElementById("slow").onclick = changeSpeed;
+        document.getElementById("normal").onclick = changeSpeed;
+        document.getElementById("fast").onclick = changeSpeed;
+        };
+      
+      function run(){
+        longStr = document.getElementById("longText").innerHTML;
+        slide= longStr.split("--");
+        // 
+        //
+        timer = setInterval(displaySlide, speed, slide);
+        //  
+        //  
+      }
+
+      function displaySlide(slide) {
+        document.getElementById("displayArea").innerHTML= slide[slideCount % slide.length];
+        slideCount++; 
+        }
+
+      function stop() {
+        clearInterval(timer); 
+        //  
+        //  
+      }
+      
+      function changeSpeed() {
+         speed = this.value;
+        //
+        //
+      }
+      
+      
+    </script>
+  </head>
+  <body>
+    <h2><strong>Practice + Homework <br>
+      </strong></h2>
+    <h3><strong>Text Animation&nbsp;&nbsp;&nbsp; </strong><br>
+    </h3>
+    <p id="longText">W--WE--WEL--WELC--WELCO--WELCOM--WELCOME--WELCOME!</p>
+    <button id="run" onclick="run();">Run</button> <button id="stop" onclick="stop()">Stop</button>&nbsp;&nbsp;&nbsp;
+    Speed :&nbsp; <label><input id="slow" name="speed" value="800" type="radio">
+      Slow </label> <label><input id="normal" name="speed" value="250" checked="checked" type="radio"> Normal </label> <label><input id="fast" name="speed" value="50" type="radio"> Fast</label>
+    <div id="displayArea"> </div>
+    <p><button>Run</button> : 클릭하면 애니메이션 <strong>시작</strong>
+      <ol>
+        <li>"id=longText" 인 &lt;p&gt; 요소의 innerHTML의 문자열을&nbsp; "--"를 구분자로하여 배열로 분리 생성.</li>
+        <li> 애니메이션 되는 동안, 배열의 첫번 째 요소로 시작하여 한 번에 하나씩 차례로 보여집니다.</li>
+        <li>기본적으로 애니메이션이 <strong>매 250 millisecond 마다 배열의 요소를 변경</strong>합다. (자바스크립트 타이머<strong> setInterval() 메서드</strong>를 사용)</li>
+        <li>애니메이션의 마지막 배열에 도달하면, 다시 돌아가 반복하여, <strong>무한 반복</strong>합니다.</li>
+      </ol>
+      <button>Stop</button>: 클릭하면 애니메이션 <span style="font-weight: bold;">정지 </span>
+      <ol>
+        <li>(자바스크립트 타이머<strong> clearInterval() 메서드</strong>를 사용)</li>
+      </ol>
+
+
+      <p><b>과제 완성 후 여기까지만 제출하세요.</b></p>
+      <hr><hr>
+    <table style="width: 100%" border="1">
+      <tbody>
+        <tr>
+          <td>HTML</td>
+          <td>&lt;p
+            id="longText"&gt;W--WE--WEL--WELC--WELCO--WELCOM--WELCOME--WELCOME!&lt;/p&gt;<br>
+            &lt;button onclick="run()"&gt;Run&lt;/button&gt; <br>
+            &lt;button onclick="stop()"&gt;Stop&lt;/button&gt; <br>
+            &lt;div id="displayArea"&gt; &lt;/div&gt;</td>
+        </tr>
+        <tr>
+          <td style="width: 93.2333px;">JavaScript</td>
+          <td style="width: 926.767px;">&lt;script&gt;<br>
+            var slideCount=0;<br>
+            function run(){<br>
+            &nbsp;&nbsp; longStr =
+            document.getElementById("longText").innerHTML;&nbsp;&nbsp; <br>
+            &nbsp;&nbsp; slide= longStr.split("--"); // your <strong>homework 1</strong>.
+            answer should replace this line<br>
+            &nbsp;&nbsp; timer = setInterval(displaySlide, 250, slide);<br>
+            &nbsp;&nbsp; // your<strong> homework 2.</strong> answer should be
+            here<br>
+            }<br>
+            function stop() {<br>
+            &nbsp;&nbsp; clearInterval(timer); <br>
+            &nbsp;&nbsp;&nbsp; // your <strong>homework 2</strong>. answer
+            should be here<br>
+            }<br>
+            function displaySlide(slide) {<br>
+            &nbsp;&nbsp; document.getElementById("displayArea").innerHTML=
+            slide[slideCount % slide.length];<br>
+            &nbsp;&nbsp; slideCount++; <br>
+            <br>
+            }<br>
+            &lt;/script&gt;</td>
+        </tr>
+      </tbody>
+    </table>
+    <p> <br>
+      <strong>"Slow", "Normal", </strong>과<strong> "Fast" </strong>로 표시된 세 개의
+      <strong>라디오 버튼</strong>을 포함합니다.<strong><br>
+      </strong></p>
+    <p><strong>Fast는 50ms</strong>의 지연을 사용하여, <strong>Normal 은 250ms</strong>이
+      며, <strong>Slow 에서 800ms</strong>입니다.</p>
+    <p><strong>처음</strong>에는 <strong>Normal </strong>버튼을 체크되어 있으며. 버튼 하나가 <strong>클
+        릭되면</strong> 박스가 체크되고 애니메니션의 <strong>속도가 변하게</strong> 된다.</p>
+    <p>애니메이션이 아직 시작되지 않았을 경우, 속도를 선택하는 것이 시작되는 원인이 되어서는 않된다.</p>
+    <table style="width: 100%" border="1">
+      <tbody>
+        <tr>
+          <td>HTML</td>
+          <td>Speed :<br>
+            &lt;label&gt;&lt;input id="slow" name="speed" value="800"
+            type="radio"&gt; Slow &lt;/label&gt; <br>
+            &lt;label&gt;&lt;input id="normal" name="speed" value="250"
+            checked="checked"&nbsp; type="radio"&gt; Normal &lt;/label&gt; <br>
+            &lt;label&gt;&lt;input id="fast" name="speed" value="50"&nbsp;
+            type="radio"&gt; Fast&lt;/label&gt;</td>
+        </tr>
+        <tr>
+          <td style="width: 46.5px;">JavaScript</td>
+          <td style="width: 886.5px;">window.onload = function() {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            document.getElementById("slow").onclick = changeSpeed;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            document.getElementById("normal").onclick = changeSpeed;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            document.getElementById("fast").onclick = changeSpeed;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; };<br>
+            function changeSpeed() {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; speed = this.value;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // your <strong>homework
+              3. </strong> answer should be here <br>
+            &nbsp;}</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><strong>Homework </strong>: </p>
+    <ol>
+      <li>입력 문자열이 구분자 없이 문자열로 주어질 때 (예: &lt;p
+        id="longText"&gt;WELCOME&lt;/p&gt;) 작동되도록 수정하시오. (hint: 문자열의&nbsp;
+        split() and concat() methods)</li>
+      <li>애니메이션이<span class="Apple-converted-space">&nbsp;</span>진행되는 동안엔 run
+        button이 비활성화<span class="Apple-converted-space">&nbsp;</span>되어야합니
+        다.&nbsp; stop 시에는 다시 활성화 되어야 합니다. (hint:
+        document.getElementById("__").disabled = true or false )</li>
+      <li>애니메이션이 재생되는 중에 버튼을 클릭하는 경우, 변경이 즉각적으로 일어나도록 수정하시오. (i.e. 사용자가 변화를 확인하기
+        위해 애니메이션을 중지하고 다시 시작하지 말아야 합니다)</li>
+      <li>제출물: 수정된 JavaScript 코드가 내장되어 작동되는 html 파일 하나를 제출.</li>
+    </ol>
+  
+
+</body></html>
