@@ -54,16 +54,17 @@
     Speed :&nbsp; <label><input id="slow" name="speed" value="800" type="radio">
       Slow </label> <label><input id="normal" name="speed" value="250" checked="checked" type="radio"> Normal </label> <label><input id="fast" name="speed" value="50" type="radio"> Fast</label>
     <div id="displayArea"> </div>
-    <p><button>Run</button> : 클릭하면 애니메이션 <strong>시작</strong><br>
-      <br>
-      애니메이션이 시작되면, "id=longText" 인 &lt;p&gt; 요소의 innerHTML의 문자열을&nbsp; "--"를
-      구분자로하여 배열로 분리 생성.</p>
-    <p>애니메이션 되는 동안, 배열의 첫번 째 요소로 시작하여 한 번에 하나씩 차례로 보여집니다.</p>
-    <p>기본적으로 애니메이션이 <strong>매 250 millisecond 마다 배열의 요소를 변경</strong>합다. (자바
-      스크립트 타이머<strong> setInterval() 메서드</strong>를 사용)</p>
-    <p>애니메이션의 마지막 배열에 도달하면, 다시 돌아가 반복하여, <strong>무한 반복</strong>합니다.</p>
-    <p><button>Stop</button>: 클릭하면 애니메이션 <span style="font-weight: bold;">정지 </span>(자
-      바 스크립트 타이머<strong> clearInterval() 메서드</strong>를 사용)</p>
+    <p><button>Run</button> : 클릭하면 애니메이션 <strong>시작</strong>
+      <ol>
+        <li>"id=longText" 인 &lt;p&gt; 요소의 innerHTML의 문자열을&nbsp; "--"를 구분자로하여 배열로 분리 생성.</li>
+        <li> 애니메이션 되는 동안, 배열의 첫번 째 요소로 시작하여 한 번에 하나씩 차례로 보여집니다.</li>
+        <li>기본적으로 애니메이션이 <strong>매 250 millisecond 마다 배열의 요소를 변경</strong>합다. (자바스크립트 타이머<strong> setInterval() 메서드</strong>를 사용)</li>
+        <li>애니메이션의 마지막 배열에 도달하면, 다시 돌아가 반복하여, <strong>무한 반복</strong>합니다.</li>
+      </ol>
+      <button>Stop</button>: 클릭하면 애니메이션 <span style="font-weight: bold;">정지 </span>
+      <ol>
+        <li>(자바스크립트 타이머<strong> clearInterval() 메서드</strong>를 사용)</li>
+      </ol>
     <table style="width: 100%" border="1">
       <tbody>
         <tr>
