@@ -204,11 +204,6 @@
 
             <hr>
             <h2>변수 자동 선언</h2>
-            <p>값이 변경되어서는 안 되는 경우에는 항상 <span style="color:red">const</span> 를 사용하십시오.</p>
-            <div class="w3-example">
-              <div class="w3-code notranslate jsHigh"><span style="color:black">
-                  <span style="color:mediumblue">const</span> carName = <span style="color:green">"Volvo"</span>; </span></div>
-            </div>
             <div class="w3-example">
               <h3>Example (<strong>Not</strong> Recommended)</h3>
               <div class="w3-code notranslate jsHigh"><span style="color:black">
@@ -289,7 +284,7 @@
             <p>JavaScript 의 변수는<strong> var </strong>키워드를 사용해서 선언한다.&nbsp;</p>
             <div class="w3-example">
               <div class="w3-code notranslate jsHigh"><span style="color:black">
-                  <span style="color:mediumblue">var</span> carName; </span></div>
+                  <span style="color:mediumblue">let</span> carName; </span></div>
             </div>
             <p>선언 후, 변수는 (값이 없어) 비어 있습니다.<br>
               <br>
@@ -301,7 +296,7 @@
             <p>그러나, 선언할 때&nbsp; 변수에 값을 할당 할 수도 있습니다:</p>
             <div class="w3-example">
               <div class="w3-code notranslate jsHigh"><span style="color:black">
-                  <span style="color:mediumblue">var</span> carName = <span style="color:brown">"Volvo"</span>;
+                  <span style="color:mediumblue">let</span> carName = <span style="color:brown">"Volvo"</span>;
                 </span></div>
             </div>
             <p>아래의 예에서, 우리는 carname 이라는 변수를 선언하 후, 여기에 값 "Volvo"를 할당하고,
@@ -320,7 +315,7 @@
                 <span style="color:brown"><span style="color:mediumblue">&lt;</span>script<span
 
                     style="color:mediumblue">&gt;</span></span><span style="color:black"><br>
-                  <span style="color:mediumblue">var</span> carName = <span style="color:brown">"Volvo"</span>;<br>
+                  <span style="color:mediumblue">let</span> carName = <span style="color:brown">"Volvo"</span>;<br>
                   document.getElementById(<span style="color:brown">"demo"</span>).innerHTML
                   = carName; <br>
                 </span><span style="color:brown"><span style="color:mediumblue">&lt;</span>/script<span
@@ -375,7 +370,7 @@
             <div class="w3-example">
               <h3>Example</h3>
               <div class="w3-code notranslate jsHigh"><span style="color:black">
-                  <span style="color:mediumblue">var</span> carName; </span></div>
+                  <span style="color:mediumblue">let</span> carName; </span></div>
               <a target="_blank" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_variables_undefined"
 
                 class="w3-btn w3-margin-bottom">Try it Yourself »</a> </div>
@@ -449,7 +444,7 @@
             <h3>Example</h3>
             <p>중괄호({}) 안에 선언된 var 변수는 블록 외부에서 접근할 수 있습니다.</p>
             <div class="w3-code notranslate jsHigh"><span style="color:black">
-              <span style="color:mediumblue">function</span> myfunction() { <br>
+               { <br>
               <span style="color:mediumblue">var</span> x = <span style="color:brown">2</span>;<br>
                 } </span><br>
               <span style="color:grey;">// x can be used here</span><br>
