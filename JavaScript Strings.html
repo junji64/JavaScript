@@ -30,24 +30,24 @@
             <div class="w3-example">
               <h3>Example</h3>
               <div class="w3-code notranslate jsHigh"><span style="color:black">
-                  <span style="color:mediumblue">var</span> carname = <span style="color:brown">"Volvo
+                  <span style="color:mediumblue">let</span> carname = <span style="color:brown">"Volvo
                     XC60"</span>;<br>
-                  <span style="color:mediumblue">var</span> carname = <span style="color:brown">'Volvo
+                  <span style="color:mediumblue">let</span> carname = <span style="color:brown">'Volvo
                     XC60'</span>; </span></div>
-              <a target="_blank" class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_strings">Try
+              <a target="_blank" class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_string">Try
                 it Yourself »</a> </div>
             <p>문자열을 둘러싼 인용 부호와 일치하지 않는 따옴표를 문자열 안에서 사용할 수 있습니다 : </p>
             <div class="w3-example">
               <h3>Example</h3>
               <div class="w3-code notranslate jsHigh"><span style="color:black">
-                  <span style="color:mediumblue">var</span> answer = <span style="color:brown">"It's
+                  <span style="color:mediumblue">let</span> answer = <span style="color:brown">"It's
                     alright"</span>;<br>
-                  <span style="color:mediumblue">var</span> answer = <span style="color:brown">"He
+                  <span style="color:mediumblue">let</span> answer = <span style="color:brown">"He
                     is called 'Johnny'"</span>;<br>
-                  <span style="color:mediumblue">var</span> answer = <span style="color:brown">'He
+                  <span style="color:mediumblue">let</span> answer = <span style="color:brown">'He
                     is called "Johnny"'</span>;<br>
                 </span></div>
-              <a target="_blank" class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_strings_quotes">Try
+              <a target="_blank" class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_string_quotes">Try
                 it Yourself »</a> </div>
             <hr>
             <h2>String Length</h2>
@@ -56,8 +56,8 @@
             <div class="w3-example">
               <h3>Example</h3>
               <div class="w3-code notranslate jsHigh"><span style="color:black">
-                  <span style="color:mediumblue">var</span> txt = <span style="color:brown">"ABCDEFGHIJKLMNOPQRSTUVWXYZ"</span>;<br>
-                  <span style="color:mediumblue">var</span> sln = txt.length;</span></div>
+                  <span style="color:mediumblue">let</span> txt = <span style="color:brown">"ABCDEFGHIJKLMNOPQRSTUVWXYZ"</span>;<br>
+                  <span style="color:mediumblue">let</span> sln = txt.length;</span></div>
               <a target="_blank" class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_string_length">Try
                 it Yourself »</a> </div>
             <hr>
@@ -66,7 +66,7 @@
               것이다:</p>
             <div class="w3-example">
               <div class="w3-code notranslate jsHigh"><span style="color:black">
-                  <span style="color:mediumblue">var</span> y = <span style="color:brown">"We
+                  <span style="color:mediumblue">let</span> y = <span style="color:brown">"We
                     are the so-called "</span>Vikings<span style="color:brown">"
                     from the north."</span><br>
                 </span></div>
@@ -77,11 +77,11 @@
               바꾸어준다:</p>
             <div class="w3-example">
               <h3>Example</h3>
-              <div class="w3-code notranslate"> <span class="highELE">var</span>
+              <div class="w3-code notranslate"> <span class="highELE">let</span>
                 x = <span class="highVAL">'It\'s alright';</span><br>
-                <span class="highELE">var</span> y = <span class="highVAL">"We
+                <span class="highELE">let</span> y = <span class="highVAL">"We
                   are the so-called \"Vikings\" from the north."</span></div>
-              <a target="_blank" class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_strings_escape">Try
+              <a target="_blank" class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_string_escape">Try
                 it Yourself »</a> </div>
             <p>escape 문자 (\) 는 문자열에 다른 특수 문자들을 넣는데도 사용될 수 있다.</p>
             <p>다음은 백슬래시(backslash) 기호로 텍스트 문자열에 추가 할 수 있는 다른 특수 문자들 목록이다 :</p>
@@ -178,8 +178,8 @@
             <div class="w3-example">
               <h3>Example</h3>
               <div class="w3-code notranslate jsHigh"><span style="color:black">
-                  <span style="color:mediumblue">var</span> x = <span style="color:brown">"John"</span>;<br>
-                  <span style="color:mediumblue">var</span> y = <span style="color:mediumblue">new</span>
+                  <span style="color:mediumblue">let</span> x = <span style="color:brown">"John"</span>;<br>
+                  <span style="color:mediumblue">let</span> y = <span style="color:mediumblue">new</span>
                   String(<span style="color:brown">"John"</span>);<br>
                   <br>
                   <span style="color:green">// typeof x will return string<br>
@@ -202,21 +202,9 @@
             </table>
             <hr>
             <h2>Test Yourself with Exercises!</h2>
-            <p> <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_strings1"
+            <p> <a class="w3-btn" href="https://www.w3schools.com/js/exercise.asp?x=xrcise_strings1"
 
-                target="_blank">Exercise 1 »</a>&nbsp;&nbsp; <a class="w3-btn"
-
-                href="http://www.w3schools.com/js/exercise.asp?filename=exercise_strings2"
-
-                target="_blank">Exercise 2 »</a>&nbsp;&nbsp; <a class="w3-btn"
-
-                href="http://www.w3schools.com/js/exercise.asp?filename=exercise_strings3"
-
-                target="_blank">Exercise 3 »</a>&nbsp;&nbsp; <a class="w3-btn"
-
-                href="http://www.w3schools.com/js/exercise.asp?filename=exercise_strings4"
-
-                target="_blank">Exercise 4 »</a> </p>
+                target="_blank">Exercises »</a>&nbsp;&nbsp;  </p>
             <hr>
             <h2>String 속성 및 메서드</h2>
             <p>"John Doe"와 같은 원시 값(primitive values)은 (객체가 아니기 때문에) 속성과 메서드를 가질
@@ -229,9 +217,9 @@
             <div class="w3-example">
               <h3>Example</h3>
               <div class="w3-code notranslate jsHigh"><span style="color:black">
-                  <span style="color:mediumblue">var</span> str = <span style="color:brown">"Please
+                  <span style="color:mediumblue">let</span> str = <span style="color:brown">"Please
                     locate where 'locate' occurs!"</span>;<br>
-                  <span style="color:mediumblue">var</span> pos = str.indexOf(<span
+                  <span style="color:mediumblue">let</span> pos = str.indexOf(<span
 
                     style="color:brown">"locate"</span>); </span></div>
               <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_string_indexof"
@@ -241,9 +229,9 @@
             <div class="w3-example">
               <h3>Example</h3>
               <div class="w3-code notranslate jsHigh"><span style="color:black">
-                  <span style="color:mediumblue">var</span> str = <span style="color:brown">"Please
+                  <span style="color:mediumblue">let</span> str = <span style="color:brown">"Please
                     locate where 'locate' occurs!"</span>;<br>
-                  <span style="color:mediumblue">var</span> pos =
+                  <span style="color:mediumblue">let</span> pos =
                   str.lastIndexOf(<span style="color:brown">"locate"</span>); </span></div>
               <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_string_lastindexof"
 
@@ -257,9 +245,9 @@
             <div class="w3-example">
               <h3>Example</h3>
               <div class="w3-code notranslate jsHigh"><span style="color:black">
-                  <span style="color:mediumblue">var</span> str = <span style="color:brown">"Please
+                  <span style="color:mediumblue">let</span> str = <span style="color:brown">"Please
                     locate where 'locate' occurs!"</span>;<br>
-                  <span style="color:mediumblue">var</span> pos = str.search(<span
+                  <span style="color:mediumblue">let</span> pos = str.search(<span
 
                     style="color:brown">"locate"</span>); </span></div>
               <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_string_search_locate"
@@ -296,9 +284,9 @@
             <div class="w3-example">
               <h3>Example</h3>
               <div class="w3-code notranslate jsHigh"><span style="color:black">
-                  <span style="color:mediumblue">var</span> str = <span style="color:brown">"Apple,
+                  <span style="color:mediumblue">let</span> str = <span style="color:brown">"Apple,
                     Banana, Kiwi"</span>;<br>
-                  <span style="color:mediumblue">var</span> res =
+                  <span style="color:mediumblue">let</span> res =
                   str.slice(7,13); </span></div>
               <p>The result of res will be:</p>
               <div class="w3-code notranslate"> Banana</div>
@@ -310,9 +298,9 @@
             <div class="w3-example">
               <h3>Example</h3>
               <div class="w3-code notranslate jsHigh"><span style="color:black">
-                  <span style="color:mediumblue">var</span> str = <span style="color:brown">"Apple,
+                  <span style="color:mediumblue">let</span> str = <span style="color:brown">"Apple,
                     Banana, Kiwi"</span>;<br>
-                  <span style="color:mediumblue">var</span> res =
+                  <span style="color:mediumblue">let</span> res =
                   str.slice(-12,-6); </span></div>
               <p>The result of res will be:</p>
               <div class="w3-code notranslate"> Banana</div>
@@ -323,7 +311,7 @@
             <div class="w3-example">
               <h3>Example</h3>
               <div class="w3-code notranslate jsHigh"><span style="color:black">
-                  <span style="color:mediumblue">var</span> res = str.slice(7);
+                  <span style="color:mediumblue">let</span> res = str.slice(7);
                 </span></div>
               <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_string_slice_rest"
 
@@ -332,7 +320,7 @@
             <div class="w3-example">
               <h3>Example</h3>
               <div class="w3-code notranslate jsHigh"><span style="color:black">
-                  <span style="color:mediumblue">var</span> res =
+                  <span style="color:mediumblue">let</span> res =
                   str.slice(-12); </span></div>
               <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_string_slice_rest_negative"
 
@@ -344,9 +332,9 @@
             <div class="w3-example">
               <h3>Example</h3>
               <div class="w3-code notranslate jsHigh"><span style="color:black">
-                  <span style="color:mediumblue">var</span> str = <span style="color:brown">"Apple,
+                  <span style="color:mediumblue">let</span> str = <span style="color:brown">"Apple,
                     Banana, Kiwi"</span>;<br>
-                  <span style="color:mediumblue">var</span> res =
+                  <span style="color:mediumblue">let</span> res =
                   str.substring(7,13); </span></div>
               <p>The result of <em>res</em> will be:</p>
               <div class="w3-code notranslate"> Banana</div>
@@ -361,9 +349,9 @@
             <div class="w3-example">
               <h3>Example</h3>
               <div class="w3-code notranslate jsHigh"><span style="color:black">
-                  <span style="color:mediumblue">var</span> str = <span style="color:brown">"Apple,
+                  <span style="color:mediumblue">let</span> str = <span style="color:brown">"Apple,
                     Banana, Kiwi"</span>;<br>
-                  <span style="color:mediumblue">var</span> res =
+                  <span style="color:mediumblue">let</span> res =
                   str.substr(7,6); </span></div>
               <p>The result of res will be:</p>
               <div class="w3-code notranslate"> Banana</div>
@@ -380,7 +368,7 @@
               <h3>Example</h3>
               <div class="w3-code notranslate jsHigh"><span style="color:black">
                   str = <span style="color:brown">"Please visit Microsoft!"</span>;<br>
-                  <span style="color:mediumblue">var</span> n = str.replace(<span
+                  <span style="color:mediumblue">let</span> n = str.replace(<span
 
                     style="color:brown">"Microsoft"</span>,<span style="color:brown">"W3Schools"</span>);<br>
                 </span></div>
@@ -396,10 +384,10 @@
             <div class="w3-example">
               <h3>Example</h3>
               <div class="w3-code notranslate jsHigh"><span style="color:black">
-                  <span style="color:mediumblue">var</span> text1 = <span style="color:brown">"Hello
+                  <span style="color:mediumblue">let</span> text1 = <span style="color:brown">"Hello
                     World!"</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:green">//
                     String<br>
-                  </span> <span style="color:mediumblue">var</span> text2 =
+                  </span> <span style="color:mediumblue">let</span> text2 =
                   text1.toUpperCase();&nbsp;&nbsp;<span style="color:green">//
                     text2 is text1 converted to upper</span></span></div>
               <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_string_toupper"
@@ -408,10 +396,10 @@
             <div class="w3-example">
               <h3>Example</h3>
               <div class="w3-code notranslate jsHigh"><span style="color:black">
-                  <span style="color:mediumblue">var</span> text1 = <span style="color:brown">"Hello
+                  <span style="color:mediumblue">let</span> text1 = <span style="color:brown">"Hello
                     World!"</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:green">//
                     String<br>
-                  </span> <span style="color:mediumblue">var</span> text2 =
+                  </span> <span style="color:mediumblue">let</span> text2 =
                   text1.toLowerCase();&nbsp;&nbsp;<span style="color:green">//
                     text2 is text1 converted to lower </span></span></div>
               <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_string_tolower"
@@ -423,8 +411,8 @@
             <div class="w3-example">
               <h3>Example</h3>
               <div class="w3-code notranslate jsHigh"><span style="color:black">
-                  <span style="color:mediumblue">var</span> text1 = <span style="color:brown">"Hello"</span>;<br>
-                  <span style="color:mediumblue">var</span> text2 = <span style="color:brown">"World"</span>;<br>
+                  <span style="color:mediumblue">let</span> text1 = <span style="color:brown">"Hello"</span>;<br>
+                  <span style="color:mediumblue">let</span> text2 = <span style="color:brown">"World"</span>;<br>
                   text3 = text1.concat(<span style="color:brown">" "</span>,text2);
                   </span></div> <a class="w3-btn w3-margin-bottom" href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_string_concat"
 
@@ -433,9 +421,9 @@
             <div class="w3-example">
               <h3>Example</h3>
               <div class="w3-code notranslate jsHigh"><span style="color:black">
-                  <span style="color:mediumblue">var</span> text = <span style="color:brown">"Hello"</span>
+                  <span style="color:mediumblue">let</span> text = <span style="color:brown">"Hello"</span>
                   + <span style="color:brown">" "</span> + <span style="color:brown">"World!"</span>;<br>
-                  <span style="color:mediumblue">var</span> text = <span style="color:brown">"Hello"</span>.concat(<span
+                  <span style="color:mediumblue">let</span> text = <span style="color:brown">"Hello"</span>.concat(<span
 
                     style="color:brown">" "</span>,<span style="color:brown">"World!"</span>);</span></div>
             </div>
@@ -453,7 +441,7 @@
             <div class="w3-example">
               <h3>Example</h3>
               <div class="w3-code notranslate jsHigh"><span style="color:black">
-                  <span style="color:mediumblue">var</span> str = <span style="color:brown">"HELLO
+                  <span style="color:mediumblue">let</span> str = <span style="color:brown">"HELLO
                     WORLD"</span>;<br>
                   str.charAt(0);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   <span style="color:green">// returns H </span></span></div>
@@ -466,7 +454,7 @@
             <div class="w3-example">
               <h3>Example</h3>
               <div class="w3-code notranslate jsHigh"><span style="color:black">
-                  <span style="color:mediumblue">var</span> str = <span style="color:brown">"HELLO
+                  <span style="color:mediumblue">let</span> str = <span style="color:brown">"HELLO
                     WORLD"</span>;<br>
                   <br>
                   str.charCodeAt(0);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -480,7 +468,7 @@
             <div class="w3-example">
               <h3>Example</h3>
               <div class="w3-code notranslate jsHigh"><span style="color:black">
-                  <span style="color:mediumblue">var</span> txt = <span style="color:brown">"a,b,c,d,e"</span>;&nbsp;&nbsp;&nbsp;<span
+                  <span style="color:mediumblue">let</span> txt = <span style="color:brown">"a,b,c,d,e"</span>;&nbsp;&nbsp;&nbsp;<span
 
                     style="color:green">// String<br>
                   </span> txt.split(<span style="color:brown">","</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -500,7 +488,7 @@
             <div class="w3-example">
               <h3>Example</h3>
               <div class="w3-code notranslate jsHigh"><span style="color:black">
-                  <span style="color:mediumblue">var</span> txt = <span style="color:brown">"Hello"</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                  <span style="color:mediumblue">let</span> txt = <span style="color:brown">"Hello"</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
 
                     style="color:green">// String<br>
                   </span> txt.split(<span style="color:brown">""</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -517,19 +505,13 @@
               property and method.</p>
             <hr>
             <h2>Test Yourself with Exercises!</h2>
-            <p> <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_stringsmet1"
+            <p> <a class="w3-btn" href="https://www.w3schools.com/js/exercise.asp?x=xrcise_string_methods1"
 
-                target="_blank">Exercise 1 »</a>&nbsp; <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_stringsmet2"
+                target="_blank">Exercise 1 »</a>&nbsp; <a class="w3-btn" href="https://www.w3schools.com/js/exercise.asp?x=xrcise_string_search1"
 
-                target="_blank">Exercise 2 »</a>&nbsp; <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_stringsmet3"
+                target="_blank">Exercise 2 »</a>&nbsp; <a class="w3-btn" href="https://www.w3schools.com/js/exercise.asp?x=xrcise_string_templates1"
 
-                target="_blank">Exercise 3 »</a>&nbsp; <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_stringsmet4"
-
-                target="_blank">Exercise 4 »</a>&nbsp; <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_stringsmet5"
-
-                target="_blank">Exercise 5 »</a>&nbsp; <a class="w3-btn" href="http://www.w3schools.com/js/exercise.asp?filename=exercise_stringsmet6"
-
-                target="_blank">Exercise 6 »</a> </p>
+                target="_blank">Exercise 3 »</a>&nbsp;  </p>
             <div class="chapter">
               <div class="w3-clear nextprev"> <a class="w3-left w3-btn" href="JavaScript%20Events.html">«
                   Previous</a> <a class="w3-right w3-btn" href="JavaScript%20Numbers.html">Next
