@@ -27,6 +27,15 @@
               들이다.</p>
             <p class="intro">HTML 페이지에서 JavaScript 가 사용될 때, JavaScript 는 이러한
               이벤트들에 "반응(<strong>react</strong>)" 할 수 있다.</p>
+
+            <!--start-->
+            <div class="w3-example">
+            <div style="width:100%;height:120px;">
+            <div style="background-color:#D94A38;width:170px;height:80px;margin:20px;padding-top:20px;color:#ffffff;font-weight:bold;font-size:18px;float:left;text-align:center;" onmouseover="this.innerHTML='Thank You'" onmouseout="this.innerHTML='Mouse Over Me'">Mouse Over Me</div>
+            <div style="background-color:#D94A38;width:170px;height:80px;margin:20px;padding-top:20px;color:#ffffff;font-weight:bold;font-size:18px;float:left;text-align:center;" onclick="clickMeEvent(this)">Click Me</div>
+            </div> 
+            </div>
+            <!--stop-->  
             <hr>
             <h2>HTML Events</h2>
             <p>HTML 이벤트(event)는 브라우저가 하는 무엇이거나, 사용자가 하는 무엇일 수 있다.</p>
@@ -204,5 +213,25 @@
         <br>
       </div>
     </div>
+    <script>
+function clickMeEvent(obj) {
+  if (obj.innerHTML == "Click Me") {
+    obj.innerHTML = "Click Me<br>Click Me Again";
+    return;
+  }
+  if (obj.innerHTML == "Click Me<br>Click Me Again") {
+    obj.innerHTML = "Thank You";  
+    return; 
+  }
+  if (obj.innerHTML == "Thank You") {
+  obj.innerHTML = "Goodbye";  
+    return; 
+  }
+  if (obj.innerHTML == "Goodbye") {
+    obj.style.display = "none";
+    return;
+  }
+}
+</script>
   </body>
 </html>
